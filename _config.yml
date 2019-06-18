@@ -1,0 +1,27 @@
+# SITE SETTINGS
+
+title: Research project
+description: Jekyll theme for research project websites
+email: your.email@example.com
+author: Peter Desmet
+# baseurl: "/research-project"
+# url: "https://peterdesmet.github.io"
+
+# SOCIAL PROFILES
+
+twitter_username: peterdesmet
+github_username: peterdesmet
+
+# BUILD SETTINGS
+
+markdown: kramdown
+plugins:
+  # - jekyll-feed
+  # - jekyll-paginate
+  # - jekyll-sitemap
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
