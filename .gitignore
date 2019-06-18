@@ -3,3 +3,6 @@
 .sass-cache
 _site
 Gemfile.lock
+
+# npm
+node_modules
