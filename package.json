@@ -1,0 +1,19 @@
+{
+  "name": "research-project",
+  "version": "1.0.0",
+  "description": "Jekyll theme for research project websites.",
+  "author": "Peter Desmet",
+  "license": "MIT",
+  "homepage": "https://github.com/peterdesmet/research-project",
+  "keywords": [
+    "jekyll",
+    "theme"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peterdesmet/research-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/peterdesmet/research-project/issues"
+  }
+}
