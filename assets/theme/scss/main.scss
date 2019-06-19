@@ -48,6 +48,36 @@ body > main {
   padding-bottom: $grid-gutter-width; // Don't stick to footer
 }
 
+// CONTENT
+
+.jumbotron {
+  // background-image: set in page frontmatter
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: theme-color("primary");
+  border-radius: 0; // Should always be square, independent from $enable-rounded
+  margin-bottom: 0;
+  padding-bottom: 4rem;
+  text-align: center;
+  
+  h1 {
+    color: $white;
+    font-weight: 800;
+    font-size: $display3-size;
+  }
+
+  .lead {
+    color: $white;
+    font-size: ($lead-font-size * 1.2);
+  }
+}
+
+.theme-content {
+  font-family: Lora, serif;
+  margin-top: $grid-gutter-width;
+}
+
 // FOOTER
 
 body > footer {
