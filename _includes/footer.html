@@ -1,5 +1,68 @@
 <footer>
   <div class="container">
+    <div class="row">
+      <div class="col-md-4 mt-md-4">
+        <ul class="list-inline">
+          {% if site.email %}
+          <li class="list-inline-item">
+            <a href="mailto:{{ site.email }}">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+
+          {% if site.twitter_username %}
+          <li class="list-inline-item">
+            <a href="https://twitter.com/{{ site.twitter_username }}">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+
+          {% if site.github_username %}
+          <li class="list-inline-item">
+            <a href="https://github.com/{{ site.github_username }}">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <h3>{{ site.data.footer.links_title }}</h3>
+        <ul class="fa-ul">
+        {% for item in site.data.footer.links %}
+          <li>
+            <i class="fa-li fa fa-chevron-circle-right"></i>
+            <a href="{{ item.link | relative_url}}" {% if item.new_window %}target="_blank"{% endif %}>{{ item.name }}</a>
+          </li>
+        {% endfor %}
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        {% if site.data.footer.funding %}
+        <h3>Funding</h3>
+        {{ site.data.footer.funding | markdownify }}
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col offset-md-4 small">
+        {{ site.data.footer.disclaimer | markdownify }}
+      </div>
+    </div>
   </div>
 </footer>
 
