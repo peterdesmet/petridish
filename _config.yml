@@ -12,6 +12,23 @@ author: Peter Desmet
 twitter_username: peterdesmet
 github_username: peterdesmet
 
+# TEMPLATE SETTINGS
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "page" # TODO: update to post
+      permalink: "/posts/:slug/"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
 # BUILD SETTINGS
 
 markdown: kramdown
