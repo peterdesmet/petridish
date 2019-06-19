@@ -15,6 +15,16 @@
   },
   "bugs": {
     "url": "https://github.com/peterdesmet/research-project/issues"
+  },
+  "scripts": {
+    "copy:bootstrap-scss": "cp -r node_modules/bootstrap/scss _sass/bootstrap",
+    
+    "copy:font-awesome": "cp node_modules/font-awesome/css/font-awesome.min.css assets/theme/css/font-awesome.min.css && cp -r node_modules/font-awesome/fonts/* assets/theme/fonts",
+    "copy:jquery": "cp node_modules/jquery/dist/jquery.min.js assets/theme/js/jquery.min.js",
+    "copy:popper": "cp node_modules/popper.js/dist/umd/popper.min.js assets/theme/js/popper.min.js",
+    "copy:bootstrap": "cp node_modules/bootstrap/dist/js/bootstrap.min.js assets/theme/js/bootstrap.min.js",
+    "copy:vendor-assets": "mkdir -p assets/theme/css && mkdir -p assets/theme/fonts && mkdir -p assets/theme/js && npm run copy:font-awesome && npm run copy:jquery && npm run copy:popper && npm run copy:bootstrap"
+  },
   "dependencies": {
     "bootstrap": "^4.3.1",
     "font-awesome": "^4.7.0",
