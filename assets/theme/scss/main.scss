@@ -7,7 +7,7 @@
 // 
 // Imports start from the default base directory _sass
 @import "bootstrap/_functions.scss"; // Load first to make use of theme-colors()
-@import "../assets/theme/scss/_variables.scss"; // Custom overwrites for Bootstrap variables
+@import "_variables.scss"; // Custom overwrites for Bootstrap variables
 @import "bootstrap/bootstrap.scss"; // Bootstrap scss
 
 // THEME CSS
