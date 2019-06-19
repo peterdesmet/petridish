@@ -25,3 +25,53 @@ body {
   white-space: normal; // Wrap button within container
 }
 
+// NAVBAR
+
+.navbar {
+  background-color: white!important;
+  border-bottom: 1px solid $gray-200;
+
+  .navbar-brand {
+    font-weight: 800;
+  }
+  .navbar-toggler {
+    font-size: 90%;
+    padding: 10px;
+    text-transform: uppercase;
+  }
+}
+
+// MAIN CONTAINER
+
+body > main {
+  min-height: calc(100vh - 54px); // Viewport height minus medium screen navbar height, to push footer to bottom
+  padding-bottom: $grid-gutter-width; // Don't stick to footer
+}
+
+// FOOTER
+
+body > footer {
+  background-color: theme-color("footer");
+  border-top: 5px solid lighten(theme-color("footer"), 50);
+  color: lighten(theme-color("footer"), 50);
+  font-size: 0.9rem;
+  padding: $grid-gutter-width / 2 0;
+
+  a, a:hover {
+    color: $white;
+  }
+
+  h3 {
+    color: lighten(theme-color("footer"), 25);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+  }
+
+  // Font awesome icons
+  .fa-inverse {
+    color: theme-color("footer");
+  }
+  .fa-ul {
+    margin-left: 1.5rem;
+  }
+}
