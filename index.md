@@ -1,5 +1,5 @@
 ---
-title: My research project
+title: Our research project
 description: Tackling a cool and exciting research goal
 background: "assets/img/chuttersnap-146799-unsplash.jpg"
 ---
