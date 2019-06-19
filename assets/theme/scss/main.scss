@@ -55,7 +55,6 @@ body > main {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: theme-color("primary");
   border-radius: 0; // Should always be square, independent from $enable-rounded
   margin-bottom: 0;
   padding-bottom: 4rem;
