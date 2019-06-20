@@ -1,12 +1,9 @@
-// Custom overwrites for Bootstrap variables
+// Theme dependent overwrites for Bootstrap variables
 // 
-// We use Bootstrap 4 (https://getbootstrap.com/) for most of the theme's layout and style.
-// Bootstrap includes a number of variables that define colour scheme and spacing.
-// By overwriting these in this file, you can customize your website.
+// Variables with !default are not altered from their default value, 
+// but are included because they are used in theme.scss (e.g. $gray-200).
+// 
 // For all Bootstrap variables, see https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
-//
-// Some variables rely on other Bootstrap variables (e.g. primary), which therefore need to be included
-// as well. You can recognize them by their "!default" suffix. Do not remove these.
 
 // Color system
 
