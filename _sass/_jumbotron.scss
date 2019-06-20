@@ -1,0 +1,23 @@
+// Jumbotron
+
+.jumbotron {
+  // background-image: set in page frontmatter
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0; // Should always be square, independent from $enable-rounded
+  margin-bottom: 0;
+  padding-bottom: 4rem;
+  text-align: center;
+  
+  h1 {
+    color: $white;
+    font-weight: 800;
+    font-size: $display3-size;
+  }
+
+  .lead {
+    color: $white;
+    font-size: ($lead-font-size * 1.2);
+  }
+}

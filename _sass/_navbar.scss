@@ -1,0 +1,15 @@
+// Navbar
+
+.navbar {
+  background-color: white!important;
+  border-bottom: 1px solid $gray-200;
+
+  .navbar-brand {
+    font-weight: 800;
+  }
+  .navbar-toggler {
+    font-size: 90%;
+    padding: 10px;
+    text-transform: uppercase;
+  }
+}

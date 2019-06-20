@@ -1,12 +1,24 @@
 ---
+# Main scss file for this theme
+# Imports scss files from default base directory _sass
 # This frontmatter ensures Jekyll reads this file and converts it to main.css
 ---
 
-// IMPORTS
-// Imports start from the default base directory _sass
-// For order see https://getbootstrap.com/docs/4.3/getting-started/theming/#variable-defaults
+// Variable overrides
+// 
+// Need to be loaded first, see https://getbootstrap.com/docs/4.3/getting-started/theming/#variable-defaults
+@import "_custom";              // User defined customization
+@import "_variables";           // Overrides for Bootstrap variables
 
-@import "_colors";              // User defined colors, including a few Bootstrap variables
-@import "_variables";           // Theme dependent overwrites for Bootstrap variables
+// Bootstrap
 @import "bootstrap/bootstrap";  // Bootstrap scss
-@import "theme";                // Main theme scss
+
+// Theme scss
+//
+// Ordered according to the order of the html elements
+@import "_general";             // General styling
+@import "_navbar";              // Navbar
+@import "_main";                // Main container
+  @import "_jumbotron";         // Jumbotron
+  @import "_content";           // Content
+@import "_footer";              // Footer
