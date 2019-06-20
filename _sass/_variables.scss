@@ -7,15 +7,15 @@
 // Color system
 
 $theme-colors: (
-  "primary": $links,    // Defined in _colors.scss
-  "secondary": $header, // Defined in _colors.scss
-  "footer": $footer     // Defined in _colors.scss
+  "primary": $links,    // Defined in _custom.scss
+  "secondary": $header, // Defined in _custom.scss
+  "footer": $footer     // Defined in _custom.scss
 );
 
 // Options
 // Spacing
 
-$spacer: 1rem !default; // Already defined in _colors.scss
+$spacer: 1rem !default; // Already defined in _custom.scss
 
 // Body
 // Links
