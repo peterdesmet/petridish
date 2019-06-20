@@ -1,7 +1,7 @@
 // User defined colors
 // 
 // In this file you can customize the colors for your website: just change the values below.
-// To find the hex value (#xxxxxx) for your color, use e.g. https://htmlcolorcodes.com
+// To find the hex value (#xxxxxx) for your color, use e.g. https://www.color-hex.com/
 
 $links: #007bff;        // For links, use a readable color that contrasts well with black text
 $header: #007bff;       // For header, use a background color that contrasts well with white text
@@ -9,4 +9,5 @@ $footer: #6c757d;       // For footer, use a background color that contrasts wel
 
 // Options
 
-$enable-rounded: true;  // Here you can set if you want rounded (true) or square (false) boxes and buttons.
+$enable-rounded: true;  // Rounded (true) or square (false) boxes and buttons.
+$spacer: 1rem;          // Affects white space of some elements (default: 1rem).
