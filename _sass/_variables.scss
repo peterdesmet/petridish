@@ -8,7 +8,7 @@
 // Some variables rely on other Bootstrap variables (e.g. primary), which therefore need to be included
 // as well. You can recognize them by their "!default" suffix. Do not remove these.
 
-// Color system (do not change these, but change theme colors below)
+// Color system
 
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
@@ -22,6 +22,24 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black:    #000 !default;
 
+$grays: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  ),
+  $grays
+);
+
+
 $blue:    #007bff !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
@@ -32,6 +50,27 @@ $yellow:  #ffc107 !default;
 $green:   #28a745 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
+
+$colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge(
+  (
+    "blue":       $blue,
+    "indigo":     $indigo,
+    "purple":     $purple,
+    "pink":       $pink,
+    "red":        $red,
+    "orange":     $orange,
+    "yellow":     $yellow,
+    "green":      $green,
+    "teal":       $teal,
+    "cyan":       $cyan,
+    "white":      $white,
+    "gray":       $gray-600,
+    "gray-dark":  $gray-800
+  ),
+  $colors
+);
 
 $primary:       $blue !default;
 $secondary:     $gray-600 !default;
@@ -45,21 +84,24 @@ $dark:          $gray-800 !default;
 // Theme colors (change these)
 
 $theme-colors: (
-  primary: #93c243,      // For links and active borders, use a bright colour
-  secondary: #513266,    // For highlights
-  footer: #513266,       // For footer, use a dark colour
-  success: $green,       // For success messages
-  info: $cyan,           // For info messages
-  warning: $yellow,      // For warning messages
-  danger: $red,          // For error messages
-  light: $gray-100,      // For light backgrounds
-  dark: $gray-800        // For dark backgrounds 
+);
+
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+  ),
+  $theme-colors
 );
 
 // Options
-
-$enable-rounded: true; // Round vs square buttons/boxes
-
 // Spacing
 
 $spacer: 1rem !default;
