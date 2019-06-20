@@ -5,7 +5,7 @@
 // 
 // The theme further customizes by:
 // 
-// 1. Allowing the user to set theme-colors in _custom.scss
+// 1. Allowing the user to set colors in _colors.scss
 // 2. Altering some Bootstrap variables in _variables.scss
 // 3. Adding custom css for some Bootstrap classes (below)
 // 4. Defining custom theme-* classes (below)
@@ -13,7 +13,7 @@
 // IMPORTS
 
 @import "bootstrap/_functions.scss"; // Load first to make use of theme-colors()
-@import "_custom.scss";              // User defined overwrites for Bootstrap variables
+@import "_colors.scss";              // User defined colors
 @import "_variables.scss";           // Theme dependent overwrites for Bootstrap variables
 @import "bootstrap/bootstrap.scss";  // Bootstrap scss
 
