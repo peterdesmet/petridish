@@ -1,109 +1,21 @@
 // Theme dependent overwrites for Bootstrap variables
 // 
-// Variables with !default are not altered from their default value, 
-// but are included because they are used in theme.scss (e.g. $gray-200).
-// 
+// Only include variables that are overwritten or variables (indicated with !default)
+// that are referred by other variables.
 // For all Bootstrap variables, see https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
 
 // Color system
 
-$white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
-$black:    #000 !default;
-
-$grays: () !default;
-// stylelint-disable-next-line scss/dollar-variable-default
-$grays: map-merge(
-  (
-    "100": $gray-100,
-    "200": $gray-200,
-    "300": $gray-300,
-    "400": $gray-400,
-    "500": $gray-500,
-    "600": $gray-600,
-    "700": $gray-700,
-    "800": $gray-800,
-    "900": $gray-900
-  ),
-  $grays
-);
-
-
-$blue:    #007bff !default;
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$pink:    #e83e8c !default;
-$red:     #dc3545 !default;
-$orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$green:   #28a745 !default;
-$teal:    #20c997 !default;
-$cyan:    #17a2b8 !default;
-
-$colors: () !default;
-// stylelint-disable-next-line scss/dollar-variable-default
-$colors: map-merge(
-  (
-    "blue":       $blue,
-    "indigo":     $indigo,
-    "purple":     $purple,
-    "pink":       $pink,
-    "red":        $red,
-    "orange":     $orange,
-    "yellow":     $yellow,
-    "green":      $green,
-    "teal":       $teal,
-    "cyan":       $cyan,
-    "white":      $white,
-    "gray":       $gray-600,
-    "gray-dark":  $gray-800
-  ),
-  $colors
-);
-
-$primary:       $blue !default;
-$secondary:     $gray-600 !default;
-$success:       $green !default;
-$info:          $cyan !default;
-$warning:       $yellow !default;
-$danger:        $red !default;
-$light:         $gray-100 !default;
-$dark:          $gray-800 !default;
-
-// Set theme-colors to colours defined in _colors.scss
 $theme-colors: (
-  "primary": $links,
-  "secondary": $header,
-  "footer": $footer
-);
-
-// stylelint-disable-next-line scss/dollar-variable-default
-$theme-colors: map-merge(
-  (
-    "primary":    $primary,
-    "secondary":  $secondary,
-    "success":    $success,
-    "info":       $info,
-    "warning":    $warning,
-    "danger":     $danger,
-    "light":      $light,
-    "dark":       $dark
-  ),
-  $theme-colors
+  "primary": $links,    // Defined in _colors.scss
+  "secondary": $header, // Defined in _colors.scss
+  "footer": $footer     // Defined in _colors.scss
 );
 
 // Options
 // Spacing
 
-$spacer: 1rem !default;
+$spacer: 1rem !default; // Already defined in _colors.scss
 
 // Body
 // Links
@@ -112,16 +24,13 @@ $spacer: 1rem !default;
 // Grid containers
 // Grid columns
 // Components
-// Typography
+// Fonts
 
 $font-family-base: "Roboto", sans-serif;
 
 $headings-margin-bottom: $spacer;
 
 // Tables
-
-$table-accent-bg: $gray-100;
-
 // Buttons + Forms
 // Buttons
 // Forms
