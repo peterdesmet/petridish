@@ -10,13 +10,6 @@
 // 3. Adding custom css for some Bootstrap classes (below)
 // 4. Defining custom theme-* classes (below)
 
-// IMPORTS
-
-@import "bootstrap/_functions.scss"; // Load first to make use of theme-colors()
-@import "_colors.scss";              // User defined colors
-@import "_variables.scss";           // Theme dependent overwrites for Bootstrap variables
-@import "bootstrap/bootstrap.scss";  // Bootstrap scss
-
 // GENERAL
 
 body {

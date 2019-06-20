@@ -2,5 +2,11 @@
 # This frontmatter ensures Jekyll reads this file and converts it to main.css
 ---
 
-// All theme scss (including Bootstrap) is maintained in default _sass directory
-@import "theme.scss"
+// IMPORTS
+// Imports start from the default base directory _sass
+// For order see https://getbootstrap.com/docs/4.3/getting-started/theming/#variable-defaults
+
+@import "_colors";              // User defined colors, including a few Bootstrap variables
+@import "_variables";           // Theme dependent overwrites for Bootstrap variables
+@import "bootstrap/bootstrap";  // Bootstrap scss
+@import "theme";                // Main theme scss
