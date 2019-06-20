@@ -78,9 +78,11 @@ $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
 
-// Theme colors (change these)
-
+// Set theme-colors to colours defined in _custom.scss!
 $theme-colors: (
+  "primary": $links,
+  "secondary": $header,
+  "footer": $footer
 );
 
 // stylelint-disable-next-line scss/dollar-variable-default
