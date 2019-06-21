@@ -1,4 +1,5 @@
 ---
+layout: team
 title: Team
 description: This is who we are
 background: assets/img/javier-allegue-barros-440362-unsplash.jpg
