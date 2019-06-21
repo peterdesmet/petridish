@@ -1,5 +1,7 @@
+# Links listed below will be included in your site navigation
+
 - name: About
-  link: /about/
+  link: /about/ # Can be external link
   new_window: false
 - name: Team
   link: /team/
@@ -7,6 +9,6 @@
 - name: Output
   link: /output/
   new_window: false
-# - name: News
-#   link: /news/
-#   new_window: false
+- name: External link
+  link: https://github.com/peterdesmet/petridish/blob/master/_data/navigation.yaml
+  new_window: true
