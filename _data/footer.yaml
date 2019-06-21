@@ -1,16 +1,25 @@
-links_title: Project partners
-links:
-  - name: Name of project partner 1
-    link: http://example.com
-    new_window: true
-  - name: Name of project partner 2
-    link: http://example.com
-    new_window: true
+# The footer contains columns: the first one is reserved for social icons,
+# but you can customize the others, as well as a license statement at the bottom.
 
-description_title: Funding
-description: > # Something to include in the footer, e.g. funding
-  This project is funded by [❤ for open source](http://example.com). To customize this text see _data/footer.yaml
+# Columns (the more you add, the more narrow they will be)
+columns:
+  - title: Project partners
+    description:
+    links:
+    - name: Name of project partner 1
+      link: http://example.com
+      new_window: true
+    - name: Name of project partner 2
+      link: http://example.com
+      new_window: true
 
-license: > # Small font license notice to add to the bottom of the footer. Prefixed by © {{ site.author }} —
+  - title: 
+    description: > # Can be Markdown
+      This project is funded by [❤ for open source](http://example.com). To customize this text see _data/footer.yaml
+    links: 
+
+# Small font license notice to add to the bottom of the footer. Can be Markdown
+# Prefixed by "© {{ site.author }} — ". Leave empty for "all rights reserved".
+license: >
   Content on this site is licensed under a [CC BY 4.0 License](http://creativecommons.org/licenses/by/4.0/).
   \| Theme: [petridish](https://github.com/peterdesmet/petridish)

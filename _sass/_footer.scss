@@ -11,10 +11,14 @@ body > footer {
     color: $white;
   }
 
-  h3 {
+  h5 {
     color: lighten(theme-color("footer"), 25);
     font-size: 1.1rem;
     text-transform: uppercase;
+
+    @include media-breakpoint-up(lg) {
+      min-height: 1.3rem; // Aim to align text if no h5 is present
+    }
   }
 
   // Font awesome icons

@@ -1,7 +1,7 @@
 <footer>
   <div class="container">
     <div class="row">
-      <div class="col-md-4 mt-md-4">
+      <div class="col-lg mt-lg-4">
         <ul class="list-inline">
           {% if site.email %}
           <li class="list-inline-item">
@@ -38,22 +38,25 @@
         </ul>
       </div>
 
-      <div class="col-md-4">
-        <h3>{{ site.data.footer.links_title }}</h3>
+      {% for col in site.data.footer.columns %}
+      <div class="col-lg">
+        <h5>{{ col.title }}</h5>
+
+        {{ col.description | markdownify }}
+
+        {% if col.links %}
         <ul class="fa-ul">
-        {% for item in site.data.footer.links %}
+        {% for item in col.links %}
           <li>
             <i class="fa-li fa fa-chevron-circle-right"></i>
             <a href="{{ item.link | relative_url}}" {% if item.new_window %}target="_blank"{% endif %}>{{ item.name }}</a>
           </li>
         {% endfor %}
         </ul>
-      </div>
+        {% endif %}
 
-      <div class="col-md-4">
-        <h3>{{ site.data.footer.description_title }}</h3>
-        {{ site.data.footer.description | markdownify }}
       </div>
+      {% endfor %}
     </div>
 
     <div class="small mt-2">
