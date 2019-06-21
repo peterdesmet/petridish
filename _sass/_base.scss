@@ -10,3 +10,8 @@ body {
 .btn {
   white-space: normal; // Wrap button within container
 }
+
+pre.highlight {
+  padding: 0.25rem;
+  margin-bottom: $grid-gutter-width / 2;
+}
