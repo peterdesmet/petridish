@@ -51,15 +51,13 @@
       </div>
 
       <div class="col-md-4">
-        {% if site.data.footer.funding %}
-        <h3>Funding</h3>
-        {{ site.data.footer.funding | markdownify }}
-        {% endif %}
+        <h3>{{ site.data.footer.description_title }}</h3>
+        {{ site.data.footer.description | markdownify }}
       </div>
     </div>
 
-    <div class="small text-center mt-2">
-      {{ site.data.footer.disclaimer | markdownify }}
+    <div class="small mt-2">
+      © {{ site.author }} — {{ site.data.footer.license | markdownify }}
     </div>
   </div>
 </footer>

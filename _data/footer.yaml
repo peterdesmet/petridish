@@ -3,14 +3,14 @@ links:
   - name: Name of project partner 1
     link: http://example.com
     new_window: true
-  - name: Institute for the Development of Research Project Websites
+  - name: Name of project partner 2
     link: http://example.com
     new_window: true
-  - name: Name of project partner 3
-    link: http://example.com
-    new_window: true
-  - name: Name of project partner 4
-    link: http://example.com
-    new_window: true
-funding: This project is funded by [funder](http://example.com).
-disclaimer: Content on this site is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
+
+description_title: Funding
+description: > # Something to include in the footer, e.g. funding
+  This project is funded by [❤ for open source](http://example.com). To customize this text see _data/footer.yaml
+
+license: > # Small font license notice to add to the bottom of the footer. Prefixed by © {{ site.author }} —
+  Content on this site is licensed under a [CC BY 4.0 License](http://creativecommons.org/licenses/by/4.0/).
+  \| Theme: [petridish](https://github.com/peterdesmet/petridish)
