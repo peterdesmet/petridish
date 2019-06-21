@@ -1,6 +1,11 @@
 // Content
 
 #content {
-  font-family: Lora, serif;
   margin-top: $grid-gutter-width;
+
+  p,
+  ul,
+  table {
+    font-family: Lora, serif;
+  }
 }
