@@ -1,7 +1,10 @@
 # Links listed below will be included in your site navigation
 
+- name: Home # The site title already links to the homepage, but you can repeat it here
+  link: /
+  new_window: false
 - name: About
-  link: /about/ # Can be external link
+  link: /about/
   new_window: false
 - name: Team
   link: /team/
