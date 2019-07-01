@@ -107,9 +107,7 @@ console.log(foo(5));
 
 [link with reference][1]
 
-URL without `<`: http://www.example.com
-
-URL with `<`: <http://www.example.com>
+url: <http://www.example.com>
 
 ## Images
 
@@ -122,7 +120,7 @@ Header 1 | Header 2
 Row 1 col 1 | Row 1 col 2
 Row 2 col 1 | Row 2 col 2
 
-Aligned columns
+Aligned columns:
 
 Right aligned | Center aligned
 ---: | :---:
