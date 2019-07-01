@@ -12,7 +12,7 @@ permalink: /output/
 #### Heading h4
 ##### Heading h5
 ###### Heading h6
-###### Heading with `{#custom_id}` {#custom_id}
+###### Heading with custom id {#custom_id}
 
 ## Paragraphs
 
@@ -27,13 +27,13 @@ And this is the second line.
 
 ## Emphasis
 
-This is **bold text**.
+This is **bold text**
 
-This is _italicized text_.
+This is _italicized text_
 
-This is **_bold italicized text_**.
+This is **_bold italicized text_**
 
-This is ~~strikethrough text~~.
+This is ~~strikethrough text~~
 
 ## Blockquotes
 
@@ -74,7 +74,7 @@ term 2
 
 ## Code
 
-Inline `code`.
+Inline `code`
 
 Indented code:
 
@@ -86,11 +86,10 @@ Indented code:
 Fenced code with syntax highlighting:
 
 ```js
-var foo = function (bar) {
-  return bar++;
-};
+const greet = (text) => "Hello " + text;
 
-console.log(foo(5));
+// Test
+console.log(greet("world"));
 ```
 
 ## Horizontal rules
@@ -137,14 +136,18 @@ Here's a sentence with a footnote. [^1]
 
 With the Kramdown Markdown parser that Jekyll uses, you can add css classes to your content (see this [blog post](https://digitaldrummerj.me/styling-jekyll-markdown/)). By sticking to [Bootstrap](https://getbootstrap.com/docs/4.3/) classes, you can easily style your content. If that doesn't fit your needs, you can always write html in your Markdown.
 
-[Alerts](https://getbootstrap.com/docs/4.3/components/alerts/):
+### Alerts
+
+[Bootstrap documentation](https://getbootstrap.com/docs/4.3/components/alerts/)
 
 {: .alert .alert-info}
 Alert info message. This paragraph is styled by prepending it with `{: .alert .alert-info}`.
 
-[Aligning images](https://getbootstrap.com/docs/4.3/content/images/#aligning-images):
+### Aligning images
 
-The image to below is styled with `{: .rounded .float-left}`. That gives it round corners and moves it to the left, with the text wrapping around it. You can use `{: .clearfix}` on a paragraph to stop wrapping.
+[Bootstrap documentation](https://getbootstrap.com/docs/4.3/content/images/#aligning-images)
+
+The image below is styled with `{: .rounded .float-left}`. That gives it round corners and moves it to the left, with the text wrapping around it. You can use `{: .clearfix}` on a paragraph to stop wrapping.
 
 ![alt text](https://images.unsplash.com/photo-1486825586573-7131f7991bdd?w=200&h=200&fit=crop){: .rounded .float-left}
 
@@ -154,4 +157,3 @@ Itself meat. Won't were face third tree from us seed kind man fruit sixth bring 
 
 {: .clearfix}
 Life brought good appear good grass air abundantly a. Life. Rule be brought unto. Fly days fruit evening. Us.
-
