@@ -1,6 +1,6 @@
 ---
 title: Research output
-description: Test page for Markdown syntax
+description: Test page for Markdown syntax. See [`pages/output.md`](https://raw.githubusercontent.com/peterdesmet/petridish/master/pages/output.md) for the Markdown itself.
 permalink: /output/
 ---
 

@@ -12,7 +12,7 @@ layout: default
       <div class="col-lg-8 col-md-10 mx-auto">
         <h1>{{ page.title }}</h1>
         {% if page.description %}
-        <p class="lead">{{ page.description }}</p>
+        <div class="lead">{{ page.description | markdownify }}</div>
         {% endif %}
       </div>
     </div>

@@ -17,5 +17,11 @@
   .lead {
     color: $white;
     font-size: ($lead-font-size * 1.2);
+
+    a,
+    a:hover,
+    a:visited {
+      color: $white;
+    }
   }
 }
