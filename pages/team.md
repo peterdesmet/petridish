@@ -1,7 +1,7 @@
 ---
 layout: team
 title: Team
-description: This is who we are
+description: Who we are
 background: assets/img/javier-allegue-barros-440362-unsplash.jpg
 permalink: /team/
 ---
