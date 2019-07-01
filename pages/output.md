@@ -12,7 +12,7 @@ permalink: /output/
 #### Heading h4
 ##### Heading h5
 ###### Heading h6
-###### Heading with custom id {#custom_id}
+###### Heading with `{#custom_id}` {#custom_id}
 
 ## Paragraphs
 
@@ -133,7 +133,25 @@ Here's a sentence with a footnote. [^1]
 
 [^1]: This is the footnote.
 
-## Bootstrap classes
+## Styling content
 
-{:.alert .alert-info}
-Alert info message
+With the Kramdown Markdown parser that Jekyll uses, you can add CSS classes to your content (see this [blog post](https://digitaldrummerj.me/styling-jekyll-markdown/)). By sticking to [Bootstrap](https://getbootstrap.com/docs/4.3/) classes, you can easily style your content.
+
+[Alerts](https://getbootstrap.com/docs/4.3/components/alerts/):
+
+{: .alert .alert-info}
+Alert info message. This paragraph is styled by prepending it with `{: .alert .alert-info}`.
+
+[Aligning images](https://getbootstrap.com/docs/4.3/content/images/#aligning-images):
+
+The image to below is styled with `{: .rounded .float-left}`. `.rounded` rounds the corners, `.float-left` moves it to the left, with the text wrapping around it. You can use `{: .clearfix}` on a paragraph to stop wrapping.
+
+![alt text](https://images.unsplash.com/photo-1486825586573-7131f7991bdd?w=200&h=200&fit=crop){: .rounded .float-left}
+
+Tree man. Gathering unto give gathered. Midst they're. After image appear. Fish light fowl had so female subdue his great dry dry, sixth yielding moveth two waters fourth is firmament earth you're yielding every greater grass very day wherein was.
+
+Itself meat. Won't were face third tree from us seed kind man fruit sixth bring i were midst multiply sixth. Cattle let, creeping fruit good whales very. There void So their you living. Appear two cattle kind man air rule signs.
+
+{: .clearfix}
+Life brought good appear good grass air abundantly a. Life. Rule be brought unto. Fly days fruit evening. Us.
+
