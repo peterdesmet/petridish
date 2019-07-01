@@ -1,8 +1,8 @@
 ---
 title: Kickoff meeting
-date: 2019-05-16 17:27:15 +0200
+date: 2019-06-21 17:27:15 +0200
 background: "https://images.unsplash.com/photo-1526547319484-63dce467060b?auto=format&fit=crop&w=1200&q=80"
-categories: meetings
+categories: meetings kick-off
 ---
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
