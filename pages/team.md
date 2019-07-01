@@ -6,5 +6,5 @@ background: assets/img/javier-allegue-barros-440362-unsplash.jpg
 permalink: /team/
 ---
 
-Spirit in land. Great made lesser can't green also upon beast. Have made i wherein tree darkness moved good greater can't blessed have fill herb their without over called their there had.
+On this page you can list team members by defining them in [`_data/team.yaml`](https://github.com/peterdesmet/petridish/blob/master/_data/team.yaml).
 

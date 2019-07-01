@@ -5,7 +5,6 @@
   image: assets/img/fry_ethan-hoover-311143-unsplash.jpg # Can be external link
   description: > # Can be Markdown
     Protagonist, from the 20th century. Many times great-uncle to Professor Hubert Farnsworth.
-    See `_data/team.yaml` to list team members.
   orcid: 0000-0000-0000-0000
   email: your.email@example.com
   github: github_name

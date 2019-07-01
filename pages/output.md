@@ -1,8 +1,10 @@
 ---
 title: Research output
-description: Test page for Markdown syntax. See [`pages/output.md`](https://raw.githubusercontent.com/peterdesmet/petridish/master/pages/output.md) for the Markdown itself.
+description: Example page for [Markdown syntax](https://guides.github.com/features/mastering-markdown/)
 permalink: /output/
 ---
+
+See [`pages/output.md`](https://raw.githubusercontent.com/peterdesmet/petridish/master/pages/output.md) for the raw Markdown of this page.
 
 ## Headings
 
