@@ -14,7 +14,7 @@ columns:
       new_window: true
 
   - title: 
-    description: > # Can be Markdown
+    description: > # E.g. funding acknowledgement. Can be Markdown
       This project is made with ❤ for open source. See [`_data/footer.yaml`](https://github.com/peterdesmet/petridish/edit/master/_data/footer.yaml) to customize this text.
     links: 
 
