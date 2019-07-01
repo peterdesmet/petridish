@@ -65,8 +65,12 @@ Task list:
 
 Definition list:
 
-term
-: definition
+term 1
+: definition 1.1
+: definition 1.2
+
+term 2
+: definition 2
 
 ## Code
 
