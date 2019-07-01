@@ -29,6 +29,10 @@ defaults:
     values:
       layout: "page"
 
+# THEME SETTINGS
+
+logo: assets/img/petri-dish_1f9eb.png
+
 # BUILD SETTINGS
 
 markdown: kramdown
