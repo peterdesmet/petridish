@@ -3,6 +3,7 @@
 .content {
   font-family: Lora, serif;
   
+  // Use base font for headings
   h1,
   h2,
   h3,
@@ -12,13 +13,24 @@
     font-family: $font-family-base;
   }
 
+  // Add extra padding between checkbox and item
   .task-list-item-checkbox {
     margin-right: 0.5rem;
   }
 
+  // Style blockquotes
   blockquote {
     border-left: 0.25rem solid $gray-200;
     color: $gray-600;
     padding: 0 1rem;
   }
+
+  // Style images, by mimicking .img-fluid
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  // Style tables
+  // This is done by replacing '<table' with '<table class="table"' in {{ content }}
 }
