@@ -1,10 +1,15 @@
 // Content
 
 .content {
+  font-family: Lora, serif;
   
-  p,
-  ul,
-  table {
-    font-family: Lora, serif;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $font-family-base;
+  }
   }
 }
