@@ -15,4 +15,10 @@
   .task-list-item-checkbox {
     margin-right: 0.5rem;
   }
+
+  blockquote {
+    border-left: 0.25rem solid $gray-200;
+    color: $gray-600;
+    padding: 0 1rem;
+  }
 }
