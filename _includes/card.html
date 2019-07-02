@@ -1,0 +1,34 @@
+<div class="card">
+  <a href="{{ post.url | relative_url }}">
+    {% if post.background %}
+      <img class="card-img-top" src="{{ post.background | relative_url }}">
+    {% else %}
+      <div class="card-img-top bg-secondary"></div>
+    {% endif %}
+  </a>
+
+  <div class="card-body position-relative">
+    <h5 class="card-title">
+      <a class="stretched-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </h5>
+
+    <h6 class="card-subtitle">{{ post.date | date: "%B %d, %Y" }}</h6>
+
+    <div class="card-text">
+      {% if post.description %}
+        {{ post.description | truncatewords: 20 }}
+      {% else %}
+        {{ post.excerpt | truncatewords: 20 }}
+      {% endif %}
+    </div>
+  </div>
+
+  {% if post.categories %}
+    <div class="card-footer">
+      {% assign cat_permalink = site.jekyll-archives.permalinks.category | replace: '/:name', '' %} 
+      {% for category in post.categories %}
+        <a class="badge badge-pill" href="{{ category | downcase | slugize | prepend: cat_permalink | relative_url }}">{{ category }}</a>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
