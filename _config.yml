@@ -20,7 +20,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: "page" # TODO: update to post
+      layout: "post"
       permalink: "/news/:slug/"
   -
     scope:

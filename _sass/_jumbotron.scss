@@ -25,7 +25,6 @@
   }
 
   .lead {
-    color: $white;
     font-size: ($lead-font-size * 1.2);
 
     a,
@@ -33,5 +32,22 @@
     a:visited {
       color: $white;
     }
+  }
+
+  time {
+    font-size: 1.25rem;
+  }
+
+  .badge {
+    border: 2px solid $white;
+    font-weight: normal;
+    padding-right: $badge-pill-padding-x * 2;
+    padding-left: $badge-pill-padding-x * 2;
+    text-transform: uppercase;
+  }
+  
+  // Use light colored border when jumbotron has no background-image
+  &.bg-secondary .badge {
+    border: 2px solid lighten(theme-color("secondary"), 25);
   }
 }
