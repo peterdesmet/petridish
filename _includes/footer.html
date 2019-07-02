@@ -4,36 +4,36 @@
       <div class="col-lg mt-lg-4">
         <ul class="list-inline">
           {% if site.email %}
-          <li class="list-inline-item">
-            <a href="mailto:{{ site.email }}">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
+            <li class="list-inline-item">
+              <a href="mailto:{{ site.email }}">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
           {% endif %}
 
           {% if site.twitter_username %}
-          <li class="list-inline-item">
-            <a href="https://twitter.com/{{ site.twitter_username }}">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
+            <li class="list-inline-item">
+              <a href="https://twitter.com/{{ site.twitter_username }}">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
           {% endif %}
 
           {% if site.github_username %}
-          <li class="list-inline-item">
-            <a href="https://github.com/{{ site.github_username }}">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/{{ site.github_username }}">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
           {% endif %}
         </ul>
       </div>
@@ -45,14 +45,14 @@
         {{ col.description | markdownify }}
 
         {% if col.links %}
-        <ul class="fa-ul">
-        {% for item in col.links %}
-          <li>
-            <i class="fa-li fa fa-chevron-circle-right"></i>
-            <a href="{{ item.link | relative_url}}" {% if item.new_window %}target="_blank"{% endif %}>{{ item.name }}</a>
-          </li>
-        {% endfor %}
-        </ul>
+          <ul class="fa-ul">
+          {% for item in col.links %}
+            <li>
+              <i class="fa-li fa fa-chevron-circle-right"></i>
+              <a href="{{ item.link | relative_url}}" {% if item.new_window %}target="_blank"{% endif %}>{{ item.name }}</a>
+            </li>
+          {% endfor %}
+          </ul>
         {% endif %}
 
       </div>
