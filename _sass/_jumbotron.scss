@@ -8,6 +8,12 @@
   border-radius: 0; // Should always be square, independent from $enable-rounded
   color: $white;
   text-align: center;
+
+  a,
+  a:hover,
+  a:visited {
+    color: $white;
+  }
   
   h1 {
     $jumbotron-h1: 3.5rem;
@@ -26,12 +32,6 @@
 
   .lead {
     font-size: ($lead-font-size * 1.2);
-
-    a,
-    a:hover,
-    a:visited {
-      color: $white;
-    }
   }
 
   time {

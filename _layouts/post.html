@@ -2,33 +2,6 @@
 layout: default
 ---
 
-{% if page.background %}
-<header class="jumbotron" style="background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('{{ page.background | absolute_url }}')">
-{% else %}
-<header class="jumbotron bg-secondary">
-{% endif %}
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">     
-        <h1>{{ page.title }}</h1>
-        
-        {% if page.description %}
-        <div class="lead">{{ page.description | markdownify }}</div>
-        {% endif %}
-        
-        <time>{{ page.date | date: "%B %d, %Y" }}</time>
-
-        {% if page.categories %}
-        <div class="mt-2">
-          {% for cat in page.categories %}
-          <span class="badge badge-pill">{{ cat }}</span>
-          {% endfor %}
-        </div>
-        {% endif %}
-      </div>
-    </div>
-  </div>
-</header>
 
 <div class="container">
   <div class="row">
