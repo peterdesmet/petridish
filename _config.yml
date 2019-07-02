@@ -32,11 +32,18 @@ defaults:
 # THEME SETTINGS
 
 logo: assets/img/petri-dish_1f9eb.png
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: "/category/:name/" # Also used in _includes/jumbotron.html & _includes/card.html
 
 # BUILD SETTINGS
 
 markdown: kramdown
 plugins:
+  - jekyll-archives
   # - jekyll-feed
   # - jekyll-paginate
   # - jekyll-sitemap
