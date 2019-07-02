@@ -21,7 +21,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      permalink: "/news/:slug/"
+      permalink: "/blog/:slug/"
   -
     scope:
       path: ""

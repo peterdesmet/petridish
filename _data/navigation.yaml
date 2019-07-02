@@ -12,6 +12,9 @@
 - name: Output
   link: /output/
   new_window: false
+- name: News
+  link: /blog/
+  new_window: false
 - name: External link
   link: https://github.com/peterdesmet/petridish/blob/master/_data/navigation.yaml
   new_window: true
