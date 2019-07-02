@@ -9,8 +9,9 @@
     <main>
       {% include jumbotron.html %}
 
-      {{ content | replace: '<table', '<table class="table"' }}
-
+      <div class="container content">
+        {{ content | replace: '<table', '<table class="table"' }}
+      </div>
     </main>
 
     {% include footer.html %}
