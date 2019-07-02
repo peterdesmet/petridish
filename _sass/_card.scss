@@ -3,8 +3,6 @@
 .cards {
   // Mimics Bootstrap .card-deck, stretching cards to equal height, but without
   // stretching width when there are fewer cards on one row (cards remain equal width)
-  margin-top: $grid-gutter-width;
-
   div[class*="col"] {
     display: flex!important;
     align-items: stretch!important; 

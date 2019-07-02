@@ -6,7 +6,7 @@ description: template for homepage
 {{ content }}
 
 {% if site.posts_on_home > 0 %}
-<div class="row cards">
+<div class="row cards mt-4">
   {% for post in site.posts limit:site.posts_on_home %}
   <div class="col-xl-4 col-sm-6">
     {% include card.html %}
