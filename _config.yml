@@ -32,6 +32,7 @@ defaults:
 # THEME SETTINGS
 
 logo: assets/img/petri-dish_1f9eb.png
+posts_on_home: 3
 jekyll-archives:
   enabled:
     - categories
@@ -45,7 +46,6 @@ markdown: kramdown
 plugins:
   - jekyll-archives
   # - jekyll-feed
-  # - jekyll-paginate
   # - jekyll-sitemap
 exclude:
   - README.md
