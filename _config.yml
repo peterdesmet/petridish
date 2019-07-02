@@ -12,33 +12,30 @@ author: Peter Desmet
 twitter_username: peterdesmet
 github_username: peterdesmet
 
-# TEMPLATE SETTINGS
-
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "page"
-      permalink: "/blog/:slug/"
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"
-
 # THEME SETTINGS
 
-logo: assets/img/petri-dish_1f9eb.png
-posts_on_home: 3
+logo: assets/img/petri-dish_1f9eb.png # Optional site logo in navbar, will be displayed with 30px height
+posts_on_home: 3 # Number of posts to include on homepage. Set to 0 or remove if you don't want any.
 jekyll-archives:
   enabled:
     - categories
   layout: archive
   permalinks:
-    category: "/category/:name/" # Also used in _includes/jumbotron.html & _includes/card.html
+    category: "/category/:name/" # Permalink for categories, used in _includes/jumbotron.html & _includes/card.html
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page" # Use the "page" template by default for pages
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "page" # Use the "page" template by default for posts as well
+      permalink: "/blog/:slug/" # Permalink for your posts, can be changed
 
 # BUILD SETTINGS
 
