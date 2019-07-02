@@ -6,12 +6,22 @@
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 0; // Should always be square, independent from $enable-rounded
+  color: $white;
   text-align: center;
   
   h1 {
-    color: $white;
+    $jumbotron-h1: 3.5rem;
+    font-size: $jumbotron-h1;
     font-weight: 800;
-    font-size: $display3-size;
+
+    // Reduce font-size on smaller screens, except on homepage
+    @include media-breakpoint-down(md) {
+      font-size: $jumbotron-h1 - 1;
+
+      &.home {
+        font-size: $jumbotron-h1;
+      }
+    }
   }
 
   .lead {
