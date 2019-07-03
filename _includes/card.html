@@ -23,11 +23,10 @@
     </div>
   </div>
 
-  {% if post.categories and site.jekyll-archives.enabled == 'all' or site.jekyll-archives.enabled contains 'categories' %}
+  {% if post.categories %}
     <div class="card-footer">
-      {% assign category_permalink = site.jekyll-archives.permalinks.category | replace: '/:name', '' %} 
       {% for category in post.categories %}
-        <a class="badge badge-pill" href="{{ category | downcase | slugize | prepend: category_permalink | relative_url }}">{{ category }}</a>
+        <span class="badge badge-pill">{{ category }}</span>
       {% endfor %}
     </div>
   {% endif %}

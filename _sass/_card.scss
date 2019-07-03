@@ -32,14 +32,9 @@
 
     // Smaller badge then the one defined in _jumbotron.scss
     .badge {
-      border: 1px solid $link-color;
+      border: 1px solid $body-color;
       font-family: $font-family-base;
       text-transform: uppercase;
-
-      &:hover,
-      &:focus {
-        border: 1px solid $link-hover-color;
-      }
     }
   }
 }
