@@ -10,7 +10,17 @@
       {% include jumbotron.html %}
 
       <div class="container content">
-        {{ content | replace: '<table', '<table class="table"' }}
+        <div class="row">
+          {% if page.layout == 'archive' %}
+            <div class="col">
+          {% else %}
+            <div class="col-lg-8 col-md-10 mx-auto">
+          {% endif %}
+          
+          {{ content | replace: '<table', '<table class="table"' }}
+
+          </div>
+        </div>
       </div>
     </main>
 

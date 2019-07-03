@@ -1,15 +1,10 @@
 ---
 layout: default
-description: full width template, with posts as cards
+description: Full width template, with posts as cards
+remark: See also page.layout == 'archive' in default.html
 ---
 
-<div class="row">
-  <div class="col">
-    
-    {{ content }}
-    
-  </div>
-</div>
+{{ content }}
 
 <div class="row cards">
   {% if page.posts %}

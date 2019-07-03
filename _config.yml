@@ -21,21 +21,7 @@ jekyll-archives:
     - categories
   layout: archive
   permalinks:
-    category: "/category/:name/" # Permalink for categories, used in _includes/jumbotron.html & _includes/card.html
-defaults:
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page" # Use the "page" template by default for pages
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "page" # Use the "page" template by default for posts as well
-      permalink: "/blog/:slug/" # Permalink for your posts, can be changed
+    category: "/category/:name/"
 
 # BUILD SETTINGS
 
@@ -53,3 +39,21 @@ exclude:
   - package-lock.json
   - package.json
   - petridish.gemspec
+
+# FRONTMATTER DEFAULTS
+defaults:
+  # Use "default" template by default. This is implied for websites using a theme,
+  # but Petridish demo site does not use a theme, so needs to be set explicitely.
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  
+  # Define permalinks for all posts
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      permalink: "/blog/:slug/"
