@@ -10,9 +10,10 @@ author: Peter Desmet
 twitter_username: peterdesmet
 github_username: peterdesmet
 
-# THEME SETTINGS
-logo: assets/img/petri-dish_1f9eb.png # Optional logo in navbar, will be displayed with 30px height
-posts_on_home: 3 # Number of posts to include on homepage: set to 0 or remove if you don't want any
+# THEME SETTINGS (ALL OPTIONAL)
+
+logo: assets/img/petri-dish_1f9eb.png # Navbar logo, will be displayed with 30px height
+posts_on_home: 3 # Number of posts to include on homepage, can be 0
 jekyll-archives:
   enabled:
     - categories # Show post categories and category pages, requires the jekyll-archives plugin

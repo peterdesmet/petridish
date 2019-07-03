@@ -14,11 +14,11 @@
           
           <time>{{ page.date | date: "%B %d, %Y" }}</time>
 
-          {% if page.categories %}
-            {% assign cat_permalink = site.jekyll-archives.permalinks.category | replace: '/:name', '' %} 
+          {% if page.categories and site.jekyll-archives.enabled == 'all' or site.jekyll-archives.enabled contains 'categories' %}
+            {% assign category_permalink = site.jekyll-archives.permalinks.category | replace: '/:name', '' %} 
             <div class="mt-2">
               {% for category in page.categories %}
-              <a class="badge badge-pill" href="{{ category | downcase | slugize | prepend: cat_permalink | relative_url }}">{{ category }}</a>
+              <a class="badge badge-pill" href="{{ category | downcase | slugize | prepend: category_permalink | relative_url }}">{{ category }}</a>
               {% endfor %}
             </div>
           {% endif %}
