@@ -14,9 +14,12 @@ github_username: peterdesmet
 
 logo: assets/img/petri-dish_1f9eb.png # Navbar logo, will be displayed with 30px height
 posts_on_home: 3 # Number of posts to include on homepage, can be 0
-jekyll-archives:
+jekyll-archives: # Show post categories and category pages, requires the jekyll-archives plugin
   enabled:
-    - categories # Show post categories and category pages, requires the jekyll-archives plugin
+    - categories
+  layout: archive
+  permalinks:
+    category: "/category/:name/"
 
 # BUILD SETTINGS
 markdown: kramdown
