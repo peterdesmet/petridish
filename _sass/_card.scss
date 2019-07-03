@@ -27,6 +27,8 @@
   }
 
   .card-footer {
+    background: inherit;
+    border-top: none;
 
     // Smaller badge then the one defined in _jumbotron.scss
     .badge {
