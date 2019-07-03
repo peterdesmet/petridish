@@ -17,7 +17,7 @@ posts_on_home: 3 # Number of posts to include on homepage, can be 0
 
 # BUILD SETTINGS
 markdown: kramdown
-plugins:
+plugins: # If you build your site on gh-pages, only use these plugins: https://pages.github.com/versions/
   - jekyll-feed
   - jekyll-sitemap
 exclude:
