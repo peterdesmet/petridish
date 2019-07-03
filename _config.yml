@@ -1,5 +1,4 @@
 # SITE SETTINGS
-
 title: Petridish
 description: Jekyll theme for research project websites
 email: your.email@example.com
@@ -8,14 +7,12 @@ author: Peter Desmet
 # baseurl: "/petridish"
 
 # SOCIAL PROFILES
-
 twitter_username: peterdesmet
 github_username: peterdesmet
 
 # THEME SETTINGS
-
-logo: assets/img/petri-dish_1f9eb.png # Optional site logo in navbar, will be displayed with 30px height
-posts_on_home: 3 # Number of posts to include on homepage. Set to 0 or remove if you don't want any.
+logo: assets/img/petri-dish_1f9eb.png # Optional logo in navbar, will be displayed with 30px height
+posts_on_home: 3 # Number of posts to include on homepage: set to 0 or remove if you don't want any
 jekyll-archives:
   enabled:
     - categories
@@ -24,12 +21,11 @@ jekyll-archives:
     category: "/category/:name/"
 
 # BUILD SETTINGS
-
 markdown: kramdown
 plugins:
   - jekyll-archives
-  # - jekyll-feed
-  # - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-sitemap
 exclude:
   - README.md
   - Gemfile
