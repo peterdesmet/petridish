@@ -15,10 +15,7 @@ logo: assets/img/petri-dish_1f9eb.png # Optional logo in navbar, will be display
 posts_on_home: 3 # Number of posts to include on homepage: set to 0 or remove if you don't want any
 jekyll-archives:
   enabled:
-    - categories
-  layout: archive
-  permalinks:
-    category: "/category/:name/"
+    - categories # Show post categories and category pages, requires the jekyll-archives plugin
 
 # BUILD SETTINGS
 markdown: kramdown
