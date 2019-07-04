@@ -14,6 +14,8 @@ github_username: peterdesmet
 
 logo: assets/img/petri-dish_1f9eb.png # Navbar logo, will be displayed with 30px height
 posts_on_home: 3 # Number of posts to include on homepage, can be 0
+tweets_on_home: true
+tweet_link_color: "#007bff"
 
 # BUILD SETTINGS
 markdown: kramdown

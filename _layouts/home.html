@@ -5,11 +5,25 @@ remark: See also page.layout == 'home' in jumbotron.html and head.html
 ---
 
 <div class="row">
-  <div class="col-lg-8 col-md-10 mx-auto">
-    
-    {{ content }}
-    
-  </div>
+  {% if site.tweets_on_home and site.twitter_username %}
+    <div class="col">
+      
+      {{ content }}
+
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <a class="twitter-timeline" data-height="600" data-link-color="{{ site.tweet_link_color }}" href="https://twitter.com/{{ site.twitter_username }}?ref_src=twsrc%5Etfw">
+        Tweets by {{ site.twitter_username }}
+      </a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+  {% else %}
+    <div class="col-md-10 col-lg-8 mx-auto">
+
+      {{ content }}
+
+    </div>
+  {% endif %}
 </div>
 
 {% if site.posts_on_home > 0 %}
