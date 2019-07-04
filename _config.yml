@@ -15,7 +15,11 @@ github_username: peterdesmet
 logo: assets/img/petri-dish_1f9eb.png # Navbar logo, will be displayed with 30px height
 posts_on_home: 3 # Number of posts to include on homepage, can be 0
 tweets_on_home: true
-tweet_link_color: "#007bff"
+colors:
+  links: "#007bff"  # Color for links: use a readable color that contrasts well with dark text
+  banner: "#007bff" # Background color for the banner when no background image is used
+  footer: "#6c757d" # Background color for the footer
+rounded_corners: true # Corners on boxes and buttons, enabled by default, use false to disable
 
 # BUILD SETTINGS
 markdown: kramdown
