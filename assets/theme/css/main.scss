@@ -4,10 +4,43 @@
 # This frontmatter ensures Jekyll reads this file and converts it to main.css
 ---
 
+// Set customizable colors
+//
+// Set default colors
+$default_link_color: #007bff;
+$default_banner_color: #007bff;
+$default_footer_color: #6c757d;
+
+// Get custom colors defined in _config.yml
+// Custom colors are optional, meaning they can be undefined in _config.yml
+// Since an empty "$custom_links: ;" would result in a scss compilation error,
+// we combine them with a default color as a space-separated list
+$custom_link_color: $default_link_color {{ site.colors.links }};
+$custom_banner_color: $default_banner_color {{ site.colors.banner }};
+$custom_footer_color: $default_footer_color {{ site.colors.footer }};
+
+// We then select the last element of the list:
+// custom color if defined, default color if undefined
+$custom_link_color: nth($custom_link_color, -1);
+$custom_banner_color: nth($custom_banner_color, -1);
+$custom_footer_color: nth($custom_footer_color, -1);
+
+// Set to default color if custom color is an invalid color value
+@if type-of($custom_link_color) != color { $custom_link_color: $default_link_color; }
+@if type-of($custom_banner_color) != color { $custom_banner_color: $default_banner_color; }
+@if type-of($custom_footer_color) != color { $custom_footer_color: $default_footer_color; }
+
+// Set enable-rounded
+$enable-rounded: true;
+$custom_rounded: "{{ site.rounded_corners }}";
+@if $custom_rounded == "false" {
+  $enable-rounded: false;
+}
+
+
 // Variable overrides
 // 
 // Need to be loaded first, see https://getbootstrap.com/docs/4.3/getting-started/theming/#variable-defaults
-@import "_custom";              // User defined customization
 @import "_variables";           // Overrides for Bootstrap variables
 
 // Bootstrap
