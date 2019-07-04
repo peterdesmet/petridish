@@ -1,29 +1,12 @@
-<!DOCTYPE html>
-<html>
+---
+layout: base
+description: Default template for pages and posts, with contained width
+---
 
-  {% include head.html %}
+<div class="row">
+  <div class="col-lg-8 col-md-10 mx-auto">
 
-  <body>
-    {% include navbar.html %}
+    {{ content }}
 
-    <main>
-      {% include jumbotron.html %}
-
-      <div class="container content">
-        <div class="row">
-          {% if page.layout == 'archive' %}
-            <div class="col">
-          {% else %}
-            <div class="col-lg-8 col-md-10 mx-auto">
-          {% endif %}
-          
-          {{ content | replace: '<table', '<table class="table"' }}
-
-          </div>
-        </div>
-      </div>
-    </main>
-
-    {% include footer.html %}
-  </body>
-</html>
+  </div>
+</div>

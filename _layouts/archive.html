@@ -1,10 +1,15 @@
 ---
-layout: default
-description: Full width template, with posts as cards
-remark: See also page.layout == 'archive' in default.html
+layout: base
+description: Template for a list of posts, with full width
 ---
 
-{{ content }}
+<div class="row">
+  <div class="col">
+
+    {{ content }}
+  
+  </div>
+</div>
 
 <div class="row cards">
   {% for post in site.posts %}
