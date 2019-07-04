@@ -4,12 +4,6 @@
 # This frontmatter ensures Jekyll reads this file and converts it to main.css
 ---
 
-$custom_var: {{ site.custom_var }};
-
-h6 {
-  color: $custom_var;
-}
-
 // Variable overrides
 // 
 // Need to be loaded first, see https://getbootstrap.com/docs/4.3/getting-started/theming/#variable-defaults
