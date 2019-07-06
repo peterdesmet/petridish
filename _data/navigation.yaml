@@ -1,6 +1,6 @@
-# Links listed below will be included in your site navigation
+# Links listed below will be included in your site's navbar (navigation at the top)
 
-- name: Home # The site title already links to the homepage, but you can repeat it here
+- name: Home # Note that users can also reach the homepage by clicking the site's title on the left in the navbar
   link: /
   new_window: false
 - name: About
