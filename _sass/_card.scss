@@ -4,8 +4,8 @@
   // Mimics Bootstrap .card-deck, stretching cards to equal height, but without
   // stretching width when there are fewer cards on one row (cards remain equal width)
   div[class*="col"] {
-    display: flex!important;
-    align-items: stretch!important; 
+    display: flex;
+    align-items: stretch;
   }
 }
 
@@ -32,9 +32,14 @@
 
     // Smaller badge then the one defined in _jumbotron.scss
     .badge {
-      border: 1px solid $body-color;
+      border: 1px solid $link-color;
       font-family: $font-family-base;
       text-transform: uppercase;
+
+      &:hover,
+      &:focus {
+        border: 1px solid $link-hover-color;
+      }
     }
   }
 }

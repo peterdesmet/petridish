@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" data-categories="{{ post.categories | join: '|' }}">
   <a href="{{ post.url | relative_url }}">
     {% if post.background %}
       <img class="card-img-top" src="{{ post.background | relative_url }}">
@@ -23,10 +23,10 @@
     </div>
   </div>
 
-  {% if post.categories %}
+  {% if post.categories and site.archive_permalink %}
     <div class="card-footer">
       {% for category in post.categories %}
-        <span class="badge badge-pill">{{ category }}</span>
+        <a class="badge badge-pill" href="{{ site.archive_permalink | relative_url }}?category={{ category | url_encode }}">{{ category }}</a>
       {% endfor %}
     </div>
   {% endif %}
