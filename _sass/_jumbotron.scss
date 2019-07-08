@@ -44,6 +44,14 @@
     padding-left: $badge-pill-padding-x * 2;
     margin-top: 0.25rem;
     text-transform: uppercase;
+
+    .close {
+      color: $black;
+      font-size: inherit;
+      margin-left: 0.5rem;
+      margin-right: -0.25rem;
+      margin-top: 0rem;
+    }
   }
   
   // Use light colored badge border when jumbotron has no background-image
