@@ -41,6 +41,11 @@
     }
   }
 
+  // Style embedded content
+  iframe {
+    margin-bottom: $headings-margin-bottom;
+  }
+
   // Style tables
   // This is done by replacing '<table' with '<table class="table"' in {{ content }}
 }
