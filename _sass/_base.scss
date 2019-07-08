@@ -4,7 +4,6 @@
 
 body {
   word-wrap: break-word; // Allow long words (e.g. URLs) to wrap, so they don't break out of container
-  hyphens: auto;
   position: relative; // Required for scrollspy
 }
 
