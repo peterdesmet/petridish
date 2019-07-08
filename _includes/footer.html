@@ -71,3 +71,27 @@
 <script src="{{ '/assets/theme/js/jquery.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/theme/js/popper.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/theme/js/bootstrap.min.js' | relative_url }}"></script>
+
+{% if page.layout == 'archive' %}
+<script>
+  // Filter cards on ?category=value
+  $(document).ready(function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    if (urlParams.has("category") && urlParams.get("category") != "") {
+      // Get category param: will decode param value + return 1st value in case of multiple category params
+      const category = urlParams.get("category");
+      
+      $(".card").each(function() {
+        const cardCategories = $(this).data("categories").split("|");
+        // Hide card if it does not contain the selected category
+        if (!cardCategories.includes(category)) {
+          $(this).parent().addClass("d-none");
+        }
+      });
+
+      $(".jumbotron .categories").append("<span class=\"badge badge-pill\">" + category + "</span>");
+    }
+  });
+</script>
+{% endif %}
