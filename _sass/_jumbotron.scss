@@ -2,6 +2,7 @@
 
 .jumbotron {
   // background-image: set in page frontmatter
+  background-color: theme-color("secondary");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -67,7 +68,7 @@
   }
   
   // Use light colored badge border when jumbotron has no background-image
-  &.bg-secondary .badge {
+  &.bg-no-image .badge {
     border: 2px solid lighten(theme-color("secondary"), 25);
   }
 }
