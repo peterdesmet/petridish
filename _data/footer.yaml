@@ -3,8 +3,7 @@
 
 # Columns (the more you add, the more narrow they will be)
 columns:
-  - title: Project partners
-    description:
+  - description:
     links:
     - name: Name of project partner 1
       link: http://example.com
@@ -13,8 +12,7 @@ columns:
       link: http://example.com
       new_window: true
 
-  - title: 
-    description: > # E.g. funding acknowledgement. Can be Markdown
+  - description: > # E.g. funding acknowledgement. Can be Markdown
       This project is made with ❤ for open source. See [`_data/footer.yaml`](https://github.com/peterdesmet/petridish/blob/master/_data/footer.yaml) to customize this text.
     links: 
 

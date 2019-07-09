@@ -7,20 +7,14 @@ body > footer {
   font-size: 0.9rem;
   padding: $grid-gutter-width / 2 0;
 
+  .container {
+    margin-top: 1rem;
+  }
+
   a,
   a:hover,
   a:visited {
     color: $white;
-  }
-
-  h5 {
-    color: lighten(theme-color("footer"), 25);
-    font-size: 1.1rem;
-    text-transform: uppercase;
-
-    @include media-breakpoint-up(lg) {
-      min-height: 1.3rem; // Aim to align text if no h5 is present
-    }
   }
 
   // Font awesome icons

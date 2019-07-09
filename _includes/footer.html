@@ -1,7 +1,7 @@
 <footer>
   <div class="container">
     <div class="row">
-      <div class="col-lg mt-lg-4">
+      <div class="col-lg">
         <ul class="list-inline">
           {% if site.email %}
             <li class="list-inline-item">
@@ -40,8 +40,6 @@
 
       {% for col in site.data.footer.columns %}
       <div class="col-lg">
-        <h5>{{ col.title }}</h5>
-
         {{ col.description | markdownify }}
 
         {% if col.links %}
