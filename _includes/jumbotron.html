@@ -1,5 +1,5 @@
 {% if page.background %}
-  <header class="jumbotron" style="background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('{{ page.background | relative_url }}')">
+  <header class="jumbotron bg-image" style="background-image: url('{{ page.background | relative_url }}')">
 {% else %}
   <header class="jumbotron bg-secondary">
 {% endif %}

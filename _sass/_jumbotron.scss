@@ -8,7 +8,19 @@
   border-radius: 0; // Should always be square, independent from $enable-rounded
   color: $white;
   hyphens: auto; // Hyphenate long words
+  position: relative; // To contain overlay
   text-align: center;
+
+  // Overlay
+  &.bg-image:before {
+    background-color: rgba(theme-color("secondary"), 0.40);
+    content: "";
+    left: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
 
   a,
   a:hover,
@@ -41,9 +53,9 @@
 
   .badge {
     border: 2px solid $white;
-    padding-right: $badge-pill-padding-x * 2;
-    padding-left: $badge-pill-padding-x * 2;
     margin-top: 0.25rem;
+    padding-left: $badge-pill-padding-x * 2;
+    padding-right: $badge-pill-padding-x * 2;
     text-transform: uppercase;
 
     .close {
