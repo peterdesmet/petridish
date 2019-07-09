@@ -14,7 +14,7 @@
 
   // Overlay
   &.bg-image:before {
-    background-color: rgba(theme-color("secondary"), 0.40);
+    background-image: linear-gradient(rgba(theme-color("secondary"), 0.1), rgba(theme-color("secondary"), 1));
     content: "";
     left: 0;
     height: 100%;
