@@ -10,6 +10,15 @@
       height: 30px;
     }
   }
+
+  // Remove border on .dropdown-menu when .navbar is collapsed
+  @include media-breakpoint-down(md) {
+    .dropdown-menu {
+      border: none;
+      padding-top: 0;
+    }
+  }
+
   .navbar-toggler {
     font-size: 90%;
     padding: 10px;

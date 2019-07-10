@@ -12,6 +12,17 @@
     <div class="collapse navbar-collapse" id="navbar-menu">
       <ul class="navbar-nav ml-auto">
       {% for item in site.data.navigation %}
+        {% if item.menu %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+              {{ item.text }}
+            </a>
+            <div class="dropdown-menu">
+            {% for subitem in item.menu %}
+              <a class="dropdown-item" href="{{ subitem.href | relative_url }}">{{ subitem.text }}</a>
+            {% endfor %}
+            </div>
+        {% else %}
           <li class="navbar-item">
             <a class="nav-link{% if item.href == page.url %} active{% endif %}" href="{{ item.href | relative_url }}" {% if item.new_window %}target="_blank"{% endif %}>{{ item.text }}</a>
           </li>
