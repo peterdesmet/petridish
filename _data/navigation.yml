@@ -15,7 +15,7 @@
   - text: "---" # Divider to separate blocks of menu items (at least 3 "-")
   - text: "Dropdown header" # Title for block of menu items
   - text: External link
-    href: https://github.com/peterdesmet/petridish/blob/master/_data/navigation.yaml
+    href: https://github.com/peterdesmet/petridish/blob/master/_data/navigation.yml
     new_window: true
 - text: News
   href: /blog/
