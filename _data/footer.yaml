@@ -5,16 +5,16 @@
 columns:
   - description:
     links:
-    - name: Name of project partner 1
-      link: http://example.com
+    - text: Name of project partner 1
+      href: http://example.com
       new_window: true
-    - name: Name of project partner 2
-      link: http://example.com
+    - text: Name of project partner 2
+      href: http://example.com
       new_window: true
 
   - description: > # E.g. funding acknowledgement. Can be Markdown
       This project is made with ❤ for open source. See [`_data/footer.yaml`](https://github.com/peterdesmet/petridish/blob/master/_data/footer.yaml) to customize this text.
-    links: 
+    links:
 
 # Small font license notice to add to the bottom of the footer. Can be Markdown
 # Prefixed by "© {{ site.author }} — ". Leave empty for "all rights reserved".

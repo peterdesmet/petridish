@@ -12,13 +12,10 @@
     <div class="collapse navbar-collapse" id="navbar-menu">
       <ul class="navbar-nav ml-auto">
       {% for item in site.data.navigation %}
-        {% assign class = "nav-link" %}
-        {% if item.link == page.url %}
-          {% assign class = class | append: " active" %}
+          <li class="navbar-item">
+            <a class="nav-link{% if item.href == page.url %} active{% endif %}" href="{{ item.href | relative_url }}" {% if item.new_window %}target="_blank"{% endif %}>{{ item.text }}</a>
+          </li>
         {% endif %}
-        <li class="navbar-item">
-          <a class="{{ class }}" href="{{ item.link | relative_url}}" {% if item.new_window %}target="_blank"{% endif %}>{{ item.name }}</a>
-        </li>
       {% endfor %}
       </ul>
     </div>
