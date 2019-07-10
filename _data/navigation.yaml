@@ -7,10 +7,13 @@
 - text: Team
   href: /team/
 - text: Output
-  href: /output/
-  menu: # This will create a dropdown menu
-  - text: 404 page
-    href: /permalink-for-page-that-does-not-exist/
+  menu: # Dropdown menu (one level deep only)
+  - text: Page 1
+    href: /there-is-no-page-for-this-permalink/
+  - text: Page 2
+    href: /there-is-no-page-for-this-permalink-either/
+  - text: "---" # Divider to separate blocks of menu items (at least 3 "-")
+  - text: "Dropdown header" # Title for block of menu items
   - text: External link
     href: https://github.com/peterdesmet/petridish/blob/master/_data/navigation.yaml
     new_window: true
