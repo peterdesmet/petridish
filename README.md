@@ -41,7 +41,7 @@ Or install it yourself as:
 
 ## Usage
 
-The [Petridish demo website](https://peterdesmet.github.io/petridish) is a Jekyll website: browse the [Petridish repository](https://github.com/peterdesmet/petridish) to see how is configured.
+The [Petridish demo website](https://peterdesmet.github.io/petridish) is a Jekyll website: browse the [Petridish repository](https://github.com/peterdesmet/petridish) to see how it is configured.
 
 ### Pages (to be completed)
 
