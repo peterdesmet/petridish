@@ -20,4 +20,4 @@ columns:
 # Will be prefixed by "© {{ site.author }}" if defined in _config.yml
 license: >
   Content on this site is licensed under a [CC BY 4.0 License](http://creativecommons.org/licenses/by/4.0/).
-  \| Theme: [petridish](https://github.com/peterdesmet/petridish)
+  \| Theme: [Petridish](https://github.com/peterdesmet/petridish)
