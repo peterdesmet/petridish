@@ -115,6 +115,8 @@ url: <http://www.example.com>
 
 ![alt text](https://images.unsplash.com/photo-1486825586573-7131f7991bdd?auto=format&w=2000)
 
+See the [Jekyll documentation](https://jekyllrb.com/docs/posts/#including-images-and-resources) to include images and resources.
+
 ## Tables
 
 Header 1 | Header 2
