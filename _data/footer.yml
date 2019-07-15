@@ -1,7 +1,9 @@
-# The footer contains columns: the first one is reserved for social icons,
-# but you can customize the others, as well as a license statement at the bottom.
+# Text below will be included in your site's footer
+# Content is organized in columns, with the first column reserved for social icons (defined in 
+# _config.yml). You can also add a small font license statement at the bottom.
+# See https://peterdesmet.github.io/petridish/ for an example.
 
-# Columns (the more you add, the more narrow they will be)
+# Columns (the more you add, the narrower they will be)
 columns:
   - description:
     links:
@@ -17,7 +19,7 @@ columns:
     links:
 
 # Small font license notice to add to the bottom of the footer. Can be Markdown
-# Prefixed by "© {{ site.author }} — ". Leave empty for "all rights reserved".
+# Will be prefixed by "© {{ site.author }}".
 license: >
   Content on this site is licensed under a [CC BY 4.0 License](http://creativecommons.org/licenses/by/4.0/).
   \| Theme: [petridish](https://github.com/peterdesmet/petridish)
