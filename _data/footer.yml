@@ -1,7 +1,7 @@
 # Text below will be included in your site's footer
 # Content is organized in columns, with the first column reserved for social icons (defined in 
 # _config.yml). You can also add a small font license statement at the bottom.
-# See https://peterdesmet.github.io/petridish/ for an example.
+# See https://peterdesmet.github.io/petridish/ for an example
 
 # Columns (the more you add, the narrower they will be)
 columns:
