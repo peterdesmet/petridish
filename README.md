@@ -28,7 +28,7 @@ If you do not what to use `remote_theme`, see the [Jekyll documentation](https:/
 
 ## Usage
 
-The [Petridish demo website](https://peterdesmet.github.io/petridish) is a Jekyll website: browse the [Petridish repository](https://github.com/peterdesmet/petridish) to see how it is configured.
+The easiest way to figure out the usage might be to peek at the [Petridish repository](https://github.com/peterdesmet/petridish) to see how things are configured for the [Petridish demo website](https://peterdesmet.github.io/petridish).
 
 ### Pages (to be completed)
 
@@ -59,7 +59,7 @@ The [Petridish demo website](https://peterdesmet.github.io/petridish) is a Jekyl
 
 ### Navigation
 
-Create a [`_data/navigation.yml`](_data/navigation.yml) file to list pages in the top navigation.
+Create a [`_data/navigation.yml`](_data/navigation.yml) file to list pages in the [top navigation](https://peterdesmet.github.io/petridish/).
 
 ### Logo & colours
 
@@ -84,7 +84,7 @@ twitter_username: your_twitter_username
 github_username: your_github_username
 ```
 
-Create a [`_data/footer.yml`](_data/footer.yml) file to add text, links and/or a disclaimer to the footer.
+Create a [`_data/footer.yml`](_data/footer.yml) file to add text, links and/or a disclaimer to the [footer](https://peterdesmet.github.io/petridish/).
 
 ## Contributing
 
