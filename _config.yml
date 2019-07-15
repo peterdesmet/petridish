@@ -43,7 +43,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      permalink: "/blog/:slug/"         # Define permalinks for all posts
+      permalink: "/blog/:slug/"         # Use /blog/{filename}/ as permalink for all posts
   -
     scope:
       path: ""
