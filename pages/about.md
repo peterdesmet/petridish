@@ -17,6 +17,9 @@ See [`pages/about.md`](https://raw.githubusercontent.com/peterdesmet/petridish/m
 ###### Heading h6
 ###### Heading with custom id {#custom_id}
 
+{: .alert .alert-info }
+It's best to start page/post headings at h2, since the page/post title will already be an h1.
+
 ## Paragraphs
 
 Set i won't void spirit all. Had after called us It wherein Tree in deep abundantly also midst Seed. Beast. Divide sixth fruitful yielding gathered gathering dominion bring beast lights life hath let rule air appear.
