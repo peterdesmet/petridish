@@ -119,7 +119,7 @@ We are happy to announce ...
 
 ```
 
-Post can be shown on an [archive page](#archive-page) and on the [home page](#home-page).
+Posts can be shown on an [archive page](#archive-page) and on the [home page](#home-page).
 
 Posts will use `layout: default` by default.
 
