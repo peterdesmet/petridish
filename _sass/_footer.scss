@@ -29,6 +29,10 @@ body > footer {
   .small.mt-2 {
     p {
       display: inline;
+
+      & + p:before {
+        content: " — ";
+      }
     }
   } 
 }

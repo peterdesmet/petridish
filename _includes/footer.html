@@ -59,10 +59,10 @@
 
     <div class="small mt-2">
       {% if site.author %}
-        © {{ site.author }}
-        {% if site.data.footer.license %}
-        — {{ site.data.footer.license | markdownify }}
-        {% endif %}
+        <p>© {{ site.author }}</p>
+      {% endif %}
+      {% if site.data.footer.license %}
+        {{ site.data.footer.license | markdownify }}
       {% endif %}
     </div>
   </div>
