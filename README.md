@@ -10,34 +10,21 @@ Petridish is a Jekyll theme for research project websites. Or your personal blog
 
 ## Installation
 
-1. Create a [GitHub Pages](https://pages.github.com/) enabled repository (with or without a theme)
-2. Add this line to your site's `_config.yml`:
+**Easiest setup**
+
+1. Follow the [GitHub Pages instructions](https://pages.github.com/) to create a website on GitHub (select `Project site` and `Choose a theme`)
+2. Go to `_config.yml` in your repository and replace `theme: ...` with:
 
     ```yml
     remote_theme: peterdesmet/petridish
     ```
 
-<!--
-Add this line to your Jekyll site's `Gemfile`:
+3. Check your website at `http://username.github.io/repository` (it can take a minute for it to rebuild)
+4. See the usage instructions below to customize your website
 
-```ruby
-gem "petridish"
-```
+**Advanced setup**
 
-And add this line to your Jekyll site's `_config.yml`:
-
-```yaml
-theme: petridish
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install petridish
--->
+If you do not what to use `remote_theme`, see the [Jekyll documentation](https://jekyllrb.com/docs/themes/#understanding-gem-based-themes) on how to install (gem-based) themes.
 
 ## Usage
 
