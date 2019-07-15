@@ -10,7 +10,7 @@ Petridish is a Jekyll theme for research project websites. Or your personal blog
 
 ## Installation
 
-**Easiest setup**
+**Easy setup**
 
 1. Follow the [GitHub Pages instructions](https://pages.github.com/) to create a website on GitHub (select `Project site` and `Choose a theme`)
 2. Go to `_config.yml` in your repository and replace `theme: ...` with:
@@ -19,43 +19,125 @@ Petridish is a Jekyll theme for research project websites. Or your personal blog
     remote_theme: peterdesmet/petridish
     ```
 
-3. Check your website at `http://username.github.io/repository` (it can take a minute for it to rebuild)
-4. See the usage instructions below to customize your website
+3. Check your website at `http://username.github.io/repository` (give it a minute to rebuild)
 
 **Advanced setup**
 
-If you do not what to use `remote_theme`, see the [Jekyll documentation](https://jekyllrb.com/docs/themes/#understanding-gem-based-themes) on how to install (gem-based) themes.
+If you do not what to use `remote_theme`, see the [Jekyll documentation](https://jekyllrb.com/docs/themes/#understanding-gem-based-themes) to install (gem-based) themes.
 
 ## Usage
 
-The easiest way to figure out the usage might be to peek at the [Petridish repository](https://github.com/peterdesmet/petridish) to see how things are configured for the [Petridish demo website](https://peterdesmet.github.io/petridish).
+For examples, browse the [Petridish repository](https://github.com/peterdesmet/petridish) to see how things are configured for the [Petridish demo website](https://peterdesmet.github.io/petridish).
 
-### Pages (to be completed)
+### Configuration
 
-- Create pages
-- YAML frontmatter: `title`, `description`, `permalink`
-- Background image
+Your site's configuration is controlled by [`_config.yml`](_config.yml). Set at least a title and maybe some social profiles.
 
-### Home page (to be completed)
+### Pages
 
-- `layout: home`
-- `tweets_on_home: true`
-- `posts_on_home: 3`
+Create [pages](https://jekyllrb.com/docs/pages/) as Markdown files in your repository (e.g. [`about.md`](pages/about.md)).
 
-### Team page (to be completed)
+Pages can have the following [front matter](https://jekyllrb.com/docs/front-matter/) (only `title` is required):
 
-- `layout: team`
-- `_data/team.yml`
+```yml
+---
+title: Title for the page
+description: Description that will appear below the title in the banner
+background: /assets/img/banner_background_image.jpg
+permalink: /about/
+---
 
-### Archive page (to be completed)
+Our project ...
 
-- `layout: archive`
-- `archive_permalink: /blog/` for working categories
+```
 
-### Blog posts (to be completed)
+`background` can be a [local](pages/home.md) or [remote](pages/about.md) image. It will be cropped vertically. For faster page loads, reduce image sizes to less than 1MB (e.g. by reducing resolution to 72dpi and/or width to 2000px).
 
-- Default Jekyll
-- YAML frontmatter: `author`, `categories`
+Pages will use `layout: default` by default.
+
+For easier maintenance, organize your pages in a [`pages/`](pages/) directory and set their [permalink](https://jekyllrb.com/docs/permalinks/#front-matter).
+
+### Home page
+
+To enable options for your [homepage](pages/home.md), add the following front matter:
+
+```yml
+layout: home
+```
+
+In `_config.yml` you can now define:
+
+```yml
+posts_on_home: 3                        # Show x number of latest posts on homepage, can be 0
+tweets_on_home: true                    # Show Twitter feed of twitter_username on homepage
+```
+
+For easier maintenance, move/rename your `index.md` to [`pages/home.md`](pages/home.md) and set its `permalink` to `/`.
+
+### Team page
+
+To enable your [team page](pages/team.md), add the following front matter:
+
+```yml
+layout: team
+```
+
+Then create a [`_data/team.yml`](_data/team.yml) file to list [team members](https://peterdesmet.github.io/petridish/team/).
+
+### Archive page
+
+To enable your [news / blog / archive page](pages/archive.md) (i.e. the page listing all posts), add the following front matter:
+
+```yml
+layout: archive
+```
+
+And enable post categories by repeating the permalink for your archive page in  `_config.yml`:
+
+```yml
+archive_permalink: /blog/               # Permalink of page using archive.html layout, required when using post categories
+```
+
+To see blog posts, you'll have to create some. ☺️
+
+### Blog posts
+
+Create [posts](https://jekyllrb.com/docs/posts/) as `yyyy-mm-dd-title.md` Markdown files in the [`_posts/`](_posts/) directory.
+
+Posts can have the following [front matter](https://jekyllrb.com/docs/front-matter/) (only `title` is required):
+
+```yml
+---
+title: Title for the post
+description: Description that will appear below the title in the banner
+background: /assets/img/banner_background_image.jpg
+author: [Author 1, Author 2]
+categories: [Category 1, Category 2]
+---
+
+We are happy to announce ...
+
+```
+
+Post can be shown on an [archive page](l#archive-page) and on the [home page](#home-page).
+
+Posts will use `layout: default` by default.
+
+To change the permalink of all posts from the default `yyyy/mm/dd/title.html` to e.g. `blog/{filename}/` without having to add a `permalink` to each post, set a [front matter default](https://jekyllrb.com/docs/step-by-step/09-collections/#front-matter-defaults) in `_config.yml`:
+
+```yml
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      permalink: "/blog/:slug/"         # Use /blog/{filename}/ as permalink for all posts
+```
+
+### Markdown options
+
+See https://peterdesmet.github.io/petridish/about for an overview of the Markdown syntax you can use in pages and posts.
 
 ### Navigation
 
@@ -73,7 +155,7 @@ colors:
 rounded_corners: true                   # Enable (default) rounded corners on boxes and buttons
 ```
 
-Add a logo by uploading it to `/assets` and referencing it in `_config.yml`:
+Add a logo by uploading it to `assets/` and referencing it in `_config.yml`:
 
 ```yml
 logo: /assets/img/petri-dish_1f9eb.png  # Logo in navbar, will be displayed with 30px height
