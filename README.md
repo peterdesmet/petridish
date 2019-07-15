@@ -61,17 +61,22 @@ The easiest way to figure out the usage might be to peek at the [Petridish repos
 
 Create a [`_data/navigation.yml`](_data/navigation.yml) file to list pages in the [top navigation](https://peterdesmet.github.io/petridish/).
 
-### Logo & colours
+### Colors & logo
 
-Customize your website with a logo and different colours, by defining these in `_config.yml`:
+Customize colors and corners in `_config.yml`:
 
 ```yml
-logo: /assets/img/petri-dish_1f9eb.png  # Logo in navbar, will be displayed with 30px height
 colors:
   links: "#007bff"                      # Color for links: use a readable color that contrasts well with dark text
   banner: "#007bff"                     # Background color for page banners: use color that contrasts well with white
   footer: "#6c757d"                     # Background color for footer: use color that contrasts well with white
 rounded_corners: true                   # Enable (default) rounded corners on boxes and buttons
+```
+
+Add a logo by uploading it to `/assets` and referencing it in `_config.yml`:
+
+```yml
+logo: /assets/img/petri-dish_1f9eb.png  # Logo in navbar, will be displayed with 30px height
 ```
 
 ### Footer
