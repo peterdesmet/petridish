@@ -11,7 +11,7 @@
   - text: Page 1
     href: /there-is-no-page-for-this-permalink/
   - text: Page 2
-    href: /there-is-no-page-for-this-permalink-either/
+    href: /about/
   - text: "---" # Divider to separate blocks of menu items (at least 3 "-")
   - text: "Dropdown header" # Title for block of menu items
   - text: External link

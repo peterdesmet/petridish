@@ -21,7 +21,7 @@
               <div class="dropdown-menu">
               {% for subitem in item.menu %}
                 {% if subitem.href %}
-                  <a class="dropdown-item" href="{{ subitem.href | relative_url }}" {% if subitem.new_window %}target="_blank"{% endif %}>{{ subitem.text }}</a>
+                  <a class="dropdown-item{% if subitem.href == page.url %} active{% endif %}" href="{{ subitem.href | relative_url }}" {% if subitem.new_window %}target="_blank"{% endif %}>{{ subitem.text }}</a>
                 {% elsif subitem.text contains '---' %}
                   <div class="dropdown-divider"></div>
                 {% else %}
