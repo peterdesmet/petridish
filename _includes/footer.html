@@ -79,13 +79,13 @@
     const urlParams = new URLSearchParams(window.location.search);
     
     if (urlParams.has("category") && urlParams.get("category") != "") {
-      // Get category param: will decode param value + return 1st value in case of multiple category params
-      const category = urlParams.get("category");
+      const category = urlParams.get("category"); // Will return 1st category value + decode URI
+      const cleanCategory = $.trim(category.toLowerCase()); // Create category as written in .card data-categories
       
       $(".card").each(function() {
         const cardCategories = $(this).data("categories").split("|");
         // Hide card if it does not contain the selected category
-        if (!cardCategories.includes(category)) {
+        if (!cardCategories.includes(cleanCategory)) {
           $(this).parent().addClass("d-none");
         }
       });

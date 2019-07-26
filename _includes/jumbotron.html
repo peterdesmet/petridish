@@ -20,7 +20,7 @@
           {% endif %}
 
           <div class="categories">
-            {% if page.categories and site. archive_permalink %}
+            {% if page.categories and site.archive_permalink %}
               {% for category in page.categories %}
               <a class="badge badge-pill" href="{{ site.archive_permalink | relative_url }}?category={{ category | url_encode }}">{{ category }}</a>
               {% endfor %}
