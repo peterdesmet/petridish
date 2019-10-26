@@ -71,6 +71,15 @@
 <script src="{{ '/assets/theme/js/jquery.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/theme/js/popper.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/theme/js/bootstrap.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/theme/js/anchor.min.js' | relative_url }}"></script>
+
+<script>
+  (function () {
+    var headings = 'h2, h3, h4, h5:not(.card-title):not(.team-member-title), h6';
+    anchors.options = { placement: 'left' };
+    anchors.add(headings);
+  })();
+</script>
 
 {% if page.layout == 'archive' %}
 <script>
