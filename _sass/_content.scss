@@ -29,12 +29,35 @@
     padding: 0 1rem;
   }
 
-  // Style images
-  img {
-    max-width: 100%; // Mimick .img-fluid
-    height: auto;
+  // Style images (excluding inline images not wrapped in p)
+  p {
+    img {
+      display: block;
+      height: auto;
+      margin-left: auto; // Mimick .mx-auto
+      margin-right: auto; // Mimick .mx-auto
+      max-width: 100%; // Mimick .img-fluid
 
-    // Add margin between floated img and text
+      // Add margin between floated img and text
+      &.float-left {
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+      &.float-right {
+        margin-left: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    // Style captions
+    img + em {
+      display: block;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    // Add margin between floated paragraphs (often containing img) and text
     &.float-left {
       margin-right: 0.5rem;
       margin-bottom: 0.5rem;
