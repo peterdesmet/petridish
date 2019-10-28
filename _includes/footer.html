@@ -74,9 +74,10 @@
 <script src="{{ '/assets/theme/js/anchor.min.js' | relative_url }}"></script>
 
 <script>
+  // Show or add anchors when hovering over headings, using anchor.js
   (function () {
-    var headings = 'h2, h3, h4, h5:not(.card-title):not(.team-member-title), h6';
-    anchors.options = { placement: 'left' };
+    const headings = ".content h2[id], .content h3[id], .content h4[id], .content h5[id], .content .team-member h5, .content h6[id]";
+    anchors.options = { placement: "right" };
     anchors.add(headings);
   })();
 </script>
