@@ -9,7 +9,7 @@ description: Template for team page
   <div class="media team-member">
     <img class="mr-3" src="{{ member.image | relative_url }}">
     <div class="media-body">
-      <h5>
+      <h5 id="{{ member.name | strip | url_encode }}">
         {{ member.name }}
         {% if member.role %}
         <small class="text-muted">| {{ member.role }}</small>
@@ -36,7 +36,7 @@ description: Template for team page
           <a href="https://twitter.com/{{ member.twitter }}"><i class="fa fa-twitter"></i></a>
         </li>
         {% endif %}
-        
+
         {% if member.github %}
         <li class="list-inline-item">
           <a href="https://github.com/{{ member.github }}"><i class="fa fa-github"></i></a>

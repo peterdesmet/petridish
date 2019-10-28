@@ -71,6 +71,16 @@
 <script src="{{ '/assets/theme/js/jquery.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/theme/js/popper.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/theme/js/bootstrap.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/theme/js/anchor.min.js' | relative_url }}"></script>
+
+<script>
+  // Show anchors when hovering over headings, using anchor.js
+  (function () {
+    const headings = ".content h2[id], .content h3[id], .content h4[id], .content h5[id], .content h6[id]";
+    anchors.options = { placement: "right" };
+    anchors.add(headings);
+  })();
+</script>
 
 {% if page.layout == 'archive' %}
 <script>
