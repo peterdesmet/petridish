@@ -114,11 +114,7 @@ console.log(greet("world"));
 
 url: <http://www.example.com>
 
-## Images
-
-![alt text](https://images.unsplash.com/photo-1486825586573-7131f7991bdd?auto=format&w=2000)
-
-See the [Jekyll documentation](https://jekyllrb.com/docs/posts/#including-images-and-resources) to include images and resources.
+See the [Jekyll documentation](https://jekyllrb.com/docs/liquid/tags/#linking-to-posts) to create internal links. Syntax is e.g. `[link](/about/)` or `[link](post_url 2010-07-21-name-of-post)`.
 
 ## Tables
 
@@ -140,6 +136,13 @@ Here's a sentence with a footnote. [^1]
 
 [^1]: This is the footnote.
 
+## Images
+
+![alt text](https://images.unsplash.com/photo-1486825586573-7131f7991bdd?w=1000&h=200&fit=crop)
+_You can add an image caption by including an `_emphasized sentence_` directly below the image without inserting a new line. This will wrap both image and caption in a paragraph._
+
+See the [Jekyll documentation](https://jekyllrb.com/docs/posts/#including-images-and-resources) to include images and resources. Syntax is e.g. `![alt text](/assets/img/my_image.png)`.
+
 ## Styling content
 
 With the Kramdown Markdown parser that Jekyll uses, you can add css classes to your content (see this [blog post](https://digitaldrummerj.me/styling-jekyll-markdown/)). By sticking to [Bootstrap](https://getbootstrap.com/docs/4.3/) classes, you can easily style your content. If that doesn't fit your needs, you can always write html in your Markdown.
@@ -155,9 +158,17 @@ Alert info message. This paragraph is styled by prepending it with `{: .alert .a
 
 [Bootstrap documentation](https://getbootstrap.com/docs/4.3/content/images/#aligning-images)
 
-The image below is styled with `{: .rounded .float-left}`. That gives it round corners and moves it to the left, with the text wrapping around it. You can use `{: .clearfix}` on a paragraph to stop wrapping.
+By default, images will be centered horizontally and use the full width if they can.
 
-![alt text](https://images.unsplash.com/photo-1486825586573-7131f7991bdd?w=200&h=200&fit=crop){: .rounded .float-left}
+The image below is wrapped in a paragraph with `{: .col-md-8 .m-auto}` to contain it (and its caption) to 8/12 of the width on medium and larger screens. On small screens the full width will be used. Controlling the width of an image is especially useful for portrait images.
+
+{: .col-md-8 .m-auto}
+![alt text](https://images.unsplash.com/photo-1486825586573-7131f7991bdd?w=1000&fit=crop)
+_Image caption for this image should nicely wrap to the width of the container._
+
+The image below is styled with `{: .rounded .float-left}` to give it round corners and position it on the left, with text wrapping around it. You can use `{: .clearfix}` on a paragraph to stop wrapping.
+
+![alt text](https://images.unsplash.com/photo-1486825586573-7131f7991bdd?w=150&h=150&fit=crop){: .rounded .float-left}
 
 Tree man. Gathering unto give gathered. Midst they're. After image appear. Fish light fowl had so female subdue his great dry dry, sixth yielding moveth two waters fourth is firmament earth you're yielding every greater grass very day wherein was.
 
