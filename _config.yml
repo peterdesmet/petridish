@@ -43,7 +43,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      permalink: "/blog/:slug/"         # Use /blog/{filename}/ as permalink for all posts
+      permalink: "/blog/:year/:slug/"   # Use /blog/yyyy/{filename}/ as permalink for all posts
   -
     scope:
       path: ""
