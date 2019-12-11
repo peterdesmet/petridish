@@ -114,7 +114,7 @@ console.log(greet("world"));
 
 url: <http://www.example.com>
 
-See the [Jekyll documentation](https://jekyllrb.com/docs/liquid/tags/#linking-to-posts) to create internal links. Syntax is e.g. `[link](/about/)` or `[link](post_url 2010-07-21-name-of-post)`.
+See the [Jekyll documentation](https://jekyllrb.com/docs/liquid/tags/#linking-to-posts) to create internal links. Syntax is e.g. `[link](/about/)` or `[link]({% post_url 2010-07-21-name-of-post %})`.
 
 ## Tables
 
