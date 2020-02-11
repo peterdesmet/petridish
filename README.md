@@ -16,7 +16,7 @@ Petridish is a Jekyll theme for research project websites. Or your personal blog
 2. Go to `_config.yml` in your repository and replace `theme: ...` with:
 
     ```yml
-    remote_theme: peterdesmet/petridish@1.0
+    remote_theme: peterdesmet/petridish@1.1
     ```
 
 3. Check your website at `http://username.github.io/repository` (give it a minute to rebuild)
