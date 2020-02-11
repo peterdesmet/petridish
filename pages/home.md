@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Open science lab for biodiversity
+title: Our research project
 description: Towards developing a theme for research project websites
 background: /assets/img/chuttersnap-146799-unsplash.jpg
 permalink: /
