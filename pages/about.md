@@ -118,14 +118,14 @@ See the [Jekyll documentation](https://jekyllrb.com/docs/liquid/tags/#link) to c
 
 The safest (and verbose) way for internal links is:
 
-- For pages: `[link text]({{ site.baseurl }}{% link pages/about.md %})`
-- For posts: `[link text]({{ site.baseurl }}{% link _posts/2010-07-21-name-of-post.md %})` or the shorter `[link text]({{ site.baseurl }}{% post_url 2010-07-21-name-of-post %})`
-- For images and documents: `[link text]({{ site.baseurl }}{% link /assets/images/name-of-image.jpg %})`
+- For pages: {% raw %}`[link text]({{ site.baseurl }}{% link pages/about.md %})`{% endraw %}
+- For posts: {% raw %}`[link text]({{ site.baseurl }}{% link _posts/2010-07-21-name-of-post.md %})`{% endraw %} or the shorter {% raw %}`[link text]({{ site.baseurl }}{% post_url 2010-07-21-name-of-post %})`{% endraw %}
+- For images and documents: {% raw %}`[link text]({{ site.baseurl }}{% link /assets/images/name-of-image.jpg %})`{% endraw %}
 
-If you have no (or an empty) `baseurl` in `_config.yml`, you don't plan to change permalinks (it's better not to anyway) and you don't want to be warned when a link is broken, you can get away using the (perma)links the pages, images and documents will have on your website:
+If you don't have a `baseurl` in `_config.yml`, don't plan to change permalinks (it's better not to anyway) and don't want page build failures when a link is broken, you can get away using the (perma)links the pages, images and documents will have on your website:
 
 - For pages: `[link text](/about/)`
-- For posts: `[link text]({% post_url 2010-07-21-name-of-post %})`
+- For posts: {% raw %}`[link text]({% post_url 2010-07-21-name-of-post %})`{% endraw %}
 - For images and documents: `[link text](/assets/images/name-of-image.jpg)`
 
 ## Tables
