@@ -114,7 +114,19 @@ console.log(greet("world"));
 
 url: <http://www.example.com>
 
-See the [Jekyll documentation](https://jekyllrb.com/docs/liquid/tags/#linking-to-posts) to create internal links. Syntax is e.g. `[link](/about/)` or `[link]({{"{% post_url 2010-07-21-name-of-post"}}%})`.
+See the [Jekyll documentation](https://jekyllrb.com/docs/liquid/tags/#link) to create internal links. All internal links start from the `url` in `_config.yml`.
+
+The safest (and verbose) way for internal links is:
+
+- For pages: `[link text]({{ site.baseurl }}{% link pages/about.md %})`
+- For posts: `[link text]({{ site.baseurl }}{% link _posts/2010-07-21-name-of-post.md %})` or the shorter `[link text]({{ site.baseurl }}{% post_url 2010-07-21-name-of-post %})`
+- For images and documents: `[link text]({{ site.baseurl }}{% link /assets/images/name-of-image.jpg %})`
+
+If you have no (or an empty) `baseurl` in `_config.yml`, you don't plan to change permalinks (it's better not to anyway) and you don't want to be warned when a link is broken, you can get away using the (perma)links the pages, images and documents will have on your website:
+
+- For pages: `[link text](/about/)`
+- For posts: `[link text]({% post_url 2010-07-21-name-of-post %})`
+- For images and documents: `[link text](/assets/images/name-of-image.jpg)`
 
 ## Tables
 
@@ -141,7 +153,7 @@ Here's a sentence with a footnote. [^1]
 ![alt text](https://images.unsplash.com/photo-1486825586573-7131f7991bdd?w=1000&h=200&fit=crop)
 _You can add an image caption by including an `_emphasized sentence_` directly below the image without inserting a new line. This will wrap both image and caption in a paragraph._
 
-See the [Jekyll documentation](https://jekyllrb.com/docs/posts/#including-images-and-resources) to include images and resources. Syntax is e.g. `![alt text](/assets/img/my_image.png)`.
+See the [the links section](#links) to learn how to reference your own images and documents.
 
 ## Styling content
 
