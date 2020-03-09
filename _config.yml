@@ -4,7 +4,7 @@ description: Jekyll theme for research project websites # Site description in <h
 author: Peter Desmet                    # Used for copyright statement in footer
 # url: "https://peterdesmet.github.io"  # No slash at the end
 # baseurl: "/petridish"                 # Only required if your site is on a subdomain e.g. https://username.github.io/sitename
-                                        # which has "url: https://username.github.io" (no slash) and "baseurl: /sitename" (leading slash)
+                                        # which has url: "https://username.github.io" (no slash) and baseurl: "/sitename" (leading slash)
                                         # A baseurl affects internal links, see http://peterdesmet.github.io/petridish/about/#links
 
 # SOCIAL PROFILES
