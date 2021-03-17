@@ -10,6 +10,9 @@ See [`pages/about.md`](https://raw.githubusercontent.com/peterdesmet/petridish/m
 ## Headings
 
 # Heading h1
+
+h1 headings are reserved for page titles and are hidden from content. Start your headings at h2.
+
 ## Heading h2
 ### Heading h3
 #### Heading h4
