@@ -43,7 +43,7 @@ Pages can have the following [front matter](https://jekyllrb.com/docs/front-matt
 ---
 title: Title for the page
 description: Description that will appear below the title in the banner
-background: /assets/img/banner_background_image.jpg
+background: /assets/images/banner_background_image.jpg
 permalink: /about/
 ---
 
@@ -110,7 +110,7 @@ Posts can have the following [front matter](https://jekyllrb.com/docs/front-matt
 ---
 title: Title for the post
 description: Description that will appear below the title in the banner
-background: /assets/img/banner_background_image.jpg
+background: /assets/images/banner_background_image.jpg
 author: [Author 1, Author 2]
 categories: [Category 1, Category 2]
 ---
@@ -158,7 +158,7 @@ rounded_corners: true                   # Enable (default) rounded corners on bo
 Add a logo by uploading it to `assets/` and referencing it in `_config.yml`:
 
 ```yml
-logo: /assets/img/petri-dish_1f9eb.png  # Logo in navbar, will be displayed with 30px height
+logo: /assets/images/logo.png  # Logo in navbar, will be displayed with 30px height
 ```
 
 ### Footer
