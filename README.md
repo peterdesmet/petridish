@@ -113,6 +113,7 @@ description: Description that will appear below the title in the banner
 background: /assets/images/banner_background_image.jpg
 author: [Author 1, Author 2]
 categories: [Category 1, Category 2]
+comments: true
 ---
 
 We are happy to announce ...
@@ -122,6 +123,8 @@ We are happy to announce ...
 Posts can be shown on an [archive page](#archive-page) and on the [home page](#home-page).
 
 Posts will use `layout: default` by default.
+
+To enable post comments, add your site to [Disqus](https://disqus.com/) and add `comments: true` to each post where you want comments. Comments are disabled by default.
 
 To change the permalink of all posts from the default `yyyy/mm/dd/title.html` to e.g. `blog/{filename}/` without having to add a `permalink` to each post, set a [front matter default](https://jekyllrb.com/docs/step-by-step/09-collections/#front-matter-defaults) in `_config.yml`:
 
