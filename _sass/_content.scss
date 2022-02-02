@@ -23,6 +23,11 @@
   // Add some space before h2, which are the main headings in content
   h2 {
     margin-top: 2rem;
+
+    // Don't add space if h2 is first element in content
+    &:first-child {
+      margin-top: 0;
+    }
   }
 
   .anchorjs-link:hover {
