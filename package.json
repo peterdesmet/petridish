@@ -26,10 +26,10 @@
     "copy:all": "mkdir -p _sass/bootstrap && mkdir -p assets/theme/css && mkdir -p assets/theme/fonts && mkdir -p assets/theme/js && npm run copy:bootstrap-scss && npm run copy:font-awesome && npm run copy:jquery && npm run copy:anchor-js && npm run copy:popper && npm run copy:bootstrap"
   },
   "dependencies": {
-    "bootstrap": "^4.3.1",
+    "bootstrap": "^5.1.3",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.5.0",
+    "jquery": "^3.6.0",
     "popper.js": "^1.14.7",
-    "anchor-js": "^4.2.0"
+    "anchor-js": "^4.3.1"
   }
 }
