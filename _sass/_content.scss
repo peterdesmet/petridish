@@ -20,6 +20,11 @@
     display: none;
   }
 
+  // Add some space before h2, which are the main headings in content
+  h2 {
+    margin-top: 2rem;
+  }
+
   .anchorjs-link:hover {
     text-decoration: none;
   }
