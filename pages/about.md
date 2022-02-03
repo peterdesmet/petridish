@@ -181,7 +181,7 @@ The image below is wrapped in a paragraph with `{: .col-md-8 .m-auto}` to contai
 ![alt text](https://images.unsplash.com/photo-1486825586573-7131f7991bdd?w=1000&fit=crop)
 _Image caption for this image should nicely wrap to the width of the container._
 
-The image below is styled with `{: .rounded .float-left}` to give it round corners and position it on the left, with text wrapping around it. You can use `{: .clearfix}` on a paragraph to stop wrapping.
+The image below is styled with `{: .rounded .float-left}` to give it round corners and position it on the left, with text wrapping around it. You can use `{: .clearfix}` on a paragraph to stop wrapping. [Bootstrap v5](https://getbootstrap.com/docs/5.1/migration/#utilities) renamed `.float-left` to `.float-start` and `.float-right` to `.float-end`, but the old class names are still supported in Petridish.
 
 ![alt text](https://images.unsplash.com/photo-1486825586573-7131f7991bdd?w=150&h=150&fit=crop){: .rounded .float-left}
 

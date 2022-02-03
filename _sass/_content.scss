@@ -46,6 +46,14 @@
     padding: 0 1rem;
   }
 
+  // Add aliases for float-left / float-right
+  .float-left {
+    @extend .float-start;
+  }
+  .float-right {
+    @extend .float-end;
+  }
+
   // Style images (excluding inline images not wrapped in p)
   p {
     img {
@@ -56,11 +64,11 @@
       max-width: 100%; // Mimick .img-fluid
 
       // Add margin between floated img and text
-      &.float-left {
+      &.float-start {
         margin-right: 0.5rem;
         margin-bottom: 0.5rem;
       }
-      &.float-right {
+      &.float-end {
         margin-left: 0.5rem;
         margin-bottom: 0.5rem;
       }
