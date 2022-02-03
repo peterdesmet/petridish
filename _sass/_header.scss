@@ -67,10 +67,11 @@
     margin-top: 0.25rem;
     padding-left: $badge-padding-x * 2;
     padding-right: $badge-padding-x * 2;
+    text-decoration: none;
     text-transform: uppercase;
 
-    .close {
-      color: $black;
+    .btn-close {
+      // color: defined in svg, inverted with .btn-close-white
       font-size: inherit;
       margin-left: 0.5rem;
       margin-right: -0.25rem;
