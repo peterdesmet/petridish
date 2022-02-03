@@ -34,12 +34,15 @@
     // Smaller badge then the one defined in _header.scss
     .badge {
       border: 1px solid $link-color;
+      color: $link-color;
       font-family: $font-family-base;
+      text-decoration: none;
       text-transform: uppercase;
 
       &:hover,
       &:focus {
         border: 1px solid $link-hover-color;
+        color: $link-hover-color;
       }
     }
   }
