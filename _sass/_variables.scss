@@ -6,11 +6,9 @@
 
 // Color system
 
-$theme-colors: (
-  "primary": $custom_link_color,
-  "secondary": $custom_banner_color,
-  "footer": $custom_footer_color
-);
+$primary: $custom_link_color;
+$secondary: $custom_banner_color;
+$footer: $custom_footer_color; // Theme variable
 
 // Characters which are escaped by the escape-svg function
 // Options
