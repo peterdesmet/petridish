@@ -2,7 +2,7 @@
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="{{'/' | relative_url }}">
       {% if site.logo %}
-        <img src="{{ site.logo | relative_url }}" class="mr-2">
+        <img src="{{ site.logo | relative_url }}" class="me-2">
       {% endif %}
       {{ site.title }}
     </a>
@@ -11,7 +11,7 @@
         Menu <i class="fa fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbar-menu">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ms-auto">
         {% for item in site.data.navigation %}
           {% if item.menu %}
             <li class="nav-item dropdown">
