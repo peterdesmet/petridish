@@ -68,6 +68,7 @@
   </div>
 </footer>
 
+<script src="{{ '/assets/theme/js/jquery.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/theme/js/popper.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/theme/js/bootstrap.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/theme/js/anchor.min.js' | relative_url }}"></script>
@@ -91,7 +92,7 @@
       const category = urlParams.get("category"); // Will return 1st category value + decode URI
       const cleanCategory = $.trim(category.toLowerCase()); // Create category as written in .card data-categories
       
-      $(".card").each(function() {
+      $(".card").each(function() {
         const cardCategories = $(this).data("categories").split("|");
         // Hide card if it does not contain the selected category
         if (!cardCategories.includes(cleanCategory)) {
