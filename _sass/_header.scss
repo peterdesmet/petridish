@@ -1,6 +1,8 @@
-// Jumbotron
+// Header
 
-.jumbotron {
+// Use to be called "jumbotron", but that is no longer part of Bootstrap (v5).
+
+.header {
   // background-image: set in page frontmatter
   background-position: center;
   background-repeat: no-repeat;
@@ -11,12 +13,12 @@
   text-align: center;
 
   &.bg-no-image {
-    background-color: theme-color("secondary");
+    background-color: $secondary;
   }
 
   // Overlay
   &.bg-image:before {
-    background-image: linear-gradient(rgba(theme-color("dark"), 0.1), rgba(theme-color("dark"), 0.9));
+    background-image: linear-gradient(rgba($dark, 0.1), rgba($dark, 0.9));
     content: "";
     left: 0;
     height: 100%;
@@ -32,16 +34,16 @@
   }
   
   h1 {
-    $jumbotron-h1: 3.5rem;
-    font-size: $jumbotron-h1;
+    $header-h1: 3.5rem;
+    font-size: $header-h1;
     font-weight: 800;
 
     // Reduce font-size on smaller screens, except on homepage
     @include media-breakpoint-down(md) {
-      font-size: $jumbotron-h1 - 1;
+      font-size: $header-h1 - 1;
 
       &.home {
-        font-size: $jumbotron-h1;
+        font-size: $header-h1;
       }
     }
   }
@@ -57,8 +59,8 @@
   .badge {
     border: 2px solid $white;
     margin-top: 0.25rem;
-    padding-left: $badge-pill-padding-x * 2;
-    padding-right: $badge-pill-padding-x * 2;
+    padding-left: $badge-padding-x * 2;
+    padding-right: $badge-padding-x * 2;
     text-transform: uppercase;
 
     .close {
@@ -69,8 +71,8 @@
     }
   }
   
-  // Use light colored badge border when jumbotron has no background-image
+  // Use light colored badge border when header has no background-image
   &.bg-no-image .badge {
-    border: 2px solid lighten(theme-color("secondary"), 25);
+    border: 2px solid lighten($secondary, 25);
   }
 }

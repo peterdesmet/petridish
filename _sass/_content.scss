@@ -13,9 +13,9 @@
     font-family: $font-family-base;
   }
 
-  // Hide h1 headings in content, its use is reserved for jumbotron
+  // Hide h1 headings in content, its use is reserved for header
   // If the markdown file has no frontmatter (e.g. README.md), Jekyll will use the first heading
-  // as page title, which would then appear in jumbotron and content. This avoids that.
+  // as page title, which would then appear in header and content. This avoids that.
   h1 {
     display: none;
   }

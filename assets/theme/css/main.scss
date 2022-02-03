@@ -52,7 +52,7 @@ $custom_rounded: "{{ site.rounded_corners }}";
 @import "_base";                // General styling
 @import "_navbar";              // Navbar
 @import "_main";                // Main container
-  @import "_jumbotron";         // Jumbotron
+  @import "_header";            // Header
   @import "_content";           // Content
   @import "_card";              // Blog post card
   @import "_team";              // Team members
