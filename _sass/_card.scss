@@ -13,6 +13,12 @@
   margin-bottom: $grid-gutter-width;
   min-width: 100%; // Use allowed width even if content is smaller
 
+  .card-title {
+    a {
+      text-decoration: none;
+    }
+  }
+
   .card-img-top {
     height: 150px;
     object-fit: cover;
@@ -21,10 +27,6 @@
   .card-subtitle {
     color: $gray-600;
     margin-bottom: 0.5rem;
-  }
-
-  a:hover {
-    text-decoration: none;
   }
 
   .card-footer {
