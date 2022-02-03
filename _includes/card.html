@@ -16,7 +16,7 @@
 
     <div class="card-text">
       {% if post.description %}
-        {{ post.description | markdownify | truncatewords: 20 }}
+        {{ post.description | markdownify | truncatewords: 20 }}
       {% else %}
         {{ post.excerpt | truncatewords: 20 }}
       {% endif %}
@@ -26,7 +26,7 @@
   {% if post.categories and site.archive_permalink %}
     <div class="card-footer">
       {% for category in post.categories %}
-        <a class="badge rounded-pill" href="{{ site.archive_permalink | relative_url }}?category={{ category | url_encode }}">{{ category }}</a>
+        <a class="badge" href="{{ site.archive_permalink | relative_url }}?category={{ category | url_encode }}">{{ category }}</a>
       {% endfor %}
     </div>
   {% endif %}
