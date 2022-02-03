@@ -36,7 +36,7 @@
   a,
   a:hover,
   a:visited {
-    color: $white;
+    color: $white; // Also applies to .badge
   }
   
   h1 {
