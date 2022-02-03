@@ -7,7 +7,7 @@
       {{ site.title }}
     </a>
     {% if site.data.navigation %}
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
         Menu <i class="fa fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbar-menu">
@@ -15,7 +15,7 @@
         {% for item in site.data.navigation %}
           {% if item.menu %}
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                 {{ item.text }}
               </a>
               <div class="dropdown-menu">
