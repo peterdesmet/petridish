@@ -6,9 +6,9 @@ description: Template for team page
 {{ content }}
 
 {% for member in site.data.team %}
-  <div class="media team-member">
+  <div class="d-flex team-member">
     <img class="me-3" src="{{ member.image | relative_url }}">
-    <div class="media-body">
+    <div>
       <h5 id="{{ member.name | strip | url_encode }}">
         {{ member.name }}
         {% if member.role %}
