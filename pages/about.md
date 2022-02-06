@@ -119,16 +119,16 @@ url: <http://www.example.com>
 
 See the [Jekyll documentation](https://jekyllrb.com/docs/liquid/tags/#link) to create internal links. All internal links start from the `url` in `_config.yml`.
 
-The safest (and verbose) way for internal links is:
+The safest (and most verbose) way for internal links is:
 
-- For pages: {% raw %}`[link text]({{ site.baseurl }}{% link pages/about.md %})`{% endraw %}
-- For posts: {% raw %}`[link text]({{ site.baseurl }}{% link _posts/2010-07-21-name-of-post.md %})`{% endraw %} or the shorter {% raw %}`[link text]({{ site.baseurl }}{% post_url 2010-07-21-name-of-post %})`{% endraw %}
-- For images and documents: {% raw %}`[link text]({{ site.baseurl }}{% link /assets/images/name-of-image.jpg %})`{% endraw %}
+- For pages: {% raw %}`[link text]({% link pages/about.md %})`{% endraw %}
+- For posts: {% raw %}`[link text]({% link _posts/2010-07-21-name-of-post.md %})`{% endraw %} or {% raw %}`[link text]({% post_url 2010-07-21-name-of-post %})`{% endraw %}. The latter will validate links when building your website.
+- For images and documents: {% raw %}`[link text]({% link /assets/images/name-of-image.jpg %})`{% endraw %}
 
-If you don't have a `baseurl` in `_config.yml`, don't plan to change permalinks (it's better not to anyway) and don't want page build failures when a link is broken, you can get away using the (perma)links the pages, images and documents will have on your website:
+You can also link using root-relative permalinks (starting with `/`):
 
 - For pages: `[link text](/about/)`
-- For posts: {% raw %}`[link text]({% post_url 2010-07-21-name-of-post %})`{% endraw %}
+- For posts: {% raw %}`[link text](/permalink_of_post/)`{% endraw %}
 - For images and documents: `[link text](/assets/images/name-of-image.jpg)`
 
 ## Tables
@@ -160,7 +160,7 @@ See the [the links section](#links) to learn how to reference your own images an
 
 ## Styling content
 
-With the Kramdown Markdown parser that Jekyll uses, you can add css classes to your content (see this [blog post](https://digitaldrummerj.me/styling-jekyll-markdown/)). By sticking to [Bootstrap](https://getbootstrap.com/docs/4.3/) classes, you can easily style your content. If that doesn't fit your needs, you can always write html in your Markdown.
+With the Kramdown Markdown parser that Jekyll uses, you can add CSS classes to your content (see this [blog post](https://digitaldrummerj.me/styling-jekyll-markdown/)). By sticking to [Bootstrap](https://getbootstrap.com/docs/4.3/) classes, you can easily style your content. If that doesn't fit your needs, you can always write html in your Markdown.
 
 ### Alerts
 
