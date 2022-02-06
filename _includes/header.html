@@ -11,12 +11,12 @@
           <div class="lead">{{ page.description | markdownify }}</div>
           
           {% if page.date %}
-          <p class="meta">
-            <time>{{ page.date | date: "%B %d, %Y" }}</time>
-            {% if page.author or page.authors %}
-              &bull; {{ page.author | join: ', ' }}{{ page.authors | join: ', ' }}
-            {% endif %}
-          </p>
+            <p class="meta">
+              <time>{{ page.date | date: "%B %d, %Y" }}</time>
+              {% if page.author or page.authors %}
+                &bull; {{ page.author | join: ', ' }}{{ page.authors | join: ', ' }}
+              {% endif %}
+            </p>
           {% endif %}
 
           <div class="categories">

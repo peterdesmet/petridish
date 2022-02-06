@@ -18,24 +18,24 @@ remark: See also page.layout == 'home' in head.html and header.html
 
       </div>
 
-    {% if twitter_feed %}
-      <div class="col-lg-4">
-        <a class="twitter-timeline" data-height="500" data-link-color="{{ site.colors.links }}" href="https://twitter.com/{{ site.twitter_username }}?ref_src=twsrc%5Etfw">
-          Tweets by {{ site.twitter_username }}
-        </a>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      </div>
-    {% endif %}
+      {% if twitter_feed %}
+        <div class="col-lg-4">
+          <a class="twitter-timeline" data-height="500" data-link-color="{{ site.colors.links }}" href="https://twitter.com/{{ site.twitter_username }}?ref_src=twsrc%5Etfw">
+            Tweets by {{ site.twitter_username }}
+          </a>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+      {% endif %}
     </div>
     
-  {% if site.posts_on_home > 0 %}
-    <div class="row cards mt-4">
-    {% for post in site.posts limit:site.posts_on_home %}
-      <div class="col-md-6{% if twitter_feed %} col-lg-4{% endif %}">
-        {% include card.html %}
+    {% if site.posts_on_home > 0 %}
+      <div class="row cards mt-4">
+        {% for post in site.posts limit:site.posts_on_home %}
+          <div class="col-md-6{% if twitter_feed %} col-lg-4{% endif %}">
+            {% include card.html %}
+          </div>
+        {% endfor %}
       </div>
-    {% endfor %}
-    </div>
-  {% endif %}
+    {% endif %}
 </div>
 

@@ -12,7 +12,7 @@ description: Template for team page
       <h5 id="{{ member.name | strip | url_encode }}">
         {{ member.name }}
         {% if member.role %}
-        <small class="text-muted">| {{ member.role }}</small>
+          <small class="text-muted">| {{ member.role }}</small>
         {% endif %}
       </h5>
 
@@ -20,27 +20,27 @@ description: Template for team page
 
       <ul class="list-inline">
         {% if member.orcid %}
-        <li class="list-inline-item">
-          <a href="https://orcid.org/{{ member.orcid }}"><img class="orcid" src="{{ '/assets/theme/images/orcid.png' | relative_url }}"></a>
-        </li>
+          <li class="list-inline-item">
+            <a href="https://orcid.org/{{ member.orcid }}"><img class="orcid" src="{{ '/assets/theme/images/orcid.png' | relative_url }}"></a>
+          </li>
         {% endif %}
 
         {% if member.email %}
-        <li class="list-inline-item">
-          <a href="mailto:{{ member.email }}"><i class="fa fa-envelope"></i></a>
-        </li>
+          <li class="list-inline-item">
+            <a href="mailto:{{ member.email }}"><i class="fa fa-envelope"></i></a>
+          </li>
         {% endif %}
 
         {% if member.twitter %}
-        <li class="list-inline-item">
-          <a href="https://twitter.com/{{ member.twitter }}"><i class="fa fa-twitter"></i></a>
-        </li>
+          <li class="list-inline-item">
+            <a href="https://twitter.com/{{ member.twitter }}"><i class="fa fa-twitter"></i></a>
+          </li>
         {% endif %}
 
         {% if member.github %}
-        <li class="list-inline-item">
-          <a href="https://github.com/{{ member.github }}"><i class="fa fa-github"></i></a>
-        </li>
+          <li class="list-inline-item">
+            <a href="https://github.com/{{ member.github }}"><i class="fa fa-github"></i></a>
+          </li>
         {% endif %}
       </ul>
     </div>

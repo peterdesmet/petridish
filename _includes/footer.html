@@ -39,21 +39,20 @@
       </div>
 
       {% for col in site.data.footer.columns %}
-      <div class="col-lg">
-        {{ col.description | markdownify }}
+        <div class="col-lg">
+          {{ col.description | markdownify }}
 
-        {% if col.links %}
-          <ul class="fa-ul">
-          {% for item in col.links %}
-            <li>
-              <i class="fa-li fa fa-chevron-circle-right"></i>
-              <a href="{{ item.href | relative_url}}" {% if item.new_window %}target="_blank"{% endif %}>{{ item.text }}</a>
-            </li>
-          {% endfor %}
-          </ul>
-        {% endif %}
-
-      </div>
+          {% if col.links %}
+            <ul class="fa-ul">
+              {% for item in col.links %}
+                <li>
+                  <i class="fa-li fa fa-chevron-circle-right"></i>
+                  <a href="{{ item.href | relative_url}}"{% if item.new_window %} target="_blank"{% endif %}>{{ item.text }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
       {% endfor %}
     </div>
 
@@ -83,29 +82,29 @@
 </script>
 
 {% if page.layout == 'archive' %}
-<script>
-  // Filter cards on ?category=value
-  $(document).ready(function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    
-    if (urlParams.has("category") && urlParams.get("category") != "") {
-      const category = urlParams.get("category"); // Will return 1st category value + decode URI
-      const cleanCategory = $.trim(category.toLowerCase()); // Create category as written in .card data-categories
+  <script>
+    // Filter cards on ?category=value
+    $(document).ready(function() {
+      const urlParams = new URLSearchParams(window.location.search);
       
-      $(".card").each(function() {
-        const cardCategories = $(this).data("categories").split("|");
-        // Hide card if it does not contain the selected category
-        if (!cardCategories.includes(cleanCategory)) {
-          $(this).parent().addClass("d-none");
-        }
-      });
+      if (urlParams.has("category") && urlParams.get("category") != "") {
+        const category = urlParams.get("category"); // Will return 1st category value + decode URI
+        const cleanCategory = $.trim(category.toLowerCase()); // Create category as written in .card data-categories
+        
+        $(".card").each(function() {
+          const cardCategories = $(this).data("categories").split("|");
+          // Hide card if it does not contain the selected category
+          if (!cardCategories.includes(cleanCategory)) {
+            $(this).parent().addClass("d-none");
+          }
+        });
 
-      $(".header .categories").append(
-        '<a class="badge{% if site.rounded_corners != false %} rounded-pill{% endif %}" href="{{ site.archive_permalink | relative_url }}">' + 
-        category + '<span class="btn-close btn-close-white"></span>' + 
-        '</a>'
-      );
-    }
-  });
-</script>
+        $(".header .categories").append(
+          '<a class="badge{% if site.rounded_corners != false %} rounded-pill{% endif %}" href="{{ site.archive_permalink | relative_url }}">' + 
+          category + '<span class="btn-close btn-close-white"></span>' + 
+          '</a>'
+        );
+      }
+    });
+  </script>
 {% endif %}
