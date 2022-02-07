@@ -7,15 +7,16 @@
     {% include navbar.html %}
 
     <main>
-      {% include jumbotron.html %}
+      {% include header.html %}
 
       <div class="container content">
           
-        {{ content | replace: '<table', '<table class="table"' }}
+        {{ content | replace: '<table>', '<table class="table">' }}
 
       </div>
     </main>
 
     {% include footer.html %}
+
   </body>
 </html>

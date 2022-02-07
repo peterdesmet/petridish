@@ -1,9 +1,9 @@
 // Footer
 
 body > footer {
-  background-color: theme-color("footer");
-  border-top: 5px solid lighten(theme-color("footer"), 50);
-  color: lighten(theme-color("footer"), 50);
+  background-color: $footer;
+  border-top: 5px solid lighten($footer, 50);
+  color: lighten($footer, 50);
   font-size: 0.9rem;
   padding: $grid-gutter-width / 2 0;
 
@@ -17,9 +17,9 @@ body > footer {
     color: $white;
   }
 
-  // Font awesome icons
+  // Font Awesome icons
   .fa-inverse {
-    color: theme-color("footer");
+    color: $footer;
   }
   .fa-ul {
     margin-left: 1.5rem;

@@ -17,19 +17,22 @@
     "url": "https://github.com/peterdesmet/petridish/issues"
   },
   "scripts": {
-    "copy:bootstrap-scss": "cp -r node_modules/bootstrap/scss/* _sass/bootstrap",
-    "copy:font-awesome": "cp node_modules/font-awesome/css/font-awesome.min.css assets/theme/css/font-awesome.min.css && cp -r node_modules/font-awesome/fonts/* assets/theme/fonts",
+    "copy:bootstrap-scss": "mkdir -p _sass/bootstrap && cp -r node_modules/bootstrap/scss/* _sass/bootstrap",
+    "copy:fontawesome": "mkdir -p assets/theme/webfonts && cp -r node_modules/@fortawesome/fontawesome-free/webfonts/* assets/theme/webfonts && cp node_modules/@fortawesome/fontawesome-free/css/all.min.css assets/theme/css/fontawesome-all.min.css",
+    "copy:academicons": "mkdir -p assets/theme/fonts && cp -r node_modules/academicons/fonts/* assets/theme/fonts && cp node_modules/academicons/css/academicons.min.css assets/theme/css/academicons.min.css",
     "copy:jquery": "cp node_modules/jquery/dist/jquery.min.js assets/theme/js/jquery.min.js",
     "copy:anchor-js": "cp node_modules/anchor-js/anchor.min.js assets/theme/js/anchor.min.js",
-    "copy:popper": "cp node_modules/popper.js/dist/umd/popper.min.js assets/theme/js/popper.min.js",
-    "copy:bootstrap": "cp node_modules/bootstrap/dist/js/bootstrap.min.js assets/theme/js/bootstrap.min.js",
-    "copy:all": "mkdir -p _sass/bootstrap && mkdir -p assets/theme/css && mkdir -p assets/theme/fonts && mkdir -p assets/theme/js && npm run copy:bootstrap-scss && npm run copy:font-awesome && npm run copy:jquery && npm run copy:anchor-js && npm run copy:popper && npm run copy:bootstrap"
+    "copy:popper": "cp node_modules/@popperjs/core/dist/umd/popper.min.js assets/theme/js/popper.min.js && cp node_modules/@popperjs/core/dist/umd/popper.min.js.map assets/theme/js/popper.min.js.map",
+    "copy:bootstrap": "cp node_modules/bootstrap/dist/js/bootstrap.min.js assets/theme/js/bootstrap.min.js && cp node_modules/bootstrap/dist/js/bootstrap.min.js.map assets/theme/js/bootstrap.min.js.map",
+    "copy:all": "mkdir -p assets/theme/css && mkdir -p assets/theme/js && npm run copy:bootstrap-scss && npm run copy:fontawesome && npm run copy:academicons && npm run copy:jquery && npm run copy:anchor-js && npm run copy:popper && npm run copy:bootstrap"
   },
   "dependencies": {
-    "bootstrap": "^4.3.1",
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@popperjs/core": "^2.11.2",
+    "academicons": "^1.9.1",
+    "anchor-js": "^4.3.1",
+    "bootstrap": "^5.1.3",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.5.0",
-    "popper.js": "^1.14.7",
-    "anchor-js": "^4.2.0"
+    "jquery": "^3.6.0"
   }
 }

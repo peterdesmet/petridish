@@ -6,13 +6,13 @@
   description: > # Can be Markdown
     Protagonist, from the 20th century. Many times great-uncle to Professor Hubert Farnsworth.
   orcid: 0000-0000-0000-0000
-  email: your.email@example.com
-  github: github_name
+  researchgate: researchgate_name
   twitter: twitter_name
+  github: github_name
+  email: your.email@example.com
 
 - name: Turanga Leela
   role: Captain
-  image: assets/theme/images/leela_artem-kovalev-1403404-unsplash.jpg
   description: >
     Mutant cyclops. Leela is spaceship captain, pilot, and head of all 
     aviation services on board the [Planet Express Ship](https://en.wikipedia.org/wiki/Planet_Express_Ship). 

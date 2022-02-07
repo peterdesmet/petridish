@@ -6,13 +6,17 @@ description: Template for team page
 {{ content }}
 
 {% for member in site.data.team %}
-  <div class="media team-member">
-    <img class="mr-3" src="{{ member.image | relative_url }}">
-    <div class="media-body">
+  <div class="d-flex team-member">
+    <div class="flex-shrink-0 me-3">
+      {% if member.image %}
+        <img src="{{ member.image | relative_url }}">
+      {% endif %}
+    </div>
+    <div>
       <h5 id="{{ member.name | strip | url_encode }}">
         {{ member.name }}
         {% if member.role %}
-        <small class="text-muted">| {{ member.role }}</small>
+          <small class="text-muted">| {{ member.role }}</small>
         {% endif %}
       </h5>
 
@@ -20,27 +24,33 @@ description: Template for team page
 
       <ul class="list-inline">
         {% if member.orcid %}
-        <li class="list-inline-item">
-          <a href="https://orcid.org/{{ member.orcid }}"><img class="orcid" src="{{ '/assets/theme/images/orcid.png' | relative_url }}"></a>
-        </li>
+          <li class="list-inline-item">
+            <a href="https://orcid.org/{{ member.orcid }}"><i class="ai ai-orcid"></i></a>
+          </li>
         {% endif %}
 
-        {% if member.email %}
-        <li class="list-inline-item">
-          <a href="mailto:{{ member.email }}"><i class="fa fa-envelope"></i></a>
-        </li>
+        {% if member.researchgate %}
+          <li class="list-inline-item">
+            <a href="https://researchgate.net/profile/{{ member.researchgate }}"><i class="ai ai-researchgate"></i></a>
+          </li>
         {% endif %}
 
         {% if member.twitter %}
-        <li class="list-inline-item">
-          <a href="https://twitter.com/{{ member.twitter }}"><i class="fa fa-twitter"></i></a>
-        </li>
+          <li class="list-inline-item">
+            <a href="https://twitter.com/{{ member.twitter }}"><i class="fab fa-twitter"></i></a>
+          </li>
         {% endif %}
 
         {% if member.github %}
-        <li class="list-inline-item">
-          <a href="https://github.com/{{ member.github }}"><i class="fa fa-github"></i></a>
-        </li>
+          <li class="list-inline-item">
+            <a href="https://github.com/{{ member.github }}"><i class="fab fa-github"></i></a>
+          </li>
+        {% endif %}
+
+        {% if member.email %}
+          <li class="list-inline-item">
+            <a href="mailto:{{ member.email }}"><i class="far fa-envelope"></i></a>
+          </li>
         {% endif %}
       </ul>
     </div>

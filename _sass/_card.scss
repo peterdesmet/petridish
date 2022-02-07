@@ -1,7 +1,7 @@
 // Blog post card
 
 .cards {
-  // Mimics Bootstrap .card-deck, stretching cards to equal height, but without
+  // Mimics Bootstrap v4 .card-deck, stretching cards to equal height, but without
   // stretching width when there are fewer cards on one row (cards remain equal width)
   div[class*="col"] {
     display: flex;
@@ -13,6 +13,12 @@
   margin-bottom: $grid-gutter-width;
   min-width: 100%; // Use allowed width even if content is smaller
 
+  .card-title {
+    a {
+      text-decoration: none;
+    }
+  }
+
   .card-img-top {
     height: 150px;
     object-fit: cover;
@@ -23,23 +29,22 @@
     margin-bottom: 0.5rem;
   }
 
-  a:hover {
-    text-decoration: none;
-  }
-
   .card-footer {
     background: inherit;
     border-top: none;
 
-    // Smaller badge then the one defined in _jumbotron.scss
+    // Smaller badge then the one defined in _header.scss
     .badge {
       border: 1px solid $link-color;
+      color: $link-color;
       font-family: $font-family-base;
+      text-decoration: none;
       text-transform: uppercase;
 
       &:hover,
       &:focus {
         border: 1px solid $link-hover-color;
+        color: $link-hover-color;
       }
     }
   }

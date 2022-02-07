@@ -12,7 +12,7 @@
   }
 
   // Remove border on .dropdown-menu when .navbar is collapsed
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(lg) {
     .dropdown-menu {
       border: none;
       padding-top: 0;

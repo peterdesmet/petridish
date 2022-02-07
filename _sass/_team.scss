@@ -3,11 +3,16 @@
 .team-member {
   margin-bottom: $grid-gutter-width;
 
-  & > img {
-    height: 100px;
+  // Image container
+  .flex-shrink-0 {
     width: 100px;
-    border-radius: 100px;
-    border: 3px solid $gray-200;
+    
+    img {
+      height: 100px;
+      width: 100px;
+      border: 3px solid $gray-200;
+      border-radius: 100px;
+    }
   }
 
   .orcid {

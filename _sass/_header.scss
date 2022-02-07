@@ -1,0 +1,84 @@
+// Header
+
+.header {
+  // Mimics Bootstrap v4 .jumbotron
+  // background-image: set in page frontmatter
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0; // Should always be square, independent from $enable-rounded
+  color: $white;
+  margin-bottom: 2rem;
+  padding: 2rem 1rem;
+  position: relative; // To contain overlay
+  text-align: center;
+
+  @include media-breakpoint-up(md) {
+    padding: 4rem 2rem;
+  }
+
+  &.bg-no-image {
+    background-color: $secondary;
+  }
+
+  // Overlay
+  &.bg-image:before {
+    background-image: linear-gradient(rgba($dark, 0.1), rgba($dark, 0.9));
+    content: "";
+    left: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  a,
+  a:hover,
+  a:visited {
+    color: $white; // Also applies to .badge
+  }
+  
+  h1 {
+    $header-h1: 3.5rem;
+    font-size: $header-h1;
+    font-weight: 800;
+
+    // Reduce font-size on smaller screens, except on homepage
+    @include media-breakpoint-down(md) {
+      font-size: $header-h1 - 1;
+
+      &.home {
+        font-size: $header-h1;
+      }
+    }
+  }
+
+  .lead {
+    font-size: ($lead-font-size * 1.2);
+  }
+
+  .meta {
+    font-size: 1.25rem;
+  }
+
+  .badge {
+    border: 2px solid $white;
+    margin-top: 0.25rem;
+    padding-left: $badge-padding-x * 2;
+    padding-right: $badge-padding-x * 2;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    .btn-close {
+      // color: defined in svg, inverted with .btn-close-white
+      font-size: inherit;
+      margin-left: 0.5rem;
+      margin-right: -0.25rem;
+    }
+  }
+  
+  // Use light colored badge border when header has no background-image
+  &.bg-no-image .badge {
+    border: 2px solid lighten($secondary, 25);
+  }
+}

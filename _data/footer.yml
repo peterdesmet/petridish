@@ -8,7 +8,7 @@ columns:
     - text: Name of project partner 1
       href: http://example.com
       new_window: true
-    - text: Name of project partner 2
+    - text: Prestigious and long name of project partner 2
       href: http://example.com
       new_window: true
 

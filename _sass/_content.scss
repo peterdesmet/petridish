@@ -13,9 +13,9 @@
     font-family: $font-family-base;
   }
 
-  // Hide h1 headings in content, its use is reserved for jumbotron
+  // Hide h1 headings in content, its use is reserved for header
   // If the markdown file has no frontmatter (e.g. README.md), Jekyll will use the first heading
-  // as page title, which would then appear in jumbotron and content. This avoids that.
+  // as page title, which would then appear in header and content. This avoids that.
   h1 {
     display: none;
   }
@@ -46,6 +46,14 @@
     padding: 0 1rem;
   }
 
+  // Add aliases for float-left / float-right
+  .float-left {
+    @extend .float-start;
+  }
+  .float-right {
+    @extend .float-end;
+  }
+
   // Style images (excluding inline images not wrapped in p)
   p {
     img {
@@ -56,11 +64,11 @@
       max-width: 100%; // Mimick .img-fluid
 
       // Add margin between floated img and text
-      &.float-left {
+      &.float-start {
         margin-right: 0.5rem;
         margin-bottom: 0.5rem;
       }
-      &.float-right {
+      &.float-end {
         margin-left: 0.5rem;
         margin-bottom: 0.5rem;
       }
@@ -96,5 +104,5 @@
   }
 
   // Style tables
-  // This is done by replacing '<table' with '<table class="table"' in {{ content }}
+  // This is done by replacing '<table' with '<table class="table"' in {{ content }}
 }
