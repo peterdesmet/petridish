@@ -7,7 +7,11 @@ description: Template for team page
 
 {% for member in site.data.team %}
   <div class="d-flex team-member">
-    <img class="me-3" src="{{ member.image | relative_url }}">
+    <div class="flex-shrink-0 me-3">
+      {% if member.image %}
+        <img src="{{ member.image | relative_url }}">
+      {% endif %}
+    </div>
     <div>
       <h5 id="{{ member.name | strip | url_encode }}">
         {{ member.name }}
