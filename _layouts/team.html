@@ -29,9 +29,9 @@ description: Template for team page
           </li>
         {% endif %}
 
-        {% if member.email %}
+        {% if member.researchgate %}
           <li class="list-inline-item">
-            <a href="mailto:{{ member.email }}"><i class="fas fa-envelope"></i></a>
+            <a href="https://researchgate.net/profile/{{ member.researchgate }}"><i class="ai ai-researchgate"></i></a>
           </li>
         {% endif %}
 
@@ -44,6 +44,12 @@ description: Template for team page
         {% if member.github %}
           <li class="list-inline-item">
             <a href="https://github.com/{{ member.github }}"><i class="fab fa-github"></i></a>
+          </li>
+        {% endif %}
+
+        {% if member.email %}
+          <li class="list-inline-item">
+            <a href="mailto:{{ member.email }}"><i class="far fa-envelope"></i></a>
           </li>
         {% endif %}
       </ul>
