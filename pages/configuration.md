@@ -1,8 +1,8 @@
 ---
 title: Configuration
 description: >
-  This page list all the configuration options you have in Petridish.
-background: https://images.unsplash.com/photo-1480506132288-68f7705954bd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80
+  Overview of the configuration options in Petridish.
+background: https://images.unsplash.com/photo-1507477338202-487281e6c27e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTkwfHxiaXJkc3xlbnwwfDB8MHx8&auto=format&fit=crop&crop=top&w=1200&h=600&q=80
 permalink: /configuration/
 ---
 
@@ -17,18 +17,19 @@ permalink: /configuration/
 [data_footer]: https://raw.githubusercontent.com/peterdesmet/petridish/master/_data/footer.yml
 [data_navigation]: https://raw.githubusercontent.com/peterdesmet/petridish/master/_data/navigation.yml
 [data_team]: https://raw.githubusercontent.com/peterdesmet/petridish/master/_data/team.yml
+[posts_dmp]: https://raw.githubusercontent.com/peterdesmet/petridish/master/_posts/2019-07-08-dmp.md
 
-### Petridish site example
+## Example website
 
 If you want to learn by example, this website uses Petridish. Browse the [Petridish repository](https://github.com/peterdesmet/petridish) to see how things are configured.
 
-### Site-wide configuration
+## Site-wide configuration
 
 Your site's configuration is controlled by [`_config.yml`][config]. Set at least a title and maybe some social profiles.
 
-### Pages
+## Pages
 
-Create [pages](https://jekyllrb.com/docs/pages/) as Markdown files in your repository (e.g. [`about.md`][pages_about]).
+Create [pages](https://jekyllrb.com/docs/pages/) as Markdown files in your repository (e.g. [`about.md`][pages_about] for [this page](/about/)).
 
 Pages can have the following [front matter](https://jekyllrb.com/docs/front-matter/) (only `title` is required):
 
@@ -52,9 +53,9 @@ Pages will use `layout: default` by default.
 
 For easier maintenance, organize your pages in a [`pages/`][pages_dir] directory and set their [permalink](https://jekyllrb.com/docs/permalinks/#front-matter).
 
-### Home page
+## Home page
 
-To enable options for your [homepage][pages_home], add the following front matter:
+To enable options for your [home page](/) (source [`home.md`][pages_home]), add the following front matter:
 
 ```yml
 layout: home
@@ -67,21 +68,21 @@ posts_on_home: 3                        # Show x number of latest posts on homep
 tweets_on_home: true                    # Show Twitter feed of twitter_username on homepage
 ```
 
-For easier maintenance, move/rename your `index.md` to [`pages/home.md`][pages_home] and set its `permalink` to `/`.
+For easier maintenance, move/rename your `index.md` to `pages/home.md` and set its `permalink` to `/`.
 
-### Team page
+## Team page
 
-To enable your [team page][pages_team], add the following front matter:
+To enable your [team page](/team/) (source [`team.md`][pages_team]), add the following front matter:
 
 ```yml
 layout: team
 ```
 
-Then create a [`_data/team.yml`][data_team] file to list [team members](https://peterdesmet.github.io/petridish/team/).
+Then create a [`_data/team.yml`][data_team] file to list team members.
 
-### Archive page
+## Archive page
 
-To enable your [news / blog / archive page][pages_archive] (i.e. the page listing all posts), add the following front matter:
+To enable your [news / blog / archive page](/blog/) (source [`archive.md`][pages_archive]) - i.e. the page listing all posts - add the following front matter:
 
 ```yml
 layout: archive
@@ -95,9 +96,9 @@ archive_permalink: /blog/               # Permalink of page using archive.html l
 
 To see blog posts, you'll have to create some. ☺️
 
-### Blog posts
+## Blog posts
 
-Create [posts](https://jekyllrb.com/docs/posts/) as `yyyy-mm-dd-title.md` Markdown files in the [`_posts/`][posts_dir] directory.
+Create [posts](https://jekyllrb.com/docs/posts/) as `yyyy-mm-dd-title.md` Markdown files in the [`_posts/`][posts_dir] directory (e.g. [`2019-07-08-dmp.md`][posts_dmp] for [this post](/blog/2019/dmp/)).
 
 Posts can have the following [front matter](https://jekyllrb.com/docs/front-matter/) (only `title` is required):
 
@@ -133,15 +134,15 @@ defaults:
       permalink: "/blog/:slug/"         # Use /blog/{filename}/ as permalink for all posts
 ```
 
-### Markdown options
+## Markdown options
 
 See the [Markdown guide](/markdown) for an overview of the Markdown syntax you can use in pages and posts.
 
-### Navigation
+## Navigation
 
-Create a [`_data/navigation.yml`][data_navigation] file. Add pages in the order you want to include them in your top site navigation. You can also include dropdown menus.
+Create a [`_data/navigation.yml`][data_navigation] file and add pages in the order you want to include them in your top site navigation. You can also include dropdown menus.
 
-### Colors & logo
+## Colors & logo
 
 Customize colors and corners in `_config.yml`:
 
@@ -159,7 +160,7 @@ Add a logo by uploading it to `assets/` and referencing it in `_config.yml`:
 logo: /assets/images/logo.png  # Logo in navbar, will be displayed with 30px height
 ```
 
-### Footer
+## Footer
 
 Add social icons to the footer by adding your (project's) social profiles in `_config.yml`:
 
@@ -170,3 +171,29 @@ github_username: your_github_username
 ```
 
 Create a [`_data/footer.yml`][data_footer] file to further customize your footer with text, links and/or a disclaimer.
+
+## Testing your site locally
+
+All the above settings can be directly made in your GitHub repository in your browser, but especially during setup it is more convenient to make those changes locally, render your website locally and then push your changes to GitHub.
+
+1. [Clone your repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) to your computer.
+2. Place a [`Gemfile`](https://github.com/peterdesmet/petridish/blob/master/Gemfile) in your repository root, with the content:
+
+    ```
+    gem "github-pages", group: :jekyll_plugins
+    ```
+
+3. Place a `.gitignore` in your repository root, with the content:
+
+    ```
+    # Jekyll
+    _site/
+    .sass-cache/
+    .jekyll-cache/
+    .jekyll-metadata
+    ```
+
+4. [Install Jekyll](https://jekyllrb.com/docs/#instructions). Skip the step to make a new site.
+5. Serve your site with `bundle exec jekyll serve`.
+6. Make changes and see the effect at `http://localhost:4000/`
+7. Push your changes to GitHub.

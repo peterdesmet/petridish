@@ -2,8 +2,8 @@
 title: Markdown
 description: >
   You write your content in [Markdown](https://guides.github.com/features/mastering-markdown/).
-  This page shows how that is going to look.
-background: https://images.unsplash.com/photo-1486825586573-7131f7991bdd?auto=format&w=2000
+  This page shows how it is rendered by Petridish.
+background: https://images.unsplash.com/photo-1550089479-fe0e48e7d788?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGJpcmR8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=1200&h=600&q=80
 permalink: /markdown/
 ---
 
@@ -171,7 +171,7 @@ By default, images will be centered horizontally and use the full width if they 
 For example, the image below is wrapped in a paragraph with `{: .col-md-8 .mx-auto}` to contain it (and its caption) to 8/12 of the width on medium and larger screens. On small screens the full width will be used. Controlling the width of an image is especially useful for portrait images.
 
 {: .col-md-8 .mx-auto}
-![alt text](https://images.unsplash.com/photo-1486825586573-7131f7991bdd?w=1000&fit=crop)
+![alt text](https://images.unsplash.com/photo-1486825586573-7131f7991bdd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80)
 _Image caption for this image should nicely wrap to the width of the container._
 
 {: .clearfix}
