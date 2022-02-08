@@ -6,7 +6,9 @@
   href: /about/
 - text: Team
   href: /team/
-- text: Output
+- text: Blog
+  href: /blog/
+- text: Documentation
   menu: # Dropdown menu (one level deep only)
   - text: Configuration guide
     href: /configuration/
@@ -17,5 +19,3 @@
   - text: External link
     href: https://github.com/peterdesmet/petridish/
     new_window: true
-- text: News
-  href: /blog/
