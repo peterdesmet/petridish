@@ -10,6 +10,16 @@ permalink: /markdown/
 {: .alert .alert-warning}
 The source file for this page is [`pages/markdown.md`](https://raw.githubusercontent.com/peterdesmet/petridish/master/pages/markdown.md). There you can see the raw Markdown.
 
+## Styling content
+
+With the Kramdown Markdown parser that Jekyll uses, you can add CSS classes to your content (see this [blog post](https://digitaldrummerj.me/styling-jekyll-markdown/)). By sticking to [Bootstrap](https://getbootstrap.com/docs/5.1/) classes, you can easily style your content. If that doesn't fit your needs, you can always write html in your Markdown.
+
+For example, the paragraph at the top of this page is styled as a [Bootstrap alert](https://getbootstrap.com/docs/5.1/components/alerts/) because it has `{: .alert .alert-warning}` right before it. Block elements like paragraphs need their class on the line above it.
+
+Inline elements on the other hand, need a class right after it. For example, to style a link as a button, use `[Don't click](http://example.com){: .btn .btn-danger}`:
+
+[Don't click](http://example.com){: .btn .btn-danger}
+
 ## Headings
 
 # Heading h1
@@ -85,20 +95,18 @@ term 2
 
 Inline `code`
 
-Indented code:
+Code block by indenting code with 4 spaces:
 
-    # Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
+    part_of_team = True
+    if part_of_team:
+      print("Everything is awesome!") # If you're part of a team
 
-Fenced code with syntax highlighting:
+Code block by fencing code in backticks. This method allows supports syntax highlighting by adding the language, e.g. <code>```python</code>:
 
-```js
-const greet = (text) => "Hello " + text;
-
-// Test
-console.log(greet("world"));
+```python
+part_of_team = True
+if part_of_team:
+  print("Everything is awesome!") # If you're part of a team
 ```
 
 ## Horizontal rules
@@ -119,7 +127,7 @@ url: <http://www.example.com>
 
 See the [Jekyll documentation](https://jekyllrb.com/docs/liquid/tags/#link) to create internal links. All internal links start from the `url` in `_config.yml`.
 
-The safest (and most verbose) way for internal links is:
+You can include internal links using Jekyll syntax:
 
 - For pages: {% raw %}`[link text]({% link pages/about.md %})`{% endraw %}
 - For posts: {% raw %}`[link text]({% link _posts/2010-07-21-name-of-post.md %})`{% endraw %} or {% raw %}`[link text]({% post_url 2010-07-21-name-of-post %})`{% endraw %}. The latter will validate links when building your website.
@@ -158,36 +166,15 @@ _You can add an image caption by including an `_emphasized sentence_` directly b
 
 See the [the links section](#links) to learn how to reference your own images and documents.
 
-## Styling content
+By default, images will be centered horizontally and use the full width if they can. But you can change **image alignment** by using [Bootstrap classes](https://getbootstrap.com/docs/5.1/content/images/#aligning-images).
 
-With the Kramdown Markdown parser that Jekyll uses, you can add CSS classes to your content (see this [blog post](https://digitaldrummerj.me/styling-jekyll-markdown/)). By sticking to [Bootstrap](https://getbootstrap.com/docs/4.3/) classes, you can easily style your content. If that doesn't fit your needs, you can always write html in your Markdown.
+For example, the image below is wrapped in a paragraph with `{: .col-md-8 .mx-auto}` to contain it (and its caption) to 8/12 of the width on medium and larger screens. On small screens the full width will be used. Controlling the width of an image is especially useful for portrait images.
 
-### Alerts
-
-[Bootstrap documentation](https://getbootstrap.com/docs/4.3/components/alerts/)
-
-{: .alert .alert-info}
-Alert info message. This paragraph is styled by prepending it with `{: .alert .alert-info}`.
-
-### Aligning images
-
-[Bootstrap documentation](https://getbootstrap.com/docs/4.3/content/images/#aligning-images)
-
-By default, images will be centered horizontally and use the full width if they can.
-
-The image below is wrapped in a paragraph with `{: .col-md-8 .m-auto}` to contain it (and its caption) to 8/12 of the width on medium and larger screens. On small screens the full width will be used. Controlling the width of an image is especially useful for portrait images.
-
-{: .col-md-8 .m-auto}
+{: .col-md-8 .mx-auto}
 ![alt text](https://images.unsplash.com/photo-1486825586573-7131f7991bdd?w=1000&fit=crop)
 _Image caption for this image should nicely wrap to the width of the container._
 
-The image below is styled with `{: .rounded .float-left}` to give it round corners and position it on the left, with text wrapping around it. You can use `{: .clearfix}` on a paragraph to stop wrapping. [Bootstrap v5](https://getbootstrap.com/docs/5.1/migration/#utilities) renamed `.float-left` to `.float-start` and `.float-right` to `.float-end`, but the old class names are still supported in Petridish.
-
-![alt text](https://images.unsplash.com/photo-1486825586573-7131f7991bdd?w=150&h=150&fit=crop){: .rounded .float-left}
-
-Tree man. Gathering unto give gathered. Midst they're. After image appear. Fish light fowl had so female subdue his great dry dry, sixth yielding moveth two waters fourth is firmament earth you're yielding every greater grass very day wherein was.
-
-Itself meat. Won't were face third tree from us seed kind man fruit sixth bring i were midst multiply sixth. Cattle let, creeping fruit good whales very. There void So their you living. Appear two cattle kind man air rule signs.
-
 {: .clearfix}
-Life brought good appear good grass air abundantly a. Life. Rule be brought unto. Fly days fruit evening. Us.
+![alt text](https://images.unsplash.com/photo-1486825586573-7131f7991bdd?w=150&h=150&fit=crop){: .rounded .float-start} The image to the left is styled with `{: .rounded .float-start}` to give it round corners and position it at the start (i.e. left), with text wrapping around it. Note that in [Bootstrap v5](https://getbootstrap.com/docs/5.1/migration/#utilities) `.float-left` was renamed to `.float-start` and `.float-right` to `.float-end`, but the old class names are still supported in Petridish.
+
+The image does not wrap around this paragraph, because the previous paragraph also has a [`{: .clearfix}`](https://getbootstrap.com/docs/5.1/helpers/clearfix/) class, which contains wrapping to that paragraph only.
