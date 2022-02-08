@@ -10,12 +10,14 @@
   href: /blog/
 - text: Documentation
   menu: # Dropdown menu (one level deep only)
-  - text: Configuration guide
+  - text: Installation
+    href: /installation/
+  - text: Configuration
     href: /configuration/
-  - text: Markdown guide
+  - text: Markdown
     href: /markdown/
   - text: "---" # Divider to separate blocks of menu items (at least 3 "-")
   - text: "Dropdown header" # Title for block of menu items
-  - text: External link
+  - text: External link to GitHub
     href: https://github.com/peterdesmet/petridish/
     new_window: true
