@@ -8,14 +8,14 @@
   href: /team/
 - text: Output
   menu: # Dropdown menu (one level deep only)
-  - text: Page 1
-    href: /there-is-no-page-for-this-permalink/
+  - text: Configuration guide
+    href: /configuration/
   - text: Markdown guide
     href: /markdown/
   - text: "---" # Divider to separate blocks of menu items (at least 3 "-")
   - text: "Dropdown header" # Title for block of menu items
   - text: External link
-    href: https://github.com/peterdesmet/petridish/blob/master/_data/navigation.yml
+    href: https://github.com/peterdesmet/petridish/
     new_window: true
 - text: News
   href: /blog/
