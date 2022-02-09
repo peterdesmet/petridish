@@ -4,6 +4,7 @@ description: >
   Overview of the configuration options in Petridish.
 background: https://images.unsplash.com/photo-1507477338202-487281e6c27e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTkwfHxiaXJkc3xlbnwwfDB8MHx8&auto=format&fit=crop&crop=top&w=1200&h=600&q=80
 permalink: /configuration/
+toc: true
 ---
 
 <!-- Links to the repository -->
@@ -39,17 +40,21 @@ title: Title for the page
 description: Description that will appear below the title in the banner
 background: /assets/images/banner_background_image.jpg
 permalink: /about/
+toc: false
+comments: false # See posts
 ---
 
 Our project ...
 
 ```
 
+Pages will use `layout: default` by default.
+
 `title` will appear on the page itself, but you can use a different (e.g. shorter) name in [navigation](#navigation).
 
 `background` can be a [local][pages_home] or [remote][pages_about] image. It will be cropped vertically. For faster page loads, reduce image sizes to less than 1MB (e.g. by reducing resolution to 72dpi and/or width to 2000px).
 
-Pages will use `layout: default` by default.
+To add a table of content based on the h2 and h3 headers of your page (like on this configuration page), add `toc: true`. The width of the page is unaffected by the table of content. The table of content is disabled by default.
 
 For easier maintenance, organize your pages in a [`pages/`][pages_dir] directory and set their [permalink](https://jekyllrb.com/docs/permalinks/#front-matter).
 
@@ -109,7 +114,8 @@ description: Description that will appear below the title in the banner
 background: /assets/images/banner_background_image.jpg
 author: [Author 1, Author 2]
 categories: [Category 1, Category 2]
-comments: true
+toc: false # See pages
+comments: false
 ---
 
 We are happy to announce ...
