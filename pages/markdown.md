@@ -36,7 +36,7 @@ h1 headings are reserved for page titles and are hidden from content. Start your
 
 ## Table of content
 
-Add `toc: true` to your page/post front matter. See [configuration]({% link pages/configuration.md %}#pages).
+Add `toc: true` to your page/post front matter. See [configuration](https://peterdesmet.github.io/petridish/configuration/#pages).
 
 ## Paragraphs
 

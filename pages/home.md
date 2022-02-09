@@ -12,6 +12,6 @@ permalink: /
 
 See the demo website for instructions:
 
-- [Installation]({% link pages/installation.md %})
-- [Configuration]({% link pages/configuration.md %})
-- [Markdown]({% link pages/markdown.md %})
+- [Installation](https://peterdesmet.github.io/petridish/installation/)
+- [Configuration](https://peterdesmet.github.io/petridish/configuration/)
+- [Markdown](https://peterdesmet.github.io/petridish/markdown/)
