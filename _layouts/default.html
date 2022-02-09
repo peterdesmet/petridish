@@ -4,7 +4,20 @@ description: Default template for pages and posts, with contained width
 ---
 
 <div class="row">
-  <div class="col-md-10 col-lg-8 mx-auto">
+  {% if page.toc %}
+  <div class="col-md-10 col-lg-3 mx-auto">
+    <div class="toc">
+      <h6>On this page</h6>
+      {% include toc.html
+        html=content
+        sanitize=true
+        h_min=2
+        h_max=3
+      %}
+    </div>
+  </div>
+  {% endif %}
+  <div class="col-md-10 col-lg-8 order-lg-first mx-auto">
 
     {{ content }}
 

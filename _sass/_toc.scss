@@ -1,0 +1,42 @@
+// Table of content
+// 
+// Table of content is included in default.html
+
+.toc {
+  font-family: $font-family-base;
+  font-size: 0.9rem;
+  color: $text-muted;
+  position: sticky;
+  top: 2rem;
+  right: 0;
+  overflow-y: auto;
+  margin-bottom: 2rem;
+
+  h6 {
+    border-bottom: 1px solid $text-muted;
+    padding-bottom: 0.5rem;
+  }
+
+  a {
+    color: $text-muted;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      margin-bottom: 0.25rem;
+    }
+
+    ul {
+      margin-top: 0.25rem;
+      padding-left: 1rem;
+    }
+  }
+}
