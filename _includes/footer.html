@@ -1,42 +1,44 @@
 <footer>
   <div class="container">
     <div class="row">
-      <div class="col-lg">
-        <ul class="list-inline">
-          {% if site.email %}
-            <li class="list-inline-item">
-              <a href="mailto:{{ site.email }}">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-          {% endif %}
+      {% if site.email or site.twitter_username or site.github_username %}
+        <div class="col-lg">
+          <ul class="list-inline">
+            {% if site.email %}
+              <li class="list-inline-item">
+                <a href="mailto:{{ site.email }}">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            {% endif %}
 
-          {% if site.twitter_username %}
-            <li class="list-inline-item">
-              <a href="https://twitter.com/{{ site.twitter_username }}">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-          {% endif %}
+            {% if site.twitter_username %}
+              <li class="list-inline-item">
+                <a href="https://twitter.com/{{ site.twitter_username }}">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            {% endif %}
 
-          {% if site.github_username %}
-            <li class="list-inline-item">
-              <a href="https://github.com/{{ site.github_username }}">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-          {% endif %}
-        </ul>
-      </div>
+            {% if site.github_username %}
+              <li class="list-inline-item">
+                <a href="https://github.com/{{ site.github_username }}">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            {% endif %}
+          </ul>
+        </div>
+      {% endif %}
 
       {% for col in site.data.footer.columns %}
         <div class="col-lg">
