@@ -148,15 +148,16 @@ See the [Markdown guide](https://peterdesmet.github.io/petridish/markdown) for a
 
 Create a [`_data/navigation.yml`][data_navigation] file and add pages in the order you want to include them in your top site navigation. You can also include dropdown menus.
 
-## Colors & logo
+## Colors & font
 
-Customize colors and corners in `_config.yml`:
+Customize colors, font type and corners in `_config.yml`:
 
 ```yml
 colors:
   links: "#007bff"                      # Color for links: use a readable color that contrasts well with dark text
   banner: "#007bff"                     # Background color for page banners: use color that contrasts well with white
   footer: "#6c757d"                     # Background color for footer: use color that contrasts well with white
+font_serif: true                        # Font type for page content: serif (default) or slightly smaller sans-serif
 rounded_corners: true                   # Enable (default) rounded corners on boxes and buttons
 ```
 
