@@ -69,11 +69,7 @@
   </div>
 </footer>
 
-<script src="{{ '/assets/theme/js/jquery.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/theme/js/popper.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/theme/js/bootstrap.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/theme/js/anchor.min.js' | relative_url }}"></script>
-
 <script>
   // Show anchors when hovering over headings, using anchor.js
   (function () {
@@ -82,31 +78,3 @@
     anchors.add(headings);
   })();
 </script>
-
-{% if page.layout == 'archive' %}
-  <script>
-    // Filter cards on ?category=value
-    $(document).ready(function() {
-      const urlParams = new URLSearchParams(window.location.search);
-      
-      if (urlParams.has("category") && urlParams.get("category") != "") {
-        const category = urlParams.get("category"); // Will return 1st category value + decode URI
-        const cleanCategory = $.trim(category.toLowerCase()); // Create category as written in .card data-categories
-        
-        $(".card").each(function() {
-          const cardCategories = $(this).data("categories").split("|");
-          // Hide card if it does not contain the selected category
-          if (!cardCategories.includes(cleanCategory)) {
-            $(this).parent().addClass("d-none");
-          }
-        });
-
-        $(".header .categories").append(
-          '<a class="badge{% if site.rounded_corners != false %} rounded-pill{% endif %}" href="{{ site.archive_permalink | relative_url }}">' + 
-          category + '<span class="btn-close btn-close-white"></span>' + 
-          '</a>'
-        );
-      }
-    });
-  </script>
-{% endif %}
