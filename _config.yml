@@ -5,7 +5,7 @@ author: Peter Desmet                    # Used for copyright statement in footer
 # url: "https://peterdesmet.github.io"  # No slash at the end
 # baseurl: "/petridish"                 # Only required if your site is on a subdomain e.g. https://username.github.io/sitename
                                         # which has url: "https://username.github.io" (no slash) and baseurl: "/sitename" (leading slash)
-                                        # A baseurl affects internal links, see http://peterdesmet.github.io/petridish/about/#links
+                                        # A baseurl affects internal links, see http://peterdesmet.github.io/petridish/markdown/#links
 
 # SOCIAL PROFILES
 email: your.email@example.com           # Social icon in footer
