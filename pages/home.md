@@ -12,6 +12,6 @@ permalink: /
 
 See the demo website for instructions:
 
-- [Installation](https://peterdesmet.github.io/petridish/installation/)
-- [Configuration](https://peterdesmet.github.io/petridish/configuration/)
-- [Markdown](https://peterdesmet.github.io/petridish/markdown/)
+- [Installation]({{ '/installation/' | relative_url }})
+- [Configuration]({{ '/configuration/' | relative_url }})
+- [Markdown]({{ '/markdown/' | relative_url }})

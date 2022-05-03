@@ -142,7 +142,7 @@ defaults:
 
 ## Markdown options
 
-See the [Markdown guide](https://peterdesmet.github.io/petridish/markdown) for an overview of the Markdown syntax you can use in pages and posts.
+See the [Markdown guide]({{ '/markdown/' | relative_url }}) for an overview of the Markdown syntax you can use in pages and posts.
 
 ## Navigation
 

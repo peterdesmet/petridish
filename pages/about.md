@@ -8,7 +8,7 @@ permalink: /about/
 {: .alert .alert-warning}
 The source file for this page is [`pages/about.md`](https://raw.githubusercontent.com/peterdesmet/petridish/master/pages/about.md).
 
-This is a default page. See [configuration](https://peterdesmet.github.io/petridish/configuration/) to learn more about **pages**.
+This is a default page. See [configuration]({{ '/configuration/' | relative_url }}) to learn more about **pages**.
 
 To remove this page, you need to:
 
