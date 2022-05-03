@@ -130,19 +130,17 @@ if part_of_team:
 
 url: <http://www.example.com>
 
-See the [Jekyll documentation](https://jekyllrb.com/docs/liquid/tags/#link) to create internal links. All internal links start from the `url` in `_config.yml`.
+See the [Jekyll documentation](https://jekyllrb.com/docs/liquid/tags/#link) to create internal links. There are several approaches, but in my opinion the safest option is using root-relative permalinks (starting with `/`) and the `relative_url` filter:
 
-You can include internal links using Jekyll syntax:
+- For pages: [{% raw %}`[link text]({{ '/about/' | relative_url }})`{% endraw %}]({{ '/about/' | relative_url }})
+- For posts: [{% raw %}`[link text]({{ '/permalink_of_post/' | relative_url }})`{% endraw %}]({{ '/blog/2019/welcome-to-jekyll/' | relative_url }})
+- For images and documents: [{% raw %}`[link text]({{ '/assets/images/name-of-image.jpg' | relative_url }})`{% endraw %}]({{ '/assets/theme/images/chuttersnap-146799-unsplash.jpg' | relative_url }})
 
-- For pages: {% raw %}`[link text]({% link pages/about.md %})`{% endraw %}
-- For posts: {% raw %}`[link text]({% link _posts/2010-07-21-name-of-post.md %})`{% endraw %} or {% raw %}`[link text]({% post_url 2010-07-21-name-of-post %})`{% endraw %}. The latter will validate links when building your website.
-- For images and documents: {% raw %}`[link text]({% link /assets/images/name-of-image.jpg %})`{% endraw %}
+You can simplify links if your site lives at a custom root domain (e.g. `https://example.com`, no `baseurl` set in `_config.yml`) or when Jekyll 4.0+ is used. Neither are the case for a default GitHub Pages, so the links below are likely broken:
 
-You can also link using root-relative permalinks (starting with `/`):
-
-- For pages: `[link text](/about/)`
-- For posts: {% raw %}`[link text](/permalink_of_post/)`{% endraw %}
-- For images and documents: `[link text](/assets/images/name-of-image.jpg)`
+- For pages: [`[link text](/about/)`](/about/)
+- For posts: [`[link text](/permalink_of_post/)`](/blog/2019/welcome-to-jekyll/)
+- For images and documents: [`[link text](/assets/images/name-of-image.jpg)`]('/assets/theme/images/chuttersnap-146799-unsplash.jpg)
 
 ## Tables
 
