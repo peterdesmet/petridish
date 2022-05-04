@@ -39,10 +39,10 @@ Minor changes can be committed directly to `main`.
 Changes requiring review (e.g. new blog posts) should be created in a separate branch and submitted as a pull request. Some guidelines:
 
 - Use `72dpi` as image resolution
-- Place background images in `assets/backgrounds`, name them after their corresponding page/post and ideally crop them to `2100 x 700px`
-- Place content images in `assets/images/`, name them after their corresponding page/post + a suffix, e.g. `-month-tracks-3`
-- Add categories to posts to indicate the project, output type, software language, and maybe partner organization, e.g. `[TrIAS, software, R, GBIF, rOpenSci]`
-- Create internal links as `[previous post]({% link 2013-10-01-tracking-eric.md %})`
+- Place background images in `assets/backgrounds/`, name them after their corresponding page/post and ideally crop them to `2100 x 700px`
+- Place content images in `assets/images/`, name them after their corresponding page/post + a suffix, e.g. `-figure-1`
+- Add categories to posts to create relevant groups (e.g. same topic, project).
+- Create internal links as `[previous post]({{ '/permalink/to/post/' | relative_url }})`
 
 ## Repo structure
 
