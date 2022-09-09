@@ -16,10 +16,4 @@ See the demo website for instructions:
 - [Configuration]({{ '/configuration/' | relative_url }})
 - [Markdown]({{ '/markdown/' | relative_url }})
 
-<div width="30%">
-          <a class="twitter-timeline" data-height="500" data-link-color="{{ site.colors.links }}" href="https://twitter.com/nickynicolson/status/1567425215596036097?ref_src=twsrc%5Etfw">
-            Tweet by nickynicolson
-          </a>
-          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
-
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Looking forward to trying this out... <a href="https://t.co/bG91BfTksK">https://t.co/bG91BfTksK</a></p>&mdash; Nicky Nicolson (@nickynicolson) <a href="https://twitter.com/nickynicolson/status/1567420746330259457?ref_src=twsrc%5Etfw">September 7, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
