@@ -16,9 +16,10 @@ See the demo website for instructions:
 - [Configuration]({{ '/configuration/' | relative_url }})
 - [Markdown]({{ '/markdown/' | relative_url }})
 
-<div>
-          <a class="twitter-timeline" data-height="500" data-link-color="{{ site.colors.links }}" href="https://twitter.com/nickynicolson?ref_src=twsrc%5Etfw">
-            Tweets by nickynicolson
+<div width="30%">
+          <a class="twitter-timeline" data-height="500" data-link-color="{{ site.colors.links }}" href="https://twitter.com/nickynicolson/status/1567425215596036097?ref_src=twsrc%5Etfw">
+            Tweet by nickynicolson
           </a>
           <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
+
