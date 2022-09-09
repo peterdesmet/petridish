@@ -17,13 +17,6 @@ See the demo website for instructions:
 - [Markdown]({{ '/markdown/' | relative_url }})
 
 <div>
-<a data-height="500" href="https://twitter.com/josephmwood/status/1565318233367904258">
-test
-</a>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
-
-<div>
           <a class="twitter-timeline" data-height="500" data-link-color="{{ site.colors.links }}" href="https://twitter.com/nickynicolson?ref_src=twsrc%5Etfw">
             Tweets by nickynicolson
           </a>
