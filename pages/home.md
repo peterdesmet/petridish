@@ -15,3 +15,15 @@ See the demo website for instructions:
 - [Installation]({{ '/installation/' | relative_url }})
 - [Configuration]({{ '/configuration/' | relative_url }})
 - [Markdown]({{ '/markdown/' | relative_url }})
+
+<div>
+
+<a data-height="500" href="https://twitter.com/josephmwood/status/1565318233367904258">
+
+test
+
+</a>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
