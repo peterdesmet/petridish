@@ -16,9 +16,9 @@
 
     <div class="card-text">
       {% if post.description %}
-        {{ post.description | markdownify | truncatewords: 20 }}
+        {{ post.description | markdownify | strip_html | truncatewords: 20 }}
       {% else %}
-        {{ post.excerpt | truncatewords: 20 }}
+        {{ post.excerpt | strip_html | truncatewords: 20 }}
       {% endif %}
     </div>
   </div>
