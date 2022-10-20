@@ -32,10 +32,14 @@
     width: 100%;
   }
 
-  a,
-  a:hover,
-  a:visited {
-    color: $white; // Also applies to .badge
+  a {
+    &:not([class]) { // Excludes <a> with class, e.g. .btn .badge
+      color: $white;
+      text-decoration: underline;
+      &:hover {
+        color: darken($white, 10);
+      }
+    }
   }
   
   h1 {
@@ -63,6 +67,7 @@
 
   .badge {
     border: 2px solid $white;
+    color: $white;
     margin-top: 0.25rem;
     padding-left: $badge-padding-x * 2;
     padding-right: $badge-padding-x * 2;
