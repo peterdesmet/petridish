@@ -34,6 +34,12 @@ description: Template for team page
             <a href="https://researchgate.net/profile/{{ member.researchgate }}"><i class="ai ai-researchgate"></i></a>
           </li>
         {% endif %}
+        
+        {% if member.googlescholar %}
+          <li class="list-inline-item">
+            <a href="https://scholar.google.com/citations?user={{ member.googlescholar }}"><i class="ai ai-google-scholar"></i></a>
+          </li>
+        {% endif %}
 
         {% if member.twitter %}
           <li class="list-inline-item">
