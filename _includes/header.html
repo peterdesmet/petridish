@@ -20,7 +20,7 @@
           {% endif %}
 
           <div class="categories">
-            {% if page.categories and site.archive_permalink %}
+            {% if page.date and page.categories and site.archive_permalink %}
               {% for category in page.categories %}
               <a class="badge{% if site.rounded_corners != false %} rounded-pill{% endif %}" href="{{ site.archive_permalink | relative_url }}?category={{ category | url_encode }}">{{ category }}</a>
               {% endfor %}
