@@ -11,11 +11,11 @@
 - text: Documentation
   menu: # Dropdown menu (one level deep only)
   - text: Installation
-    href: /installation/
+    href: /docs/installation/
   - text: Configuration
-    href: /configuration/
+    href: /docs/configuration/
   - text: Markdown
-    href: /markdown/
+    href: /docs/markdown/
   - text: "---" # Divider to separate blocks of menu items (at least 3 "-")
   - text: "Dropdown header" # Title for block of menu items
   - text: External link to GitHub

@@ -3,7 +3,7 @@ title: Configuration
 description: >
   Overview of the configuration options in Petridish.
 background: https://images.unsplash.com/photo-1507477338202-487281e6c27e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTkwfHxiaXJkc3xlbnwwfDB8MHx8&auto=format&fit=crop&crop=top&w=1200&h=600&q=80
-permalink: /configuration/
+permalink: /docs/configuration/
 toc: true
 ---
 
@@ -142,7 +142,7 @@ defaults:
 
 ## Markdown options
 
-See the [Markdown guide]({{ '/markdown/' | relative_url }}) for an overview of the Markdown syntax you can use in pages and posts.
+See the [Markdown guide]({{ '/docs/markdown/' | relative_url }}) for an overview of the Markdown syntax you can use in pages and posts.
 
 ## Navigation
 
