@@ -42,6 +42,7 @@ exclude:
 collections:
   docs:                                 # Settings for the "docs" collection
     output: true
+    permalink: "/:collection/:path/"
     order:
       - installation.md
       - configuration.md
