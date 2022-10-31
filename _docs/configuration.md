@@ -4,6 +4,7 @@ description: >
   Overview of the configuration options in Petridish.
 background: https://images.unsplash.com/photo-1507477338202-487281e6c27e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTkwfHxiaXJkc3xlbnwwfDB8MHx8&auto=format&fit=crop&crop=top&w=1200&h=600&q=80
 toc: true
+order: 2
 ---
 
 <!-- Links to the repository -->
