@@ -40,14 +40,11 @@ exclude:
 
 # FRONTMATTER DEFAULTS
 defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
+  - scope:
+      type: posts
     values:
       permalink: "/blog/:year/:slug/"   # Use /blog/yyyy/{filename}/ as permalink for all posts
-  -
-    scope:
+  - scope:
       path: ""
     values:
-      layout: "default"                 # Only required for Petridish website, implied for sites using a theme
+      layout: default                   # Only required for the Petridish website, implied for sites using the theme
