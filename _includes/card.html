@@ -12,8 +12,8 @@
       <a class="stretched-link" href="{{ item.url | relative_url }}">{{ item.title }}</a>
     </h5>
 
-    {% if item.collection == "posts" %}
-      <h6 class="card-subtitle">{{ item.date | date: "%B %d, %Y" }}</h6>
+    {% if item.collection == 'posts' %}
+      <h6 class="card-subtitle">{{ item.date | date: '%B %d, %Y' }}</h6>
     {% endif %}
 
     <div class="card-text">
@@ -25,7 +25,7 @@
     </div>
   </div>
 
-  {% if item.collection == "posts" and item.categories and site.archive_permalink %}
+  {% if item.collection == 'posts' and item.categories and site.archive_permalink %}
     <div class="card-footer">
       {% for category in item.categories %}
         <a class="badge{% if site.rounded_corners != false %} rounded-pill{% endif %}" href="{{ site.archive_permalink | relative_url }}?category={{ category | url_encode }}">{{ category }}</a>

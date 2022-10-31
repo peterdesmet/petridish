@@ -10,9 +10,9 @@
           
           <div class="lead">{{ page.description | markdownify }}</div>
           
-          {% if page.collection == "posts" %}
+          {% if page.collection == 'posts' %}
             <p class="meta">
-              <time>{{ page.date | date: "%B %d, %Y" }}</time>
+              <time>{{ page.date | date: '%B %d, %Y' }}</time>
               {% if page.author or page.authors %}
                 &bull; {{ page.author | join: ', ' }}{{ page.authors | join: ', ' }}
               {% endif %}
@@ -20,7 +20,7 @@
           {% endif %}
 
           <div class="categories">
-            {% if page.collection == "posts" and page.categories and site.archive_permalink %}
+            {% if page.collection == 'posts' and page.categories and site.archive_permalink %}
               {% for category in page.categories %}
               <a class="badge{% if site.rounded_corners != false %} rounded-pill{% endif %}" href="{{ site.archive_permalink | relative_url }}?category={{ category | url_encode }}">{{ category }}</a>
               {% endfor %}
