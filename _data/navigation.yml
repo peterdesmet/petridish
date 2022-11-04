@@ -10,7 +10,7 @@
   href: /blog/
 - text: Documentation
   menu: # Dropdown menu (one level deep only)
-  - collection: docs # Shortcut to list all items in the "docs" collection
+  - collection: docs # Shortcut to list all pages in the "docs" collection
   - text: "---" # Divider to separate blocks of menu items (at least 3 "-")
   - text: "Dropdown header" # Title for block of menu items
   - text: Documentation

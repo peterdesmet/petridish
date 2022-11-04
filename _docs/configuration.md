@@ -150,7 +150,13 @@ See the [Markdown guide]({{ '/docs/markdown/' | relative_url }}) for an overview
 
 ## Navigation
 
-Create a [`_data/navigation.yml`][data_navigation] file and add pages in the order you want to include them in your top site navigation. You can also include dropdown menus.
+Create a [`_data/navigation.yml`][data_navigation] file and add pages in the order you want to include them in your top site navigation. You can also include dropdown menus and automatically list all pages from a [collection](#collections).
+
+```yml
+- text: Documentation
+  menu: # Dropdown menu (one level deep only)
+  - collection: docs # Shortcut to list all pages in the "docs" collection
+```
 
 ## Colors & font
 
