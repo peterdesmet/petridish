@@ -47,14 +47,10 @@ collections:
 # FRONTMATTER DEFAULTS
 defaults:
   - scope:
+      path: ""
+    values:
+      layout: default                   # Use default.html layout by default for all files
+  - scope:
       type: posts
     values:
       permalink: "/blog/:year/:slug/"   # Use /blog/yyyy/{filename}/ as permalink for all posts
-  - scope:
-      layout: archive
-    values:
-      collection: posts                 # Show posts on pages using the deprecated archive.html layout (symlinked to collection.html)
-  - scope:
-      path: ""
-    values:
-      layout: default                   # Only required for the Petridish website, implied for sites using the theme

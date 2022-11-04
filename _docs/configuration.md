@@ -97,7 +97,7 @@ Then create a [`_data/team.yml`][data_team] file to list team members.
 - Automatically list all pages in your collection as a dropdown in the [navigation](#navigation).
 - Automatically list all pages in your collection on an [overview page](#collection-overview-page).
 
-To create a collection, define it `_config.yml`:
+To create a collection, define one in `_config.yml`:
 
 ```yml
 collections:
@@ -106,7 +106,17 @@ collections:
     permalink: "/:collection/:path/"    # Use /your_collection/{filename}/ as permalink for all pages in your collection
 ```
 
-Then create pages as Markdown files in a new [`_yourcollection`][collection_dir] directory. The name should start with an underscore.
+Pages in a collection will **not** use `layout: default` by default, so set this [front matter default](https://jekyllrb.com/docs/step-by-step/09-collections/#front-matter-defaults) in `_config.yml`:
+
+```yml
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default                   # Use default.html layout by default for all files
+```
+
+Then create pages as Markdown files in a new [`_yourcollection`][docs_dir] directory. The name should start with an underscore.
 
 To control the order in which pages appear in the [navigation](#navigation) or [overview page](#collection-overview-page), add `order: integer` to the front matter of each page. Pages without this setting will be sorted alphabetically on path and placed _before_ the sorted pages. 
 
