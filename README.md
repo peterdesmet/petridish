@@ -49,7 +49,7 @@ Changes requiring review (e.g. new blog posts) should be created in a separate b
 The repository structure follows that of Jekyll websites.
 
 - General site settings: [_config.yml](_config.yml)
-- Pages: [pages/](pages/)
+- Pages: [pages/](pages/) or `_yourcollection`
 - Posts: [_posts/](_posts/)
 - Images & static files: [assets/](assets/)
 - Top navigation: [_data/navigation.yml](_data/navigation.yml)
