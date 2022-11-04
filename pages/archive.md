@@ -1,5 +1,6 @@
 ---
-layout: archive
+layout: collection
+collection: posts
 title: News
 description: News & blog posts
 permalink: /blog/
