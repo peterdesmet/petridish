@@ -42,6 +42,7 @@ background: /assets/images/banner_background_image.jpg
 permalink: /about/
 toc: false
 comments: false # See posts
+published: true # See posts
 ---
 
 Our project ...
@@ -116,6 +117,7 @@ author: [Author 1, Author 2]
 categories: [Category 1, Category 2]
 toc: false # See pages
 comments: false
+published: true
 ---
 
 We are happy to announce ...
@@ -127,6 +129,8 @@ Posts can be shown on an [archive page](#archive-page) and on the [home page](#h
 Posts will use `layout: default` by default.
 
 To enable post comments, add your site to [Disqus](https://disqus.com/) and add `comments: true` to each post where you want comments. Comments are disabled by default.
+
+To hide a post (e.g. a draft), add [`published: false`](https://jekyllrb.com/docs/front-matter/#predefined-global-variables). Drafts can also be stored in [`_drafts`](https://jekyllrb.com/docs/posts/#drafts), but `published: false` is easier to track in git and can be used for pages as well. Posts and pages are published by default.
 
 To change the permalink of all posts from the default `yyyy/mm/dd/title.html` to e.g. `blog/{filename}/` without having to add a `permalink` to each post, set a [front matter default](https://jekyllrb.com/docs/step-by-step/09-collections/#front-matter-defaults) in `_config.yml`:
 
