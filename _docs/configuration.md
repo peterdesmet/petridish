@@ -12,12 +12,14 @@ order: 2
 [pages_dir]: https://github.com/peterdesmet/petridish/tree/master/pages
 [pages_about]: https://raw.githubusercontent.com/peterdesmet/petridish/master/pages/about.md
 [pages_archive]: https://raw.githubusercontent.com/peterdesmet/petridish/master/pages/archive.md
+[pages_docs]: https://raw.githubusercontent.com/peterdesmet/petridish/master/pages/docs.md
 [pages_home]: https://raw.githubusercontent.com/peterdesmet/petridish/master/pages/home.md
 [pages_team]: https://raw.githubusercontent.com/peterdesmet/petridish/master/pages/team.md
 [posts_dir]: https://github.com/peterdesmet/petridish/tree/master/_posts
 [data_footer]: https://raw.githubusercontent.com/peterdesmet/petridish/master/_data/footer.yml
 [data_navigation]: https://raw.githubusercontent.com/peterdesmet/petridish/master/_data/navigation.yml
 [data_team]: https://raw.githubusercontent.com/peterdesmet/petridish/master/_data/team.yml
+[docs_dir]: https://github.com/peterdesmet/petridish/tree/master/_docs
 [posts_dmp]: https://raw.githubusercontent.com/peterdesmet/petridish/master/_posts/2019-07-08-dmp.md
 
 ## Example website
@@ -57,7 +59,7 @@ Pages will use `layout: default` by default.
 
 To add a table of content based on the h2 and h3 headers of your page (like on this configuration page), add `toc: true`. The width of the page is unaffected by the table of content. The table of content is disabled by default.
 
-For easier maintenance, organize your pages in a [`pages/`][pages_dir] directory and set their [permalink](https://jekyllrb.com/docs/permalinks/#front-matter).
+For easier maintenance, organize your top-level pages in a [`pages/`][pages_dir] directory and set their [permalink](https://jekyllrb.com/docs/permalinks/#front-matter). Subpages are best organized in a [collection](#collections).
 
 ## Home page
 
@@ -85,6 +87,41 @@ layout: team
 ```
 
 Then create a [`_data/team.yml`][data_team] file to list team members.
+
+## Collections
+
+[Collections](https://jekyllrb.com/docs/collections/) are a great way to group related (sub)pages or other content. [Blog posts](#blog-posts) are an example of such a collection (called `posts`), but you can create your own collection(s) as well, which offers several advantages:
+
+- Keep related content together in your repository.
+- Set a default settings (e.g. permalink) for all pages in your collection.
+- Automatically list all pages in your collection as a dropdown in the [navigation](#navigation).
+- Automatically list all pages in your collection on an [overview page](#collection-overview-page).
+
+To create a collection, define it `_config.yml`:
+
+```yml
+collections:
+  yourcollection:
+    output: true                        # Required to show your collection
+    permalink: "/:collection/:path/"    # Use /your_collection/{filename}/ as permalink for all pages in your collection
+```
+
+Then create pages as Markdown files in a new [`_yourcollection`][collection_dir] directory. The name should start with an underscore.
+
+To control the order in which pages appear in the [navigation](#navigation) or [overview page](#collection-overview-page), add `order: integer` to the front matter of each page. Pages without this setting will be sorted alphabetically on path and placed _before_ the sorted pages. 
+
+```yml
+order: 1 # This page will be shown first, assuming all pages in the collection have "order"
+```
+
+## Collection overview page
+
+To create an [overview page]({{ '/docs/' | relative_url }}) (source [`docs.md`][pages_docs]) of all pages in your collection, add the following front matter:
+
+```yml
+layout: collection
+collection: yourcollection
+```
 
 ## Archive page
 
