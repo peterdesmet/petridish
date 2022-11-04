@@ -7,9 +7,9 @@ baseurl: "/petridish"                   # Only required if your site is in a dir
                                         # A baseurl affects internal links, see http://peterdesmet.github.io/petridish/markdown/#links
 
 # SOCIAL PROFILES
-email: your.email@example.com           # Social icon in footer
-twitter_username: peterdesmet           # Social icon in footer
-github_username: peterdesmet            # Social icon in footer
+email: your.email@example.com
+twitter_username: peterdesmet
+github_username: peterdesmet            # Can also be a repository: username/reponame
 
 # THEME SETTINGS (ALL OPTIONAL)
 posts_on_home: 3                        # Show x number of latest posts on homepage, can be 0

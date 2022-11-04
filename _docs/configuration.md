@@ -32,7 +32,7 @@ Your site's configuration is controlled by [`_config.yml`][config]. Set at least
 
 ## Pages
 
-Create [pages](https://jekyllrb.com/docs/pages/) as Markdown files in your repository (e.g. [`about.md`][pages_about] for [this page](/about/)).
+Create [pages](https://jekyllrb.com/docs/pages/) as Markdown files in your repository (e.g. [`about.md`][pages_about] for [this page]({{ '/about/' | relative_url }})).
 
 Pages can have the following [front matter](https://jekyllrb.com/docs/front-matter/) (only `title` is required):
 
@@ -239,7 +239,7 @@ Add social icons to the footer by adding your (project's) social profiles in `_c
 ```yml
 email: your.email@example.com
 twitter_username: your_twitter_username
-github_username: your_github_username
+github_username: your_github_username   # Can also be a repository: username/reponame
 ```
 
 Create a [`_data/footer.yml`][data_footer] file to further customize your footer with text, links and/or a disclaimer.
