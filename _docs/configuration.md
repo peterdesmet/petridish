@@ -104,7 +104,7 @@ To see blog posts, you'll have to create some. ☺️
 
 ## Blog posts
 
-Create [posts](https://jekyllrb.com/docs/posts/) as `yyyy-mm-dd-title.md` Markdown files in the [`_posts/`][posts_dir] directory (e.g. [`2019-07-08-dmp.md`][posts_dmp] for [this post](/blog/2019/dmp/)).
+Create [posts](https://jekyllrb.com/docs/posts/) as `yyyy-mm-dd-title.md` Markdown files in the [`_posts/`][posts_dir] directory (e.g. [`2019-07-08-dmp.md`][posts_dmp] for [this post]({{ '/blog/2019/dmp/' | relative_url }})).
 
 Posts can have the following [front matter](https://jekyllrb.com/docs/front-matter/) (only `title` is required):
 
