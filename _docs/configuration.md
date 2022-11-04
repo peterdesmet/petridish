@@ -244,6 +244,16 @@ github_username: your_github_username   # Can also be a repository: username/rep
 
 Create a [`_data/footer.yml`][data_footer] file to further customize your footer with text, links and/or a disclaimer.
 
+## Edit link
+
+Invite contributions by adding an "edit this page" link in the footer, in `_config.yml`:
+
+```yml
+github_edit: true
+```
+
+This assumes your repository is public, with `main` as default branch. You will be able to directly edit the file, users without rights will have to fork your repository and create a pull request.
+
 ## Testing your site locally
 
 All the above settings can be directly made in your GitHub repository in your browser, but especially during setup it is more convenient to make those changes locally, render your website locally and then push your changes to GitHub.

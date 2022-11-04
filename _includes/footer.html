@@ -65,6 +65,13 @@
       {% if site.data.footer.license %}
         {{ site.data.footer.license | markdownify }}
       {% endif %}
+      {% if site.github_edit %}
+        <p>
+          <a href="{{ site.github.repository_url }}/edit/main/{{ page.path }}">
+            <i class="fas fa-edit"></i> Edit this page
+          </a>
+        </p>
+      {% endif %}
     </div>
   </div>
 </footer>

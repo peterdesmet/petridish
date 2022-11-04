@@ -15,6 +15,7 @@ github_username: peterdesmet            # Can also be a repository: username/rep
 posts_on_home: 3                        # Show x number of latest posts on homepage, can be 0
 tweets_on_home: true                    # Show Twitter feed of twitter_username on homepage
 archive_permalink: /blog/               # Permalink of page using the collection.html layout to show posts, required when using post categories
+github_edit: true                       # Show an "edit this page" link in the footer
 colors:
   links: "#007bff"                      # Color for links: use a readable color that contrasts well with dark text
   banner: "#007bff"                     # Background color for page banners: use color that contrasts well with white
