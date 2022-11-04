@@ -1,7 +1,7 @@
-<div class="card" data-categories="{% for category in post.categories %}{{ category | downcase | strip }}|{% endfor %}">
-  <a href="{{ post.url | relative_url }}">
-    {% if post.background %}
-      <img class="card-img-top" src="{{ post.background | relative_url }}">
+<div class="card" data-categories="{% for category in item.categories %}{{ category | downcase | strip }}|{% endfor %}">
+  <a href="{{ item.url | relative_url }}">
+    {% if item.background %}
+      <img class="card-img-top" src="{{ item.background | relative_url }}">
     {% else %}
       <div class="card-img-top bg-secondary"></div>
     {% endif %}
@@ -9,23 +9,25 @@
 
   <div class="card-body position-relative">
     <h5 class="card-title">
-      <a class="stretched-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <a class="stretched-link" href="{{ item.url | relative_url }}">{{ item.title }}</a>
     </h5>
 
-    <h6 class="card-subtitle">{{ post.date | date: "%B %d, %Y" }}</h6>
+    {% if item.collection == 'posts' %}
+      <h6 class="card-subtitle">{{ item.date | date: '%B %d, %Y' }}</h6>
+    {% endif %}
 
     <div class="card-text">
-      {% if post.description %}
-        {{ post.description | markdownify | strip_html | truncatewords: 20 }}
+      {% if item.description %}
+        {{ item.description | markdownify | strip_html | truncatewords: 20 }}
       {% else %}
-        {{ post.excerpt | strip_html | truncatewords: 20 }}
+        {{ item.excerpt | strip_html | truncatewords: 20 }}
       {% endif %}
     </div>
   </div>
 
-  {% if post.categories and site.archive_permalink %}
+  {% if item.collection == 'posts' and item.categories and site.archive_permalink %}
     <div class="card-footer">
-      {% for category in post.categories %}
+      {% for category in item.categories %}
         <a class="badge{% if site.rounded_corners != false %} rounded-pill{% endif %}" href="{{ site.archive_permalink | relative_url }}?category={{ category | url_encode }}">{{ category }}</a>
       {% endfor %}
     </div>

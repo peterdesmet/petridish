@@ -14,7 +14,7 @@ github_username: peterdesmet            # Social icon in footer
 # THEME SETTINGS (ALL OPTIONAL)
 posts_on_home: 3                        # Show x number of latest posts on homepage, can be 0
 tweets_on_home: true                    # Show Twitter feed of twitter_username on homepage
-archive_permalink: /blog/               # Permalink of page using archive.html layout, required when using post categories
+archive_permalink: /blog/               # Permalink of page using the collection.html layout to show posts, required when using post categories
 colors:
   links: "#007bff"                      # Color for links: use a readable color that contrasts well with dark text
   banner: "#007bff"                     # Background color for page banners: use color that contrasts well with white
@@ -38,16 +38,23 @@ exclude:
   - package.json
   - petridish.gemspec
 
+# COLLECTIONS
+collections:
+  docs:                                 # Settings for the "docs" collection
+    output: true
+    permalink: "/:collection/:path/"
+
 # FRONTMATTER DEFAULTS
 defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
+  - scope:
+      type: posts
     values:
       permalink: "/blog/:year/:slug/"   # Use /blog/yyyy/{filename}/ as permalink for all posts
-  -
-    scope:
+  - scope:
+      layout: archive
+    values:
+      collection: posts                 # Show posts on pages using the deprecated archive.html layout (symlinked to collection.html)
+  - scope:
       path: ""
     values:
-      layout: "default"                 # Only required for Petridish website, implied for sites using a theme
+      layout: default                   # Only required for the Petridish website, implied for sites using the theme

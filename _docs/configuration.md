@@ -3,8 +3,8 @@ title: Configuration
 description: >
   Overview of the configuration options in Petridish.
 background: https://images.unsplash.com/photo-1507477338202-487281e6c27e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTkwfHxiaXJkc3xlbnwwfDB8MHx8&auto=format&fit=crop&crop=top&w=1200&h=600&q=80
-permalink: /configuration/
 toc: true
+order: 2
 ---
 
 <!-- Links to the repository -->
@@ -12,12 +12,14 @@ toc: true
 [pages_dir]: https://github.com/peterdesmet/petridish/tree/master/pages
 [pages_about]: https://raw.githubusercontent.com/peterdesmet/petridish/master/pages/about.md
 [pages_archive]: https://raw.githubusercontent.com/peterdesmet/petridish/master/pages/archive.md
+[pages_docs]: https://raw.githubusercontent.com/peterdesmet/petridish/master/pages/docs.md
 [pages_home]: https://raw.githubusercontent.com/peterdesmet/petridish/master/pages/home.md
 [pages_team]: https://raw.githubusercontent.com/peterdesmet/petridish/master/pages/team.md
 [posts_dir]: https://github.com/peterdesmet/petridish/tree/master/_posts
 [data_footer]: https://raw.githubusercontent.com/peterdesmet/petridish/master/_data/footer.yml
 [data_navigation]: https://raw.githubusercontent.com/peterdesmet/petridish/master/_data/navigation.yml
 [data_team]: https://raw.githubusercontent.com/peterdesmet/petridish/master/_data/team.yml
+[docs_dir]: https://github.com/peterdesmet/petridish/tree/master/_docs
 [posts_dmp]: https://raw.githubusercontent.com/peterdesmet/petridish/master/_posts/2019-07-08-dmp.md
 
 ## Example website
@@ -42,6 +44,7 @@ background: /assets/images/banner_background_image.jpg
 permalink: /about/
 toc: false
 comments: false # See posts
+published: true # See posts
 ---
 
 Our project ...
@@ -56,7 +59,7 @@ Pages will use `layout: default` by default.
 
 To add a table of content based on the h2 and h3 headers of your page (like on this configuration page), add `toc: true`. The width of the page is unaffected by the table of content. The table of content is disabled by default.
 
-For easier maintenance, organize your pages in a [`pages/`][pages_dir] directory and set their [permalink](https://jekyllrb.com/docs/permalinks/#front-matter).
+For easier maintenance, organize your top-level pages in a [`pages/`][pages_dir] directory and set their [permalink](https://jekyllrb.com/docs/permalinks/#front-matter). Subpages are best organized in a [collection](#collections).
 
 ## Home page
 
@@ -85,25 +88,64 @@ layout: team
 
 Then create a [`_data/team.yml`][data_team] file to list team members.
 
-## Archive page
+## Collections
 
-To enable your [news / blog / archive page](/blog/) (source [`archive.md`][pages_archive]) - i.e. the page listing all posts - add the following front matter:
+[Collections](https://jekyllrb.com/docs/collections/) are a great way to group related (sub)pages or other content. [Blog posts](#blog-posts) are an example of such a collection (called `posts`), but you can create your own collection(s) as well, which offers several advantages:
+
+- Keep related content together in your repository.
+- Set a default settings (e.g. permalink) for all pages in your collection.
+- Automatically list all pages in your collection as a dropdown in the [navigation](#navigation).
+- Automatically list all pages in your collection on an [overview page](#collection-overview-page).
+
+To create a collection, define it `_config.yml`:
 
 ```yml
-layout: archive
+collections:
+  yourcollection:
+    output: true                        # Required to show your collection
+    permalink: "/:collection/:path/"    # Use /your_collection/{filename}/ as permalink for all pages in your collection
+```
+
+Then create pages as Markdown files in a new [`_yourcollection`][collection_dir] directory. The name should start with an underscore.
+
+To control the order in which pages appear in the [navigation](#navigation) or [overview page](#collection-overview-page), add `order: integer` to the front matter of each page. Pages without this setting will be sorted alphabetically on path and placed _before_ the sorted pages. 
+
+```yml
+order: 1 # This page will be shown first, assuming all pages in the collection have "order"
+```
+
+## Collection overview page
+
+To create an [overview page]({{ '/docs/' | relative_url }}) (source [`docs.md`][pages_docs]) of all pages in your collection, add the following front matter:
+
+```yml
+layout: collection
+collection: yourcollection
+```
+
+## Archive page
+
+{: .alert .alert-danger }
+The use of the `layout: archive` template is deprecated and might break in future versions of Petridish. Use the settings below instead.
+
+To create an [overview page]({{ '/blog/' | relative_url }}) (source [`archive.md`][pages_archive]) of all blog posts (i.e. an archive, news, or blog page), add the following front matter:
+
+```yml
+layout: collection
+collection: posts
 ```
 
 And enable post categories by repeating the permalink for your archive page in  `_config.yml`:
 
 ```yml
-archive_permalink: /blog/               # Permalink of page using archive.html layout, required when using post categories
+archive_permalink: /blog/               # Permalink of page using the collection.html layout to show posts, required when using post categories
 ```
 
 To see blog posts, you'll have to create some. ☺️
 
 ## Blog posts
 
-Create [posts](https://jekyllrb.com/docs/posts/) as `yyyy-mm-dd-title.md` Markdown files in the [`_posts/`][posts_dir] directory (e.g. [`2019-07-08-dmp.md`][posts_dmp] for [this post](/blog/2019/dmp/)).
+Create [posts](https://jekyllrb.com/docs/posts/) as `yyyy-mm-dd-title.md` Markdown files in the [`_posts/`][posts_dir] directory (e.g. [`2019-07-08-dmp.md`][posts_dmp] for [this post]({{ '/blog/2019/dmp/' | relative_url }})).
 
 Posts can have the following [front matter](https://jekyllrb.com/docs/front-matter/) (only `title` is required):
 
@@ -116,6 +158,7 @@ author: [Author 1, Author 2]
 categories: [Category 1, Category 2]
 toc: false # See pages
 comments: false
+published: true
 ---
 
 We are happy to announce ...
@@ -127,6 +170,8 @@ Posts can be shown on an [archive page](#archive-page) and on the [home page](#h
 Posts will use `layout: default` by default.
 
 To enable post comments, add your site to [Disqus](https://disqus.com/) and add `comments: true` to each post where you want comments. Comments are disabled by default.
+
+To hide a post (e.g. a draft), add [`published: false`](https://jekyllrb.com/docs/front-matter/#predefined-global-variables). Drafts can also be stored in [`_drafts`](https://jekyllrb.com/docs/posts/#drafts), but `published: false` is easier to track in git and can be used for pages as well. Posts and pages are published by default.
 
 To change the permalink of all posts from the default `yyyy/mm/dd/title.html` to e.g. `blog/{filename}/` without having to add a `permalink` to each post, set a [front matter default](https://jekyllrb.com/docs/step-by-step/09-collections/#front-matter-defaults) in `_config.yml`:
 
@@ -142,11 +187,17 @@ defaults:
 
 ## Markdown options
 
-See the [Markdown guide]({{ '/markdown/' | relative_url }}) for an overview of the Markdown syntax you can use in pages and posts.
+See the [Markdown guide]({{ '/docs/markdown/' | relative_url }}) for an overview of the Markdown syntax you can use in pages and posts.
 
 ## Navigation
 
-Create a [`_data/navigation.yml`][data_navigation] file and add pages in the order you want to include them in your top site navigation. You can also include dropdown menus.
+Create a [`_data/navigation.yml`][data_navigation] file and add pages in the order you want to include them in your top site navigation. You can also include dropdown menus and automatically list all pages from a [collection](#collections).
+
+```yml
+- text: Documentation
+  menu: # Dropdown menu (one level deep only)
+  - collection: docs # Shortcut to list all pages in the "docs" collection
+```
 
 ## Colors & font
 

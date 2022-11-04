@@ -12,6 +12,6 @@ permalink: /
 
 See the demo website for instructions:
 
-- [Installation]({{ '/installation/' | relative_url }})
-- [Configuration]({{ '/configuration/' | relative_url }})
-- [Markdown]({{ '/markdown/' | relative_url }})
+- [Installation]({{ '/docs/installation/' | relative_url }})
+- [Configuration]({{ '/docs/configuration/' | relative_url }})
+- [Markdown]({{ '/docs/markdown/' | relative_url }})

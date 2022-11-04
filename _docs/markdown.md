@@ -4,8 +4,8 @@ description: >
   You write your content in [Markdown](https://guides.github.com/features/mastering-markdown/).
   This page shows how it is rendered by Petridish.
 background: https://images.unsplash.com/photo-1550089479-fe0e48e7d788?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGJpcmR8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=1200&h=600&q=80
-permalink: /markdown/
 toc: true
+order: 3
 ---
 
 {: .alert .alert-warning}
@@ -36,7 +36,7 @@ h1 headings are reserved for page titles and are hidden from content. Start your
 
 ## Table of content
 
-Add `toc: true` to your page/post front matter. See [configuration]({{ '/configuration/' | relative_url }}#pages).
+Add `toc: true` to your page/post front matter. See [configuration]({{ '/docs/configuration/' | relative_url }}#pages).
 
 ## Paragraphs
 

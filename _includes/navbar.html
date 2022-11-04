@@ -22,6 +22,11 @@
                   {% for subitem in item.menu %}
                     {% if subitem.href %}
                       <a class="dropdown-item{% if subitem.href == page.url %} active{% endif %}" href="{{ subitem.href | relative_url }}"{% if subitem.new_window %} target="_blank"{% endif %}>{{ subitem.text }}</a>
+                    {% elsif subitem.collection %}
+                      {% assign collection = site[subitem.collection] | sort: 'order' %}
+                      {% for colitem in collection %}
+                        <a class="dropdown-item{% if colitem.url == page.url %} active{% endif %}" href="{{ colitem.url | relative_url }}">{{ colitem.title }}</a>
+                      {% endfor %}
                     {% elsif subitem.text contains '---' %}
                       <div class="dropdown-divider"></div>
                     {% else %}
