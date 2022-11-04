@@ -138,7 +138,7 @@ collection: posts
 And enable post categories by repeating the permalink for your archive page in  `_config.yml`:
 
 ```yml
-archive_permalink: /blog/               # Permalink of page using collection.html layout for posts collection, required when using post categories
+archive_permalink: /blog/               # Permalink of page using the collection.html layout to show posts, required when using post categories
 ```
 
 To see blog posts, you'll have to create some. ☺️

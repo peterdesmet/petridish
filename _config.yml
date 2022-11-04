@@ -14,7 +14,7 @@ github_username: peterdesmet            # Social icon in footer
 # THEME SETTINGS (ALL OPTIONAL)
 posts_on_home: 3                        # Show x number of latest posts on homepage, can be 0
 tweets_on_home: true                    # Show Twitter feed of twitter_username on homepage
-archive_permalink: /blog/               # Permalink of page using collection.html layout for posts collection, required when using post categories
+archive_permalink: /blog/               # Permalink of page using the collection.html layout to show posts, required when using post categories
 colors:
   links: "#007bff"                      # Color for links: use a readable color that contrasts well with dark text
   banner: "#007bff"                     # Background color for page banners: use color that contrasts well with white
