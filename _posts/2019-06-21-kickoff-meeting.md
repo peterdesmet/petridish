@@ -1,7 +1,10 @@
 ---
 title: Kickoff meeting
 description: 9-10 September 2019 in Ghent, Belgium.
-background: "https://images.unsplash.com/photo-1558441440-d4111d18d48f?ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
+background:
+  img: "https://images.unsplash.com/photo-1558441440-d4111d18d48f?ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
+  by: Kyle Arcilla
+  href: https://unsplash.com/photos/XA1pHcB5AMA
 author: [Philip J. Fry, Turanga Leela]
 categories: [Meetings, Shared category]
 ---
