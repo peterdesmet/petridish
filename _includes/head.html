@@ -13,6 +13,22 @@
   {% if site.remote_theme %}
     <meta name="generator" content="Jekyll, theme: {{ site.remote_theme }}">
   {% endif %}
+  <meta name="twitter:card" content="summary_large_image">
+  {% if site.twitter_username %}
+    <meta name="twitter:site" content="@{{ site.twitter_username }}">
+  {% endif %}
+  <meta name="twitter:title" content="{{ page.title }}">
+  {% if page.description %}
+    <meta name="twitter:description" content="{{ page.description }}">
+  {% endif %}
+  {% if page.background.first %}
+    {% assign background = page.background.img %}
+  {% else %}
+    {% assign background = page.background %}
+  {% endif %}
+  {% if background %}
+    <meta name="twitter:image" content="{{ background | relative_url }}">
+  {% endif %}
 
   <link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | absolute_url }}">
   <!-- Bootstrap CSS is included in main.css -->

@@ -1,9 +1,4 @@
-{% if page.background.first %}
-  {% assign background = page.background.img %}
-{% else %}
-  {% assign background = page.background %}
-{% endif %}
-
+{% comment %}background is defined in head.html{% endcomment %}
 {% if background %}
   <header class="header bg-image" style="background-image: url('{{ background | relative_url }}')">
 {% else %}
