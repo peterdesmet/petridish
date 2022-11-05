@@ -1,5 +1,11 @@
-{% if page.background %}
-  <header class="header bg-image" style="background-image: url('{{ page.background | relative_url }}')">
+{% if page.background.first %}
+  {% assign background = page.background.img %}
+{% else %}
+  {% assign background = page.background %}
+{% endif %}
+
+{% if background %}
+  <header class="header bg-image" style="background-image: url('{{ background | relative_url }}')">
 {% else %}
   <header class="header bg-no-image">
 {% endif %}

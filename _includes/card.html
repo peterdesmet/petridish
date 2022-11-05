@@ -1,7 +1,13 @@
+{% if item.background.first %}
+  {% assign background = item.background.img %}
+{% else %}
+  {% assign background = item.background %}
+{% endif %}
+
 <div class="card" data-categories="{% for category in item.categories %}{{ category | downcase | strip }}|{% endfor %}">
   <a href="{{ item.url | relative_url }}">
     {% if item.background %}
-      <img class="card-img-top" src="{{ item.background | relative_url }}">
+      <img class="card-img-top" src="{{ background | relative_url }}">  
     {% else %}
       <div class="card-img-top bg-secondary"></div>
     {% endif %}
