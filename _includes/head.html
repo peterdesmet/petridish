@@ -13,7 +13,7 @@
   {% if site.remote_theme %}
     <meta name="generator" content="Jekyll, theme: {{ site.remote_theme }}">
   {% endif %}
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="summary">
   {% if site.twitter_username %}
     <meta name="twitter:site" content="@{{ site.twitter_username }}">
   {% endif %}
@@ -27,7 +27,7 @@
     {% assign background = page.background %}
   {% endif %}
   {% if background %}
-    <meta name="twitter:image" content="{{ background | relative_url }}">
+    <meta name="twitter:image" content="{{ background | absolute_url }}">
   {% endif %}
 
   <link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | absolute_url }}">
