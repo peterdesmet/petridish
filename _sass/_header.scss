@@ -2,7 +2,7 @@
 
 .header {
   // Mimics Bootstrap v4 .jumbotron
-  // background-image: set in page frontmatter
+  // background-image: set in page front matter
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -85,5 +85,19 @@
   // Use light colored badge border when header has no background-image
   &.bg-no-image .badge {
     border: 2px solid lighten($secondary, 25);
+  }
+  
+  .caption {
+    bottom: 0;
+    color: darken($white, 25);
+    font-size: 80%;
+    padding: 0 0.5rem;
+    position: absolute;
+    right: 0;
+
+    a {
+      color: darken($white, 25);
+      text-decoration: none;
+    }
   }
 }

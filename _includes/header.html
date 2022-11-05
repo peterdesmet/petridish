@@ -35,4 +35,13 @@
         </div>
       </div>
     </div>
+    {% if page.background.img and page.background.by %}
+      <div class="caption">
+        {% if page.background.href %}
+          Image by <a href="{{ page.background.href }}">{{ page.background.by }}</a>
+        {% else %}
+          Image by {{ page.background.by }}
+        {% endif %}
+      </div>
+    {% endif %}
   </header>
