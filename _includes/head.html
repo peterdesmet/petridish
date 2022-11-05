@@ -1,5 +1,3 @@
-{% capture newline %}
-{% endcapture %}
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,14 +8,20 @@
     <title>{{ page.title }} - {{ site.title }}</title>
   {% endif %}
 
-  {% assign description = page.description | markdownify | strip_html | replace: newline, " " %}
-  <meta name="description" content="{{ description }}">
+  {% if page.description %}
+    {% assign description = page.description | markdownify | strip_html | newline_to_br | split: '<br />' | first %}
+  {% endif %}
+  {% if description %}
+    <meta name="description" content="{{ description }}">
+  {% endif %}
   {% if page.author %}
     {% assign author = page.author | join: ", " %}
   {% else %}
     {% assign author = site.author %}
   {% endif %}
-  <meta name="author" content="{{ author }}">
+  {% if author %}
+    <meta name="author" content="{{ author }}">
+  {% endif %}
   {% if site.remote_theme %}
     <meta name="generator" content="Jekyll, theme: {{ site.remote_theme }}">
   {% endif %}
@@ -27,7 +31,9 @@
     <meta name="twitter:site" content="@{{ site.twitter_username }}">
   {% endif %}
   <meta name="twitter:title" content="{{ page.title }}">
-  <meta name="twitter:description" content="{{ description }}">
+  {% if description %}
+    <meta name="twitter:description" content="{{ description }}">
+  {% endif %}
   {% if page.background.first %}
     {% assign background = page.background.img %}
   {% else %}
