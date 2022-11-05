@@ -60,6 +60,15 @@ Pages will use `layout: default` by default.
 
 `background` can be a [local][pages_home] or [remote][pages_about] image. It will be cropped vertically. For faster page loads, reduce image sizes to less than 1MB (e.g. by reducing resolution to 72dpi and/or width to 2000px).
 
+`background` can also be provided with attribution information:
+
+```yml
+background:
+  img: https://images.unsplash.com/photo-1507477338202-487281e6c27e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTkwfHxiaXJkc3xlbnwwfDB8MHx8&auto=format&fit=crop&crop=top&w=1200&h=600&q=80
+  by: Mathew Schwartz # Creator of the image
+  href: https://unsplash.com/photos/5iFZBM7qgWc # Link to the original source
+```
+
 To add a table of content based on the h2 and h3 headers of your page (like on this configuration page), add `toc: true`. The width of the page is unaffected by the table of content. The table of content is disabled by default.
 
 For easier maintenance, organize your top-level pages in a [`pages/`][pages_dir] directory and set their [permalink](https://jekyllrb.com/docs/permalinks/#front-matter). Subpages are best organized in a [collection](#collections).
