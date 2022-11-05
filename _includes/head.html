@@ -9,10 +9,15 @@
   {% else %}
     <title>{{ page.title }} - {{ site.title }}</title>
   {% endif %}
-  
-  <meta name="author" content="{{ site.author }}">
+
   {% assign description = page.description | markdownify | strip_html | replace: newline, " " %}
   <meta name="description" content="{{ description }}">
+  {% if page.author %}
+    {% assign author = page.author | join: ", " %}
+  {% else %}
+    {% assign author = site.author %}
+  {% endif %}
+  <meta name="author" content="{{ author }}">
   {% if site.remote_theme %}
     <meta name="generator" content="Jekyll, theme: {{ site.remote_theme }}">
   {% endif %}
