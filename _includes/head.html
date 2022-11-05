@@ -1,3 +1,5 @@
+{% capture newline %}
+{% endcapture %}
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,19 +10,19 @@
     <title>{{ page.title }} - {{ site.title }}</title>
   {% endif %}
   
-  <meta name="description" content="{{ site.description }}">
   <meta name="author" content="{{ site.author }}">
+  {% assign description = page.description | markdownify | strip_html | replace: newline, " " %}
+  <meta name="description" content="{{ description }}">
   {% if site.remote_theme %}
     <meta name="generator" content="Jekyll, theme: {{ site.remote_theme }}">
   {% endif %}
+
   <meta name="twitter:card" content="summary">
   {% if site.twitter_username %}
     <meta name="twitter:site" content="@{{ site.twitter_username }}">
   {% endif %}
   <meta name="twitter:title" content="{{ page.title }}">
-  {% if page.description %}
-    <meta name="twitter:description" content="{{ page.description }}">
-  {% endif %}
+  <meta name="twitter:description" content="{{ description }}">
   {% if page.background.first %}
     {% assign background = page.background.img %}
   {% else %}
