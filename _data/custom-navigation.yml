@@ -1,0 +1,13 @@
+# Links listed below will be included in your site's navbar (navigation at the top)
+
+- text: "Courses 2022" # Note that users can reach the homepage by clicking the site's title on the left in the navbar
+  href: /docs/custom-navigation/
+- text: Courses
+  menu:
+  - text: Course 1
+    href: true
+  - text: Course 2
+    href: true
+- text: Exercises
+  href: true
+

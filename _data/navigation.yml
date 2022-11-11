@@ -20,6 +20,8 @@
   - text: "Dropdown header" # Title for block of menu items
   - text: No page with this title # Will be shown in red, since there is no page with this title
     href: true
+  - text: Page with custom navigation
+    href: /docs/custom-navigation/
 - text: GitHub
   href: https://github.com/peterdesmet/petridish/
   new_window: true

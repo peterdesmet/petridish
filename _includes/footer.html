@@ -49,7 +49,7 @@
               {% for item in col.links %}
                 <li>
                   <i class="fa-li fa fa-chevron-circle-right"></i>
-                  <a href="{{ item.href | relative_url}}"{% if item.new_window %} target="_blank"{% endif %}>{{ item.text }}</a>
+                  <a href="{{ item.href | relative_url }}"{% if item.new_window %} target="_blank"{% endif %}>{{ item.text }}</a>
                 </li>
               {% endfor %}
             </ul>

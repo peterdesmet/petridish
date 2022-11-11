@@ -6,13 +6,18 @@
       {% endif %}
       {{ site.title }}
     </a>
-    {% if site.data.navigation %}
+    {% if page.navigation and site.data[page.navigation] %}
+      {% assign navigation = site.data[page.navigation] %}
+    {% elsif site.data.navigation %}
+      {% assign navigation = site.data.navigation %}
+    {% endif %}
+    {% if navigation %}
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
         Menu <i class="fas fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbar-menu">
         <ul class="navbar-nav ms-auto">
-          {% for item in site.data.navigation %}
+          {% for item in navigation %}
             {% if item.menu %}
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">

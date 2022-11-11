@@ -49,9 +49,3 @@ defaults:
       type: posts
     values:
       permalink: "/blog/:year/:slug/"   # Use /blog/yyyy/{filename}/ as permalink for all posts
-
-# FRONTMATTER DEFAULTS FOR PETRIDISH DEMO
-  - scope:
-      path: "pages/docs"
-    values:
-      permalink: "/docs/:basename/"

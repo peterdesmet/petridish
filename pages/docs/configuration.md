@@ -9,8 +9,6 @@ toc: true
 ---
 
 <!-- Links to the repository -->
-[pages_docs]: https://raw.githubusercontent.com/peterdesmet/petridish/master/pages/docs.md
-[docs_dir]: https://github.com/peterdesmet/petridish/tree/master/_docs
 [config]: https://raw.githubusercontent.com/peterdesmet/petridish/main/_config.yml
 [pages_dir]: https://github.com/peterdesmet/petridish/tree/main/pages
 [pages_about]: https://raw.githubusercontent.com/peterdesmet/petridish/main/pages/about.md
@@ -20,6 +18,7 @@ toc: true
 [posts_dir]: https://github.com/peterdesmet/petridish/tree/main/_posts
 [data_footer]: https://raw.githubusercontent.com/peterdesmet/petridish/main/_data/footer.yml
 [data_navigation]: https://raw.githubusercontent.com/peterdesmet/petridish/main/_data/navigation.yml
+[data_custom_navigation]: https://raw.githubusercontent.com/peterdesmet/petridish/main/_data/custom-navigation.yml
 [data_team]: https://raw.githubusercontent.com/peterdesmet/petridish/main/_data/team.yml
 [posts_dmp]: https://raw.githubusercontent.com/peterdesmet/petridish/main/_posts/2019-07-08-dmp.md
 
@@ -93,6 +92,8 @@ courses/                                index.md
 ```
 
 Starting the directory structure from the root of your repository has the advantage (in both approaches) that the default permalink of the pages will be their path, e.g. `https://example.org/courses/2022/course-1/`.
+
+To provide better access to deeper sections your site (e.g. the pages in `courses/2022`), setup a custom [navigation](#navigation).
 
 {: .alert .alert-warning }
 > You could also organize pages as [Collections](https://jekyllrb.com/docs/collections/), but note that:
@@ -195,6 +196,21 @@ See the [Markdown guide]({{ '/docs/markdown/' | relative_url }}) for an overview
 
 Create a [`_data/navigation.yml`][data_navigation] file and add pages in the order you want to include them in your top site navigation. You can also include dropdown menus.
 
+Since the top site navigation only allows for 2 levels, deeper pages are a bit harder to access. You can solve this by creating a custom top navigation for that section of the site. Taking the `courses/2022` example mentioned [here](#organizing-pages):
+
+1. Create a separate [`_data/course_2022_navigation.yml`][data_custom_navigation].
+2. Add `navigation: course_2022_navigation` to the front matter of each page or (recommended) set it as front matter default in `_config.yml`:
+
+    ```yml
+    defaults:
+      - scope:
+          path: "courses/2022"
+        values:
+          navigation: "course_2022_navigation"
+    ```
+
+3. That section of the site will now have its [own top navigation]({{ '/docs/custom-navigation/' | relative_url }}). Users will always be able to go back to the main site by clicking the site title.
+
 ## Colors & font
 
 Customize colors, font type and corners in `_config.yml`:
@@ -242,7 +258,7 @@ This assumes your repository is public, with `main` as default branch. You will 
 
 ## Testing your site locally
 
-All the above settings can be directly made in your GitHub repository in your browser, but especially during setup it is more convenient to make those changes locally, render your website locally and then push your changes to GitHub.
+All the above settings can be directly made in your GitHub repository in your browser, but especially during setup it is more convenient to make those changes locally, render your site locally and then push your changes to GitHub.
 
 1. [Clone your repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) to your computer.
 2. Place a [`Gemfile`](https://github.com/peterdesmet/petridish/blob/main/Gemfile) in your repository root, with the content:
