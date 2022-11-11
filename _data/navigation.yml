@@ -3,21 +3,23 @@
 - text: Home # Note that users can also reach the homepage by clicking the site's title on the left in the navbar
   href: /
 - text: About
-  href: /about/
+  href: /about/ # Hardcoded URL
 - text: Team
-  href: /team/
+  href: true # Automatically add URL of (first) page called "Team"
 - text: Blog
   href: /blog/
 - text: Documentation
   menu: # Dropdown menu (one level deep only)
   - text: Installation
-    href: /docs/installation/
+    href: true
   - text: Configuration
-    href: /docs/configuration/
+    href: true
   - text: Markdown
-    href: /docs/markdown/
+    href: true
   - text: "---" # Divider to separate blocks of menu items (at least 3 "-")
   - text: "Dropdown header" # Title for block of menu items
+  - text: No page with this title # Will be shown in red, since there is no page with this title
+    href: true
 - text: GitHub
   href: https://github.com/peterdesmet/petridish/
   new_window: true
