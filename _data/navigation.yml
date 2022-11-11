@@ -18,8 +18,6 @@
     href: /docs/markdown/
   - text: "---" # Divider to separate blocks of menu items (at least 3 "-")
   - text: "Dropdown header" # Title for block of menu items
-  - text: Documentation
-    href: /docs/
 - text: GitHub
   href: https://github.com/peterdesmet/petridish/
   new_window: true
