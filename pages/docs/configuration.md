@@ -145,20 +145,16 @@ collection: yourcollection
 
 ## Archive page
 
-{: .alert .alert-danger }
-The use of the `layout: archive` template is deprecated and might break in future versions of Petridish. Use the settings below instead.
-
 To create an [overview page]({{ '/blog/' | relative_url }}) (source [`archive.md`][pages_archive]) of all blog posts (i.e. an archive, news, or blog page), add the following front matter:
 
 ```yml
-layout: collection
-collection: posts
+layout: archive
 ```
 
 And enable post categories by repeating the permalink for your archive page in  `_config.yml`:
 
 ```yml
-archive_permalink: /blog/               # Permalink of page using the collection.html layout to show posts, required when using post categories
+archive_permalink: /blog/               # Permalink of page using the archive.html layout, required when using post categories
 ```
 
 To see blog posts, you'll have to create some. ☺️
