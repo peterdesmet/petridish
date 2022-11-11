@@ -6,7 +6,6 @@ background:
   by: Mathew Schwartz
   href: https://unsplash.com/photos/5iFZBM7qgWc
 toc: true
-order: 2
 ---
 
 <!-- Links to the repository -->
@@ -98,50 +97,6 @@ layout: team
 ```
 
 Then create a [`_data/team.yml`][data_team] file to list team members.
-
-## Collections
-
-[Collections](https://jekyllrb.com/docs/collections/) are a great way to group related (sub)pages or other content. [Blog posts](#blog-posts) are an example of such a collection (called `posts`), but you can create your own collection(s) as well, which offers several advantages:
-
-- Keep related content together in your repository.
-- Set a default settings (e.g. permalink) for all pages in your collection.
-- Automatically list all pages in your collection on an [overview page](#collection-overview-page).
-
-To create a collection, define one in `_config.yml`:
-
-```yml
-collections:
-  yourcollection:
-    output: true                        # Required to show your collection
-    permalink: "/:collection/:path/"    # Use /your_collection/{filename}/ as permalink for all pages in your collection
-```
-
-Pages in a collection will **not** use `layout: default` by default, so set this [front matter default](https://jekyllrb.com/docs/step-by-step/09-collections/#front-matter-defaults) in `_config.yml`:
-
-```yml
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: default                   # Use default.html layout by default for all files
-```
-
-Then create pages as Markdown files in a new [`_yourcollection`][docs_dir] directory. The name should start with an underscore.
-
-To control the order in which pages appear in the [navigation](#navigation) or [overview page](#collection-overview-page), add `order: integer` to the front matter of each page. Pages without this setting will be sorted alphabetically on path and placed _before_ the sorted pages. 
-
-```yml
-order: 1 # This page will be shown first, assuming all pages in the collection have "order"
-```
-
-## Collection overview page
-
-To create an [overview page]({{ '/docs/' | relative_url }}) (source [`docs.md`][pages_docs]) of all pages in your collection, add the following front matter:
-
-```yml
-layout: collection
-collection: yourcollection
-```
 
 ## Archive page
 

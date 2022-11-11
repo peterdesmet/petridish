@@ -6,7 +6,6 @@ background:
   by: William Foley
   href: https://unsplash.com/photos/EysCLgycVgc
 toc: true
-order: 1
 # categories: [categories are reserved for posts so this one will not show up]
 ---
 

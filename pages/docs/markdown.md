@@ -8,7 +8,6 @@ background:
   by: Krzysztof Niewolny
   href: https://unsplash.com/photos/pTfcnk9WZHA
 toc: true
-order: 3
 ---
 
 {: .alert .alert-warning}
