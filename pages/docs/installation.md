@@ -28,7 +28,7 @@ This method creates a clean repository without unnecessary files. You can then *
 This method gives you a copy of the Petridish repository and website. You can then **update** content and settings, and **remove** all the files you don't need.
 
 1. Go to the [Petridish repository](https://github.com/peterdesmet/petridish/) and click the green button `Use this template`. Give your repository a name and description (can be changed later).
-2. Go to your repository settings and enable GitHub Pages (`http://github.com/username/repository/settings/pages`). Use the `master` branch as source.
+2. Go to your repository settings and enable GitHub Pages (`http://github.com/username/repository/settings/pages`). Use the `main` branch as source.
 3. Check your site at `http://username.github.io/repository` (give it a minute to build).
 4. See [configuration]({{ '/docs/configuration/' | relative_url }}) to update elements of your site.
 5. Since you copied the Petridish repository, the theme is verbosely included. If you opt to make use of the `remote_theme` option described above, you can safely remove:

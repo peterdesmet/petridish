@@ -11,7 +11,7 @@ toc: true
 ---
 
 {: .alert .alert-warning}
-The source file for this page is [`pages/markdown.md`](https://raw.githubusercontent.com/peterdesmet/petridish/master/pages/markdown.md). There you can see the raw Markdown.
+The source file for this page is [`pages/markdown.md`](https://raw.githubusercontent.com/peterdesmet/petridish/main/pages/markdown.md). There you can see the raw Markdown.
 
 ## Styling content
 

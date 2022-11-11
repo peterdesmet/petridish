@@ -9,19 +9,19 @@ toc: true
 ---
 
 <!-- Links to the repository -->
-[config]: https://raw.githubusercontent.com/peterdesmet/petridish/master/_config.yml
-[pages_dir]: https://github.com/peterdesmet/petridish/tree/master/pages
-[pages_about]: https://raw.githubusercontent.com/peterdesmet/petridish/master/pages/about.md
-[pages_archive]: https://raw.githubusercontent.com/peterdesmet/petridish/master/pages/archive.md
 [pages_docs]: https://raw.githubusercontent.com/peterdesmet/petridish/master/pages/docs.md
-[pages_home]: https://raw.githubusercontent.com/peterdesmet/petridish/master/pages/home.md
-[pages_team]: https://raw.githubusercontent.com/peterdesmet/petridish/master/pages/team.md
-[posts_dir]: https://github.com/peterdesmet/petridish/tree/master/_posts
-[data_footer]: https://raw.githubusercontent.com/peterdesmet/petridish/master/_data/footer.yml
-[data_navigation]: https://raw.githubusercontent.com/peterdesmet/petridish/master/_data/navigation.yml
-[data_team]: https://raw.githubusercontent.com/peterdesmet/petridish/master/_data/team.yml
 [docs_dir]: https://github.com/peterdesmet/petridish/tree/master/_docs
-[posts_dmp]: https://raw.githubusercontent.com/peterdesmet/petridish/master/_posts/2019-07-08-dmp.md
+[config]: https://raw.githubusercontent.com/peterdesmet/petridish/main/_config.yml
+[pages_dir]: https://github.com/peterdesmet/petridish/tree/main/pages
+[pages_about]: https://raw.githubusercontent.com/peterdesmet/petridish/main/pages/about.md
+[pages_archive]: https://raw.githubusercontent.com/peterdesmet/petridish/main/pages/archive.md
+[pages_home]: https://raw.githubusercontent.com/peterdesmet/petridish/main/pages/home.md
+[pages_team]: https://raw.githubusercontent.com/peterdesmet/petridish/main/pages/team.md
+[posts_dir]: https://github.com/peterdesmet/petridish/tree/main/_posts
+[data_footer]: https://raw.githubusercontent.com/peterdesmet/petridish/main/_data/footer.yml
+[data_navigation]: https://raw.githubusercontent.com/peterdesmet/petridish/main/_data/navigation.yml
+[data_team]: https://raw.githubusercontent.com/peterdesmet/petridish/main/_data/team.yml
+[posts_dmp]: https://raw.githubusercontent.com/peterdesmet/petridish/main/_posts/2019-07-08-dmp.md
 
 ## Example website
 
@@ -214,7 +214,7 @@ This assumes your repository is public, with `main` as default branch. You will 
 All the above settings can be directly made in your GitHub repository in your browser, but especially during setup it is more convenient to make those changes locally, render your website locally and then push your changes to GitHub.
 
 1. [Clone your repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) to your computer.
-2. Place a [`Gemfile`](https://github.com/peterdesmet/petridish/blob/master/Gemfile) in your repository root, with the content:
+2. Place a [`Gemfile`](https://github.com/peterdesmet/petridish/blob/main/Gemfile) in your repository root, with the content:
 
     ```
     gem "github-pages", group: :jekyll_plugins
