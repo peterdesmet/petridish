@@ -105,7 +105,6 @@ Then create a [`_data/team.yml`][data_team] file to list team members.
 
 - Keep related content together in your repository.
 - Set a default settings (e.g. permalink) for all pages in your collection.
-- Automatically list all pages in your collection as a dropdown in the [navigation](#navigation).
 - Automatically list all pages in your collection on an [overview page](#collection-overview-page).
 
 To create a collection, define one in `_config.yml`:
@@ -212,13 +211,7 @@ See the [Markdown guide]({{ '/docs/markdown/' | relative_url }}) for an overview
 
 ## Navigation
 
-Create a [`_data/navigation.yml`][data_navigation] file and add pages in the order you want to include them in your top site navigation. You can also include dropdown menus and automatically list all pages from a [collection](#collections).
-
-```yml
-- text: Documentation
-  menu: # Dropdown menu (one level deep only)
-  - collection: docs # Shortcut to list all pages in the "docs" collection
-```
+Create a [`_data/navigation.yml`][data_navigation] file and add pages in the order you want to include them in your top site navigation. You can also include dropdown menus.
 
 ## Colors & font
 
