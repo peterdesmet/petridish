@@ -69,8 +69,30 @@ background:
 
 To add a table of content based on the h2 and h3 headers of your page (like on this configuration page), add `toc: true`. The width of the page is unaffected by the table of content. The table of content is disabled by default.
 
-For easier maintenance, organize your top-level pages in a [`pages/`][pages_dir] directory and set their [permalink](https://jekyllrb.com/docs/permalinks/#front-matter). Subpages are best organized in a [collection](#collections).
+If you only have a few pages (less than 20), organize them in a [`pages/`][pages_dir] directory and set their [permalink](https://jekyllrb.com/docs/permalinks/#front-matter).
+
 ## Organizing pages
+
+If your site has many pages, you can organize them in a directory structure, e.g.:
+
+```yml
+# As named files                      # As directories with index.md
+about.md                              about/index.md
+courses.md                            courses/
+courses/                                index.md
+  2021.md                               2021/
+  2021/                                   index.md
+    course-1.md                           course-1/index.md
+    course-2.md                           course-2/index.md
+    exercises.md                          exercises/index.md
+  2022.md                               2022/
+  2022/                                   index.md
+    course-1.md                           course-1/index.md
+    course-2.md                           course-2/index.md
+    exercises.md                          exercises/index.md
+```
+
+Starting the directory structure from the root of your repository has the advantage (in both approaches) that the default permalink of the pages will be their path, e.g. `https://example.org/courses/2022/course-1/`.
 
 {: .alert .alert-warning }
 > You could also organize pages as [Collections](https://jekyllrb.com/docs/collections/), but note that:
