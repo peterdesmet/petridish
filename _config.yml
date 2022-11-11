@@ -39,12 +39,6 @@ exclude:
   - package.json
   - petridish.gemspec
 
-# COLLECTIONS
-collections:
-  docs:                                 # Settings for the "docs" collection
-    output: true
-    permalink: "/:collection/:path/"
-
 # FRONTMATTER DEFAULTS
 defaults:
   - scope:
@@ -55,3 +49,9 @@ defaults:
       type: posts
     values:
       permalink: "/blog/:year/:slug/"   # Use /blog/yyyy/{filename}/ as permalink for all posts
+
+# FRONTMATTER DEFAULTS FOR PETRIDISH DEMO
+  - scope:
+      path: "pages/docs"
+    values:
+      permalink: "/docs/:basename/"

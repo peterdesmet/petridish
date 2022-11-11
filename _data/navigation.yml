@@ -10,7 +10,12 @@
   href: /blog/
 - text: Documentation
   menu: # Dropdown menu (one level deep only)
-  - collection: docs # Shortcut to list all pages in the "docs" collection
+  - text: Installation
+    href: /docs/installation/
+  - text: Configuration
+    href: /docs/configuration/
+  - text: Markdown
+    href: /docs/markdown/
   - text: "---" # Divider to separate blocks of menu items (at least 3 "-")
   - text: "Dropdown header" # Title for block of menu items
   - text: Documentation
