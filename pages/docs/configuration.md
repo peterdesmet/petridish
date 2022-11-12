@@ -100,7 +100,7 @@ To provide better access to deeper sections your site (e.g. the pages in `course
 > You could also organize pages as [Collections](https://jekyllrb.com/docs/collections/), but note that:
 > - Pages in a collection are not part of `site.pages`.
 > - Pages in a collection will not use `layout: default` by default, so you need to set this in the front matter (defaults).
-> - The `:path` placeholder of collection items _includes_ the filename, while it doesn't for pages. So `_my_collection/subdirectory/index.md` with permalink `/:collection/:path/` will result the page being served from `/my_collection/subdirectory/index/index.html`.
+> - The `:path` placeholder of collection items _includes_ the filename, while it doesn't for pages. So `_my_collection/subdirectory/index.md` with permalink `/:collection/:path/` will result in the page being served from `/my_collection/subdirectory/index/index.html`.
 > - Defaults for custom page attributes (like `toc: true`) cannot be set as part of the collection, only as [front matter defaults](https://jekyllrb.com/docs/step-by-step/09-collections/#front-matter-defaults).
 > - [Custom sorting](https://jekyllrb.com/docs/collections/#custom-sorting-of-documents) is only available in Jekyll 4.0, which is not yet supported on GitHub Pages.
 
