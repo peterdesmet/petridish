@@ -23,7 +23,7 @@
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                   {{ item.text }}
                 </a>
-                <div class="dropdown-menu">
+                <div class="dropdown-menu dropdown-menu-end">
                   {% for subitem in item.menu %}
                     {% if subitem.href %}
                       {% if subitem.href contains '' %}
