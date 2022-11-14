@@ -145,6 +145,8 @@ You can simplify links if your site lives at a custom root domain (e.g. `https:/
 - For posts: [`[link text](/permalink_of_post/)`](/blog/2019/welcome-to-jekyll/)
 - For images and documents: [`[link text](/assets/images/name-of-image.jpg)`]('/assets/theme/images/chuttersnap-146799-unsplash.jpg)
 
+If you want links that work on your site _and_ in your GitHub repository, use relative links to the Markdown files (e.g. `[about]{% raw %}(../about.md){% endraw %}`). These are automatically converted to permalinks by the [jekyll-relative-links](https://github.com/benbalter/jekyll-relative-links) plugin (enabled by default on GitHub Pages), but will break if you move pages around.
+
 ## Tables
 
 Header 1 | Header 2
