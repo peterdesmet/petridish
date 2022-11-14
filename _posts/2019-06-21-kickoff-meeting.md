@@ -6,7 +6,7 @@ background:
   by: Kyle Arcilla
   href: https://unsplash.com/photos/XA1pHcB5AMA
 author: [Philip J. Fry, Turanga Leela]
-categories: [Meetings, Shared category]
+tags: [Meetings, Shared tag]
 ---
 
 This post has a portrait background image to test if it still renders nicely.

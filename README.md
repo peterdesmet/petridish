@@ -41,7 +41,7 @@ Changes requiring review (e.g. new blog posts) should be created in a separate b
 - Use `72dpi` as image resolution
 - Place background images in `assets/backgrounds/`, name them after their corresponding page/post and ideally crop them to `2100 x 700px`
 - Place content images in `assets/images/`, name them after their corresponding page/post + a suffix, e.g. `-figure-1`
-- Add categories to posts to create relevant groups (e.g. same topic, project).
+- Add tags to posts to create relevant groups (e.g. same topic, project).
 - Create internal links as `[previous post]({{ '/permalink/to/post/' | relative_url }})`
 
 ## Repo structure

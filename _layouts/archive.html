@@ -20,25 +20,25 @@ description: Template for a list of posts as cards, with full width.
 </div>
 
 <script>
-  // Filter cards on ?category=value
+  // Filter cards on ?tag=value
   $(document).ready(function() {
     const urlParams = new URLSearchParams(window.location.search);
     
-    if (urlParams.has("category") && urlParams.get("category") != "") {
-      const category = urlParams.get("category"); // Will return 1st category value + decode URI
-      const cleanCategory = $.trim(category.toLowerCase()); // Create category as written in .card data-categories
+    if (urlParams.has("tag") && urlParams.get("tag") != "") {
+      const tag = urlParams.get("tag"); // Will return 1st tag value + decode URI
+      const cleanTag = $.trim(tag.toLowerCase()); // Create tag as written in .card data-tags
       
       $(".card").each(function() {
-        const cardCategories = $(this).data("categories").split("|");
-        // Hide card if it does not contain the selected category
-        if (!cardCategories.includes(cleanCategory)) {
+        const cardTags = $(this).data("tags").split("|");
+        // Hide card if it does not contain the selected tag
+        if (!cardTags.includes(cleanTag)) {
           $(this).parent().addClass("d-none");
         }
       });
 
-      $(".header .categories").append(
+      $(".header .tags").append(
         '<a class="badge{% if site.rounded_corners != false %} rounded-pill{% endif %}" href="{{ site.archive_permalink | relative_url }}">' + 
-        category + '<span class="btn-close btn-close-white"></span>' + 
+        tag + '<span class="btn-close btn-close-white"></span>' + 
         '</a>'
       );
     }
