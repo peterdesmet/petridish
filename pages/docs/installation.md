@@ -7,7 +7,7 @@ background:
   href: https://unsplash.com/photos/EysCLgycVgc
 permalink: /docs/installation/
 toc: true
-# categories: [categories are reserved for posts so this one will not show up]
+# tags: [tags are reserved for posts so this one will not show up]
 ---
 
 ## Create a site from scratch (recommended)

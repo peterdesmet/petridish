@@ -4,7 +4,7 @@
   {% assign background = item.background %}
 {% endif %}
 
-<div class="card" data-categories="{% for category in item.categories %}{{ category | downcase | strip }}|{% endfor %}">
+<div class="card" data-tags="{% for tag in item.tags %}{{ tag | downcase | strip }}|{% endfor %}">
   <a href="{{ item.url | relative_url }}">
     {% if item.background %}
       <img class="card-img-top" src="{{ background | relative_url }}">  
@@ -31,10 +31,10 @@
     </div>
   </div>
 
-  {% if item.collection == 'posts' and item.categories and site.archive_permalink %}
+  {% if item.collection == 'posts' and item.tags and site.archive_permalink %}
     <div class="card-footer">
-      {% for category in item.categories %}
-        <a class="badge{% if site.rounded_corners != false %} rounded-pill{% endif %}" href="{{ site.archive_permalink | relative_url }}?category={{ category | url_encode }}">{{ category }}</a>
+      {% for tag in item.tags %}
+        <a class="badge{% if site.rounded_corners != false %} rounded-pill{% endif %}" href="{{ site.archive_permalink | relative_url }}?tag={{ tag | url_encode }}">{{ tag }}</a>
       {% endfor %}
     </div>
   {% endif %}
