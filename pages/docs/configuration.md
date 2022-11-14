@@ -139,10 +139,10 @@ To create an [overview page]({{ '/blog/' | relative_url }}) (source [`archive.md
 layout: archive
 ```
 
-And enable post categories by repeating the permalink for your archive page in  `_config.yml`:
+And enable post tags by repeating the permalink for your archive page in  `_config.yml`:
 
 ```yml
-archive_permalink: /blog/               # Permalink of page using the archive.html layout, required when using post categories
+archive_permalink: /blog/               # Permalink of page using the archive.html layout, required when using post tags
 ```
 
 To see blog posts, you'll have to create some. ☺️
@@ -159,7 +159,7 @@ title: "Title for the post: wrap in quotes if it contains special characters"
 description: Description that will appear below the title in the banner
 background: /assets/images/banner_background_image.jpg
 author: [Author 1, Author 2]
-categories: [Category 1, Category 2]
+tags: [Tag 1, Tag 2]
 toc: false # See pages
 comments: false
 published: true

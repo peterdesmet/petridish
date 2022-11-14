@@ -20,10 +20,10 @@
             </p>
           {% endif %}
 
-          <div class="categories">
-            {% if page.collection == 'posts' and page.categories and site.archive_permalink %}
-              {% for category in page.categories %}
-              <a class="badge{% if site.rounded_corners != false %} rounded-pill{% endif %}" href="{{ site.archive_permalink | relative_url }}?category={{ category | url_encode }}">{{ category }}</a>
+          <div class="tags">
+            {% if page.collection == 'posts' and page.tags and site.archive_permalink %}
+              {% for tag in page.tags %}
+              <a class="badge{% if site.rounded_corners != false %} rounded-pill{% endif %}" href="{{ site.archive_permalink | relative_url }}?tag={{ tag | url_encode }}">{{ tag }}</a>
               {% endfor %}
             {% endif %}
           </div>
