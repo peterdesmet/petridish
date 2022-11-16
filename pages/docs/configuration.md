@@ -116,7 +116,7 @@ In `_config.yml` you can now define:
 
 ```yml
 posts_on_home: 3                        # Show x number of latest posts on homepage, can be 0
-tweets_on_home: true                    # Show Twitter feed of twitter_username on homepage
+tweets_on_home: true                    # Show Twitter feed of social.twitter on homepage
 ```
 
 For easier maintenance, move/rename your `index.md` to `pages/home.md` and set its `permalink` to `/`.
@@ -240,9 +240,12 @@ Add a favicon by adding a `favicon.ico` file to the root of your repository.
 Add social icons to the footer by adding your (project's) social profiles in `_config.yml`:
 
 ```yml
-email: your.email@example.com
-twitter_username: your_twitter_username
-github_username: your_github_username   # Can also be a repository: username/reponame
+social:
+  email: name@example.com
+  twitter: twitter_username
+  github: github_username               # Can also be a github_username/repository
+  mastodon: https://mastodon.social/@mastodon_username
+  facebook: https://www.facebook.com/groups/group_id/
 ```
 
 Create a [`_data/footer.yml`][data_footer] file to further customize your footer with text, links and/or a disclaimer.

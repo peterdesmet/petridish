@@ -6,11 +6,11 @@
   description: > # Can be Markdown
     Protagonist, from the 20th century. Many times great-uncle to Professor Hubert Farnsworth.
   orcid: 0000-0000-0000-0000
-  researchgate: researchgate_name
-  googlescholar: googlescholar_name
-  twitter: twitter_name
-  github: github_name
-  email: your.email@example.com
+  researchgate: researchgate_username
+  googlescholar: googlescholar_username
+  twitter: twitter_username
+  github: github_username
+  email: name@example.com
 
 - name: Turanga Leela
   role: Captain

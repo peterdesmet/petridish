@@ -8,6 +8,17 @@
     <title>{{ page.title }} - {{ site.title }}</title>
   {% endif %}
 
+  {% comment %}Deprecated variables{% endcomment %} 
+  {% if site.email %}
+    {% assign site.social.email = site.email %}
+  {% endif %}
+  {% if site.twitter_username %}
+    {% assign site.social.twitter = site.twitter_username %}
+  {% endif %}
+  {% if site.github_username %}
+    {% assign site.social.github = site.github_username %}
+  {% endif %}
+
   {% if page.description %}
     {% assign description = page.description | markdownify | strip_html | newline_to_br | split: '<br />' | first %}
   {% endif %}

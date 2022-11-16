@@ -1,12 +1,12 @@
 <footer>
   <div class="container">
     <div class="row">
-      {% if site.email or site.twitter_username or site.github_username %}
+      {% if site.social %}
         <div class="col-lg">
           <ul class="list-inline">
-            {% if site.email %}
+            {% if site.social.email %}
               <li class="list-inline-item">
-                <a href="mailto:{{ site.email }}">
+                <a href="mailto:{{ site.social.email }}">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
@@ -15,9 +15,9 @@
               </li>
             {% endif %}
 
-            {% if site.twitter_username %}
+            {% if site.social.twitter %}
               <li class="list-inline-item">
-                <a href="https://twitter.com/{{ site.twitter_username }}">
+                <a href="https://twitter.com/{{ site.social.twitter }}">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
@@ -26,9 +26,7 @@
               </li>
             {% endif %}
 
-            {% if site.github_username %}
               <li class="list-inline-item">
-                <a href="https://github.com/{{ site.github_username }}">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fab fa-github fa-stack-1x fa-inverse"></i>
@@ -36,6 +34,8 @@
                 </a>
               </li>
             {% endif %}
+            {% if site.social.github %}
+                <a href="https://github.com/{{ site.social.github }}">
           </ul>
         </div>
       {% endif %}

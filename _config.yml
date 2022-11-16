@@ -7,13 +7,14 @@ baseurl: "/petridish"                   # Only required if your site is in a dir
                                         # A baseurl affects internal links, see http://peterdesmet.github.io/petridish/markdown/#links
 
 # SOCIAL PROFILES
-email: your.email@example.com
-twitter_username: peterdesmet
-github_username: peterdesmet            # Can also be a repository: username/reponame
+social:
+  email: name@example.com
+  twitter: peterdesmet
+  github: github_username               # Can also be a github_username/repository
 
 # THEME SETTINGS (ALL OPTIONAL)
 posts_on_home: 3                        # Show x number of latest posts on homepage, can be 0
-tweets_on_home: true                    # Show Twitter feed of twitter_username on homepage
+tweets_on_home: true                    # Show Twitter feed of social.twitter on homepage
 archive_permalink: /blog/               # Permalink of page using the archive.html layout, required when using post tags
 github_edit: true                       # Show an "edit this page" link in the footer
 colors:
