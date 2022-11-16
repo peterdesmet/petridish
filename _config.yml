@@ -11,6 +11,8 @@ social:
   email: name@example.com
   twitter: peterdesmet
   github: github_username               # Can also be a github_username/repository
+  mastodon: https://mastodon.social/@mastodon_username
+  facebook: https://www.facebook.com/groups/group_id/
 
 # THEME SETTINGS (ALL OPTIONAL)
 posts_on_home: 3                        # Show x number of latest posts on homepage, can be 0

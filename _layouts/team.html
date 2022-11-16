@@ -47,6 +47,12 @@ description: Template for team page.
           </li>
         {% endif %}
 
+        {% if member.mastodon %}
+          <li class="list-inline-item">
+            <a href="{{ member.mastodon }}"><i class="fab fa-mastodon"></i></a>
+          </li>
+        {% endif %}
+
         {% if member.github %}
           <li class="list-inline-item">
             <a href="https://github.com/{{ member.github }}"><i class="fab fa-github"></i></a>

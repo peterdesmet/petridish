@@ -9,6 +9,7 @@
   researchgate: researchgate_username
   googlescholar: googlescholar_username
   twitter: twitter_username
+  mastodon: https://mastodon.social/@mastodon_username
   github: github_username
   email: name@example.com
 

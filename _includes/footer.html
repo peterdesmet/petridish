@@ -26,16 +26,38 @@
               </li>
             {% endif %}
 
+            {% if site.social.mastodon %}
               <li class="list-inline-item">
+                <a rel="me" href="{{ site.social.mastodon }}">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-mastodon fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            {% endif %}
+
+            {% if site.social.facebook %}
+              <li class="list-inline-item">
+                <a red="me" href="{{ site.social.facebook }}">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            {% endif %}
+
+            {% if site.social.github %}
+              <li class="list-inline-item">
+                <a href="https://github.com/{{ site.social.github }}">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fab fa-github fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
-            {% endif %}
-            {% if site.social.github %}
-                <a href="https://github.com/{{ site.social.github }}">
+            {% endif %}   
           </ul>
         </div>
       {% endif %}
