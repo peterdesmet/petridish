@@ -22,7 +22,7 @@ colors:
   links: "#617E3E"                      # TDWG green, used for links and .primary. The colour deviates slightly from the logo green (#709147) so that buttons get white text
   banner: "#043B58"                     # TDWG blue, used as for banners and .secondary
   footer: "#043B58"                     # TDWG blue, used for footer
-font_serif: false                       # Font type for page content: serif (default) or slightly smaller sans-serif
+font_serif: false                       # Font type for page content: serif or slightly smaller sans-serif (default)
 rounded_corners: true                   # Enable (default) rounded corners on boxes and buttons
 logo: /assets/theme/images/logo.svg     # Logo in navbar, will be displayed with 30px height
 
