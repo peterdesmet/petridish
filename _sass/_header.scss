@@ -23,7 +23,7 @@
 
   // Overlay
   &.bg-image:before {
-    background-image: linear-gradient(rgba($dark, 0.1), rgba($dark, 0.9));
+    background-image: linear-gradient(rgba($secondary, 1), rgba($secondary, 0.6));
     content: "";
     left: 0;
     height: 100%;
