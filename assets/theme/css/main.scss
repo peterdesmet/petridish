@@ -7,9 +7,9 @@
 // Set customizable colors
 //
 // Set default colors
-$default_link_color: #007bff;
-$default_banner_color: #007bff;
-$default_footer_color: #6c757d;
+$default_link_color: #617E3E;
+$default_banner_color: #043B58;
+$default_footer_color: #043B58;
 
 // Get custom colors defined in _config.yml
 // Custom colors are optional, meaning they can be undefined in _config.yml
@@ -31,7 +31,7 @@ $custom_footer_color: nth($custom_footer_color, -1);
 @if type-of($custom_footer_color) != color { $custom_footer_color: $default_footer_color; }
 
 // Set font
-$custom_font: {% if site.font_serif != false %}Lora{% else %}system-ui{% endif %};
+$custom_font: {% if site.font_serif %}Lora{% else %}system-ui{% endif %};
 
 // Set enable-rounded
 $enable-rounded: {% if site.rounded_corners != false %}true{% else %}false{% endif %};
