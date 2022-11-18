@@ -7,7 +7,7 @@
 <div class="card" data-tags="{% for tag in item.tags %}{{ tag | downcase | strip }}|{% endfor %}">
   <a href="{{ item.url | relative_url }}">
     {% if item.background %}
-      <img class="card-img-top" src="{{ background | relative_url }}">  
+      <img class="card-img-top" src="{{ background | relative_url }}" alt="Background image">  
     {% else %}
       <div class="card-img-top bg-secondary"></div>
     {% endif %}
