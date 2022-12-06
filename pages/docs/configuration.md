@@ -129,7 +129,7 @@ To enable your [team page](/team/) (source [`team.md`][pages_team]), add the fol
 layout: team
 ```
 
-Then create a [`_data/team.yml`][data_team] file to list team members.
+Then create a [`_data/team.yml`][data_team] file to list team members. For multiple team pages (e.g. keynote speakers at a conference), create e.g. a `_data/conf_2022_team.yml` and reference it in front matter as `team: conf_2022_team`.
 
 ## Archive page
 
