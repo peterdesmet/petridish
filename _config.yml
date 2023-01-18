@@ -18,7 +18,7 @@ social:
 posts_on_home: 3                        # Show x number of latest posts on homepage, can be 0
 tweets_on_home: true                    # Show Twitter feed of social.twitter on homepage
 archive_permalink: /blog/               # Permalink of page using the archive.html layout, required when using post tags
-github_edit: true                       # Show an "edit this page" link in the footer
+github_edit: true                       # Show an "edit this page" link in the footer, can also be name of branch (default: main)
 colors:
   links: "#007bff"                      # Color for links: use a readable color that contrasts well with dark text
   banner: "#007bff"                     # Background color for page banners: use color that contrasts well with white
