@@ -258,7 +258,7 @@ Invite contributions by adding an "edit this page" link in the footer, in `_conf
 github_edit: true
 ```
 
-This assumes your repository is public, with `main` as default branch. You will be able to directly edit the file, users without rights will have to fork your repository and create a pull request.
+This assumes your repository is public, with `main` as default branch. Use `github_edit: my_branch` if you use another branch. You will be able to directly edit the file, users without rights will have to fork your repository and create a pull request.
 
 ## Testing your site locally
 

@@ -88,8 +88,13 @@
         {{ site.data.footer.license | markdownify }}
       {% endif %}
       {% if site.github_edit %}
+        {% if site.github_edit contains '' %}
+          {% assign branch = site.github_edit %}
+        {% else %}
+          {% assign branch = 'main' %}
+        {% endif %}
         <p>
-          <a href="{{ site.github.repository_url }}/edit/main/{{ page.path }}">
+          <a href="{{ site.github.repository_url }}/edit/{{ branch }}/{{ page.path }}">
             <i class="fas fa-edit"></i> Edit this page
           </a>
         </p>
