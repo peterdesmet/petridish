@@ -26,16 +26,12 @@
                 <div class="dropdown-menu dropdown-menu-end">
                   {% for subitem in item.menu %}
                     {% if subitem.href %}
-                      {% if subitem.href contains '' %}
-                        {% assign subitem_href = subitem.href %}
+                      {% if subitem.text contains '' %}
+                        {% assign subitem_text = subitem.text %}
                       {% else %}
-                        {% assign subitem_href = site.pages | where: 'title', subitem.text | map: 'url' | first %}
+                        {% assign subitem_text = site.pages | where: 'url', subitem.href | map: 'title' | first %}
                       {% endif %}
-                      {% if subitem_href %}
-                        <a class="dropdown-item{% if subitem_href == page.url %} active{% endif %}" href="{{ subitem_href | relative_url }}"{% if subitem.new_window %} target="_blank"{% endif %}>{{ subitem.text }}</a>
-                      {% else %}
-                        <a class="dropdown-item text-danger" href="#">{{ subitem.text }}</a>
-                      {% endif %}
+                      <a class="dropdown-item{% if subitem.href == page.url %} active{% endif %}" href="{{ subitem.href | relative_url }}"{% if subitem.new_window %} target="_blank"{% endif %}>{{ subitem_text }}</a>
                     {% elsif subitem.text contains '---' %}
                       <div class="dropdown-divider"></div>
                     {% else %}
@@ -46,16 +42,12 @@
               </li>
             {% else %}
               <li class="navbar-item">
-                {% if item.href contains '' %}
-                  {% assign item_href = item.href %}
+                {% if item.text contains '' %}
+                  {% assign item_text = item.text %}
                 {% else %}
-                  {% assign item_href = site.pages | where: 'title', item.text | map: 'url' | first %}
+                  {% assign item_text = site.pages | where: 'url', item.href | map: 'title' | first %}
                 {% endif %}
-                {% if item_href %}
-                  <a class="nav-link{% if item_href == page.url %} active{% endif %}" href="{{ item_href | relative_url }}"{% if item.new_window %} target="_blank"{% endif %}>{{ item.text }}</a>
-                {% else %}
-                  <a class="nav-link text-danger" href="#">{{ item.text }}</a>
-                {% endif %}
+                <a class="nav-link{% if item.href == page.url %} active{% endif %}" href="{{ item.href | relative_url }}"{% if item.new_window %} target="_blank"{% endif %}>{{ item_text }}</a>
               </li>
             {% endif %}
           {% endfor %}
