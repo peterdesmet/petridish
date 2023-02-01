@@ -43,7 +43,7 @@
   }
   
   h1 {
-    $header-h1: 3.5rem;
+    $header-h1: 3rem;
     font-size: $header-h1;
     font-weight: 800;
 
@@ -58,7 +58,7 @@
   }
 
   .lead {
-    font-size: ($lead-font-size * 1.2);
+    font-size: ($lead-font-size * 1.1);
   }
 
   .meta {
