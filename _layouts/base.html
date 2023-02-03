@@ -11,7 +11,11 @@
 
       <div class="container content">
           
-        {{ content | replace: '<table>', '<div class="table-responsive"><table class="table">' | replace: '</table>', '</table></div>' }}
+        {{ content
+          | replace: '<table', '<div class="table-responsive"><table'
+          | replace: '</table>', '</table></div>'
+          | replace: '<table>', '<table class="table">'
+        }}
 
       </div>
     </main>

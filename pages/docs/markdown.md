@@ -162,12 +162,25 @@ Row 2 col 1 | Row 2 col 2 very_long_word_that_does_not_wrap_but_should_trigger_h
 
 Aligned columns:
 
-Right aligned | Center aligned
----: | :---:
+Center aligned | Right aligned
+:---: | :---
 Row 1 col 1 | Row 1 col 2
 Row 2 col 1 | Row 2 col 2 very_long_word_that_does_not_wrap_but_should_trigger_horizontal_scroll
 
-Petridish will automatically convert `<table>` to `<table class="table">` (to enable Bootstrap layout) and wrap it in a div with class [`table-responsive`](https://getbootstrap.com/docs/5.0/content/tables/#responsive-tables) (to avoid tables getting wider than their parent container). You can disable this by using something other than `<table>` e.g. `<table class="custom">`.
+HTML table with Bootstrap classes:
+
+<table class="table table-dark table-striped">
+  <thead>
+    <th>Header 1</th>
+    <th>Header 2</th>
+  </thead>
+  <tbody>
+    <tr><td>Row 1 col 1</td><td>Row 1 col 2</td></tr>
+    <tr><td>Row 2 col 1</td><td>Row 2 col 2 very_long_word_that_does_not_wrap_but_should_trigger_horizontal_scroll</td></tr>
+  </tbody>
+</table>
+
+Petridish will automatically wrap tables in a div with class [`table-responsive`](https://getbootstrap.com/docs/5.0/content/tables/#responsive-tables) to avoid tables getting wider than their parent container. It will also automatically convert `<table>` to `<table class="table">` to enable Bootstrap layout, unless you already defined class(es) for your table.
 
 ## Footnotes
 
