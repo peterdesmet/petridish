@@ -96,7 +96,7 @@ Starting the directory structure from the root of your repository has the advant
 
 To provide better access to deeper sections your site (e.g. the pages in `courses/2022`), setup a custom [navigation](#navigation).
 
-{: .alert .alert-warning }
+{:.alert .alert-warning}
 > You could also organize pages as [Collections](https://jekyllrb.com/docs/collections/), but note that:
 > - Pages in a collection are not part of `site.pages`.
 > - Pages in a collection will not use `layout: default` by default, so you need to set this in the front matter (defaults).
@@ -139,7 +139,7 @@ To create an [overview page]({{ '/blog/' | relative_url }}) (source [`archive.md
 layout: archive
 ```
 
-And enable post tags by repeating the permalink for your archive page in  `_config.yml`:
+And enable post tags by repeating the permalink for your archive page in `_config.yml`:
 
 ```yml
 archive_permalink: /blog/               # Permalink of page using the archive.html layout, required when using post tags

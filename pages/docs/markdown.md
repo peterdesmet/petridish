@@ -11,18 +11,19 @@ permalink: /docs/markdown/
 toc: true
 ---
 
-{: .alert .alert-warning}
+{:.alert .alert-warning}
 The source file for this page is [`pages/docs/markdown.md`](https://raw.githubusercontent.com/peterdesmet/petridish/main/pages/docs/markdown.md). There you can see the raw Markdown.
 
 ## Styling content
 
 Petridish uses [kramdown](https://kramdown.gettalong.org/) as Markdown processor. This processor allows you to add attributes, such as CSS classes to your content (see this [blog post](https://digitaldrummerj.me/styling-jekyll-markdown/)). By sticking to [Bootstrap](https://getbootstrap.com/docs/5.1/) classes, you can easily style your content. If that doesn't fit your needs, you can always write html in your Markdown.
 
-For example, the paragraph at the top of this page is styled as a [Bootstrap alert](https://getbootstrap.com/docs/5.1/components/alerts/) because it has `{: .alert .alert-warning}` right before it. Block elements like paragraphs need their class on the line above it.
+For example, the paragraph at the top of this page is styled as a [Bootstrap alert](https://getbootstrap.com/docs/5.1/components/alerts/) because it has `{:.alert .alert-warning}` right before it. Block elements like paragraphs need their class on the line above it.
 
-Inline elements on the other hand, need a class right after it. For example, to style a link as a button, use `[Don't click](http://example.com){: .btn .btn-danger}`:
+Inline elements on the other hand, need a class right after it. For example, to style a link as a button, use `[Don't click](http://example.com){:.btn .btn-danger}`:
 
-[Don't click](http://example.com){: .btn .btn-danger}
+[Don't click](http://example.com){:.btn .btn-danger}
+
 Note that kramdown does not process bare URL like GitHub does (they need to be written as `<url>`). If you want your content to [match the results you see on GitHub](https://docs.github.com/en/enterprise-server@3.5/pages/setting-up-a-github-pages-site-with-jekyll/setting-a-markdown-processor-for-your-github-pages-site-using-jekyll) without the option to style, change the markdown parser in `_config.yml` to:
 
 ```yml
@@ -181,13 +182,13 @@ See the [the links section](#links) to learn how to reference your own images an
 
 By default, images will be centered horizontally and use the full width if they can. But you can change **image alignment** by using [Bootstrap classes](https://getbootstrap.com/docs/5.1/content/images/#aligning-images).
 
-For example, the image below is wrapped in a paragraph with `{: .col-md-8 .mx-auto}` to contain it (and its caption) to 8/12 of the width on medium and larger screens. On small screens the full width will be used. Controlling the width of an image is especially useful for portrait images.
+For example, the image below is wrapped in a paragraph with `{:.col-md-8 .mx-auto}` to contain it (and its caption) to 8/12 of the width on medium and larger screens. On small screens the full width will be used. Controlling the width of an image is especially useful for portrait images.
 
-{: .col-md-8 .mx-auto}
+{:.col-md-8 .mx-auto}
 ![alt text](https://images.unsplash.com/photo-1486825586573-7131f7991bdd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80)
 _Image caption for this image should nicely wrap to the width of the container._
 
-{: .clearfix}
-![alt text](https://images.unsplash.com/photo-1486825586573-7131f7991bdd?w=150&h=150&fit=crop){: .rounded .float-start} The image to the left is styled with `{: .rounded .float-start}` to give it round corners and position it at the start (i.e. left), with text wrapping around it. Note that in [Bootstrap v5](https://getbootstrap.com/docs/5.1/migration/#utilities) `.float-left` was renamed to `.float-start` and `.float-right` to `.float-end`, but the old class names are still supported in Petridish.
+{:.clearfix}
+![alt text](https://images.unsplash.com/photo-1486825586573-7131f7991bdd?w=150&h=150&fit=crop){:.rounded .float-start} The image to the left is styled with `{:.rounded .float-start}` to give it round corners and position it at the start (i.e. left), with text wrapping around it. Note that in [Bootstrap v5](https://getbootstrap.com/docs/5.1/migration/#utilities) `.float-left` was renamed to `.float-start` and `.float-right` to `.float-end`, but the old class names are still supported in Petridish.
 
-The image does not wrap around this paragraph, because the previous paragraph also has a [`{: .clearfix}`](https://getbootstrap.com/docs/5.1/helpers/clearfix/) class, which contains wrapping to that paragraph only.
+The image does not wrap around this paragraph, because the previous paragraph also has a [`{:.clearfix}`](https://getbootstrap.com/docs/5.1/helpers/clearfix/) class, which contains wrapping to that paragraph only.
