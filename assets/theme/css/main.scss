@@ -56,3 +56,4 @@ $enable-rounded: {% if site.rounded_corners != false %}true{% else %}false{% end
   @import "_card";              // Blog post card
   @import "_team";              // Team members
 @import "_footer";              // Footer
+@import "_custom";              // Custom styling
