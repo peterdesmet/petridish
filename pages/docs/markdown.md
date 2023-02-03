@@ -158,14 +158,16 @@ If you want links that work on your site _and_ in your GitHub repository, use re
 Header 1 | Header 2
 --- | ---
 Row 1 col 1 | Row 1 col 2
-Row 2 col 1 | Row 2 col 2
+Row 2 col 1 | Row 2 col 2 very_long_word_that_does_not_wrap_but_should_trigger_horizontal_scroll
 
 Aligned columns:
 
 Right aligned | Center aligned
 ---: | :---:
 Row 1 col 1 | Row 1 col 2
-Row 2 col 1 | Row 2 col 2
+Row 2 col 1 | Row 2 col 2 very_long_word_that_does_not_wrap_but_should_trigger_horizontal_scroll
+
+Petridish will automatically convert `<table>` to `<table class="table">` (to enable Bootstrap layout) and wrap it in a div with class [`table-responsive`](https://getbootstrap.com/docs/5.0/content/tables/#responsive-tables) (to avoid tables getting wider than their parent container). You can disable this by using something other than `<table>` e.g. `<table class="custom">`.
 
 ## Footnotes
 
