@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "petridish"
-  spec.version       = "0.2.0"
+  spec.version       = "0.3.0"
   spec.authors       = ["Peter Desmet"]
   spec.email         = ["peter.desmet.work@gmail.com"]
 
