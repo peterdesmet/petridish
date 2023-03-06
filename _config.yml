@@ -12,6 +12,7 @@ social:
   github: github_username               # Can also be a github_username/repository
   mastodon: https://mastodon.social/@mastodon_username
   facebook: https://www.facebook.com/groups/group_id/
+  disqus: disqus_sitename               # Enable Disqus comments from disqus_sitename.disqus.com
 
 # THEME SETTINGS (ALL OPTIONAL)
 posts_on_home: 3                        # Show x number of latest posts on homepage, can be 0

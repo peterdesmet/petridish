@@ -173,11 +173,18 @@ Posts can be shown on an [archive page](#archive-page) and on the [home page](#h
 
 Posts will use `layout: default` by default.
 
-To enable post comments, add your site to [Disqus](https://disqus.com/) and add `comments: true` to each post where you want comments. Comments are disabled by default.
+To enable post comments, add your site to [Disqus](https://disqus.com/) and reference it in `_config.yml`:
+
+```yml
+social:
+  disqus: disqus_sitename               # Enable Disqus comments from disqus_sitename.disqus.com
+```
+
+Then add `comments: true` to each post where you want comments. Comments are disabled by default.
 
 To hide a post (e.g. a draft), add [`published: false`](https://jekyllrb.com/docs/front-matter/#predefined-global-variables). Drafts can also be stored in [`_drafts`](https://jekyllrb.com/docs/posts/#drafts), but `published: false` is easier to track in git and can be used for pages as well. Posts and pages are published by default.
 
-To change the permalink of all posts from the default `yyyy/mm/dd/title.html` to e.g. `blog/{filename}/` without having to add a `permalink` to each post, set a [front matter default](https://jekyllrb.com/docs/step-by-step/09-collections/#front-matter-defaults) in `_config.yml`:
+To change the permalink of all posts from the default `yyyy/mm/dd/title.html` to e.g. `blog/{filename}/` without having to add a `permalink` to each post, set a [front matter default](https://jekyllrb.com/docs/step-by-step/09-collections/#front-matter-defaults) in `_config.yml`. Defaults can also be used to e.g. enable comments for all posts:
 
 ```yml
 defaults:
@@ -187,6 +194,7 @@ defaults:
       type: "posts"
     values:
       permalink: "/blog/:slug/"         # Use /blog/{filename}/ as permalink for all posts
+      comments: true                    # Enable comments for all posts
 ```
 
 ## Markdown options
@@ -230,7 +238,7 @@ rounded_corners: true                   # Enable (default) rounded corners on bo
 Add a logo by uploading it to `assets/` and referencing it in `_config.yml`:
 
 ```yml
-logo: /assets/images/logo.png  # Logo in navbar, will be displayed with 30px height
+logo: /assets/images/logo.png           # Logo in navbar, will be displayed with 30px height
 ```
 
 Add a favicon by adding a `favicon.ico` file to the root of your repository.
