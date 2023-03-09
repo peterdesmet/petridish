@@ -18,7 +18,7 @@ This method creates a clean repository without unnecessary files. You can then *
 2. Go to `_config.yml` in your repository and replace `theme: ...` with:
 
     ```yml
-    remote_theme: peterdesmet/petridish@2.0
+    remote_theme: peterdesmet/petridish@3.0
     ```
 
 3. Check your site at `http://username.github.io/repository` (give it a minute to rebuild).
