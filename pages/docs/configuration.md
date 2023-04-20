@@ -145,7 +145,7 @@ And enable post tags by repeating the permalink for your archive page in `_confi
 archive_permalink: /blog/               # Permalink of page using the archive.html layout, required when using post tags
 ```
 
-To see blog posts, you'll have to create some. ☺️
+This will also enable an RSS feed icon in the footer. To see blog posts, you'll have to create some. ☺️
 
 ## Blog posts
 

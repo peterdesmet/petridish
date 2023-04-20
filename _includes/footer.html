@@ -57,7 +57,18 @@
                   </span>
                 </a>
               </li>
-            {% endif %}   
+            {% endif %}
+
+            {% if site.archive_permalink %}
+              <li class="list-inline-item">
+                <a href="{{ '/feed.xml' | absolute_url }}">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            {% endif %}
           </ul>
         </div>
       {% endif %}

@@ -11,7 +11,7 @@ social:
   twitter: peterdesmet
   github: github_username               # Can also be a github_username/repository
   mastodon: https://mastodon.social/@mastodon_username
-  facebook: https://www.facebook.com/groups/group_id/
+  facebook:                             # A URL
   disqus: disqus_sitename               # Enable Disqus comments from disqus_sitename.disqus.com
 
 # THEME SETTINGS (ALL OPTIONAL)
