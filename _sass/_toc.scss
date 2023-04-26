@@ -10,7 +10,7 @@
   top: 2rem;
   right: 0;
   overflow-y: auto;
-  max-height: 100vh; // Allows scroll within toc
+  max-height: calc(100vh - 2rem); // Allow scroll within toc
   margin-bottom: 2rem;
 
   h6 {
