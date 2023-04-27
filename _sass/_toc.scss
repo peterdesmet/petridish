@@ -6,12 +6,16 @@
   font-family: $font-family-base;
   font-size: 0.9rem;
   color: $text-muted;
-  position: sticky;
-  top: 2rem;
-  right: 0;
-  overflow-y: auto;
-  max-height: calc(100vh - 2rem); // Allow scroll within toc
   margin-bottom: 2rem;
+
+  // Side navigation on larger pages
+  @include media-breakpoint-up(lg) {
+    position: sticky;
+    top: 2rem;
+    right: 0;
+    overflow-y: auto;
+    max-height: calc(100vh - 2rem); // Allow scroll within toc
+  }
 
   h6 {
     border-bottom: 1px solid $text-muted;
