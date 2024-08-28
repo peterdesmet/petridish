@@ -18,7 +18,7 @@ The source file for this page is [`pages/docs/markdown.md`](https://raw.githubus
 
 Petridish uses [kramdown](https://kramdown.gettalong.org/) as Markdown processor. This processor allows you to add attributes, such as CSS classes to your content (see this [blog post](https://digitaldrummerj.me/styling-jekyll-markdown/)). By sticking to [Bootstrap](https://getbootstrap.com/docs/5.1/) classes, you can easily style your content. If that doesn't fit your needs, you can always write html in your Markdown.
 
-For example, the paragraph at the top of this page is styled as a [Bootstrap alert](https://getbootstrap.com/docs/5.1/components/alerts/) because it has `{:.alert .alert-warning}` right before it. Block elements like paragraphs need their class on the line above it.
+For example, the paragraph at the top of this page is styled as a [Bootstrap alert](https://getbootstrap.com/docs/5.1/components/alerts/) because it has `{:.alert .alert-warning}` on the line directly above it. This is how block elements like paragraphs can be styled.
 
 Inline elements on the other hand, need a class right after it. For example, to style a link as a button, use `[Don't click](http://example.com){:.btn .btn-danger}`:
 
