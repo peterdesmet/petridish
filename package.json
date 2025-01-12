@@ -25,7 +25,7 @@
     "copy-js:bootstrap": "cp node_modules/bootstrap/dist/js/bootstrap.min.js assets/theme/js/bootstrap.min.js && cp node_modules/bootstrap/dist/js/bootstrap.min.js.map assets/theme/js/bootstrap.min.js.map",
     "copy-js:fuse": "cp node_modules/fuse.js/dist/fuse.min.js assets/theme/js/fuse.min.js",
     "copy-js:jquery": "cp node_modules/jquery/dist/jquery.min.js assets/theme/js/jquery.min.js",
-    "copy-js:popper": "cp node_modules/@popperjs/core/dist/umd/popper.min.js assets/theme/js/popper.min.js && cp node_modules/@popperjs/core/dist/umd/popper.min.js.map assets/theme/js/popper.min.js.map"    
+    "copy-js:popper": "cp node_modules/@popperjs/core/dist/umd/popper.min.js assets/theme/js/popper.min.js && cp node_modules/@popperjs/core/dist/umd/popper.min.js.map assets/theme/js/popper.min.js.map"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
@@ -33,7 +33,6 @@
     "academicons": "^1.9.1",
     "anchor-js": "^4.3.1",
     "bootstrap": "^5.1.3",
-    "font-awesome": "^4.7.0",
     "fuse.js": "^7.0.0",
     "jquery": "^3.6.0"
   }
