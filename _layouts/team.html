@@ -31,27 +31,25 @@ description: Template for team page.
       <ul class="list-inline">
         {% if member.orcid %}
           <li class="list-inline-item">
-            <a href="https://orcid.org/{{ member.orcid }}"><i class="ai ai-orcid"></i></a>
+            <a href="https://orcid.org/{{ member.orcid }}"><i class="fa-brands fa-orcid"></i></a>
           </li>
         {% endif %}
 
         {% if member.researchgate %}
           <li class="list-inline-item">
-            <a href="https://researchgate.net/profile/{{ member.researchgate }}"><i class="ai ai-researchgate"></i></a>
+            <a href="https://researchgate.net/profile/{{ member.researchgate }}"><i class="fa-brands fa-researchgate"></i></a>
           </li>
         {% endif %}
         
         {% if member.googlescholar %}
           <li class="list-inline-item">
-            <a href="https://scholar.google.com/citations?user={{ member.googlescholar }}"><i class="ai ai-google-scholar"></i></a>
+            <a href="https://scholar.google.com/citations?user={{ member.googlescholar }}"><i class="fa-brands fa-google-scholar"></i></a>
           </li>
         {% endif %}
 
         {% if member.twitter %}
           <li class="list-inline-item">
             <a href="https://twitter.com/{{ member.twitter }}"><i class="fa-brands fa-twitter"></i></a>
-          </li>
-        {% endif %}
           </li>
         {% endif %}
 
