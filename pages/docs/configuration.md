@@ -251,9 +251,9 @@ Add social icons to the footer by adding your (project's) social profiles in `_c
 social:
   email: name@example.com
   twitter: twitter_username
+  linkedin: https://linkedin.com/company/project_name/
+  facebook: https://facebook.com/groups/group_id/
   github: github_username               # Can also be a github_username/repository
-  mastodon: https://mastodon.social/@mastodon_username
-  facebook: https://www.facebook.com/groups/group_id/
 ```
 
 Create a [`_data/footer.yml`][data_footer] file to further customize your footer with text, links and/or a disclaimer.

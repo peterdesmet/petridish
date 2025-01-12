@@ -37,9 +37,20 @@
               </li>
             {% endif %}
 
+            {% if site.social.linkedin %}
+              <li class="list-inline-item mb-2">
+                <a href="{{ site.social.linkedin }}">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                    <i class="fa-brands fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            {% endif %}
+
             {% if site.social.facebook %}
               <li class="list-inline-item mb-2">
-                <a red="me" href="{{ site.social.facebook }}">
+                <a href="{{ site.social.facebook }}">
                   <span class="fa-stack fa-lg">
                     <i class="fa-solid fa-circle fa-stack-2x"></i>
                     <i class="fa-brands fa-facebook fa-stack-1x fa-inverse"></i>

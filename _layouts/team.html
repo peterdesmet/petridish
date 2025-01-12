@@ -59,6 +59,12 @@ description: Template for team page.
           </li>
         {% endif %}
 
+        {% if member.linkedin %}
+          <li class="list-inline-item">
+            <a href="https://linkedin.com/in/{{ member.linkedin }}"><i class="fa-brands fa-linkedin"></i></a>
+          </li>
+        {% endif %}
+
         {% if member.github %}
           <li class="list-inline-item">
             <a href="https://github.com/{{ member.github }}"><i class="fa-brands fa-github"></i></a>
