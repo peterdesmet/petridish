@@ -8,8 +8,10 @@
   orcid: 0000-0000-0000-0000
   researchgate: researchgate_username
   googlescholar: googlescholar_username
-  twitter: twitter_username
+  bluesky: bluesky_username.bsky.social
   mastodon: https://mastodon.social/@mastodon_username
+  twitter: twitter_username
+  linkedin: linkedin_username
   github: github_username
   email: name@example.com
 

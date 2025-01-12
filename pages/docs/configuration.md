@@ -116,10 +116,12 @@ In `_config.yml` you can now define:
 
 ```yml
 posts_on_home: 3                        # Show x number of latest posts on homepage, can be 0
-tweets_on_home: true                    # Show Twitter feed of social.twitter on homepage
 ```
 
 For easier maintenance, move/rename your `index.md` to `pages/home.md` and set its `permalink` to `/`.
+
+{:.alert .alert-warning}
+In earlier versions you could show a Twitter feed on the home page using `tweets_on_home: true` in `_config.yml`. This functionality no longer worked with the change from Twitter to X and the setting has been removed in Petridish v3.1.0.
 
 ## Team page
 
@@ -250,10 +252,12 @@ Add social icons to the footer by adding your (project's) social profiles in `_c
 ```yml
 social:
   email: name@example.com
-  twitter: twitter_username
-  github: github_username               # Can also be a github_username/repository
+  bluesky: bluesky_username.bsky.social
   mastodon: https://mastodon.social/@mastodon_username
-  facebook: https://www.facebook.com/groups/group_id/
+  twitter: twitter_username
+  linkedin: https://linkedin.com/company/project_name/
+  facebook: https://facebook.com/groups/group_id/
+  github: github_username               # Can also be a github_username/repository
 ```
 
 Create a [`_data/footer.yml`][data_footer] file to further customize your footer with text, links and/or a disclaimer.

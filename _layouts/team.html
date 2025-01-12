@@ -47,15 +47,27 @@ description: Template for team page.
           </li>
         {% endif %}
 
-        {% if member.twitter %}
+        {% if member.bluesky %}
           <li class="list-inline-item">
-            <a href="https://twitter.com/{{ member.twitter }}"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://bsky.app/profile/{{ member.bluesky }}"><i class="fa-brands fa-bluesky"></i></a>
           </li>
         {% endif %}
 
         {% if member.mastodon %}
           <li class="list-inline-item">
             <a href="{{ member.mastodon }}"><i class="fa-brands fa-mastodon"></i></a>
+          </li>
+        {% endif %}
+
+        {% if member.twitter %}
+          <li class="list-inline-item">
+            <a href="https://twitter.com/{{ member.twitter }}"><i class="fa-brands fa-x-twitter"></i></a>
+          </li>
+        {% endif %}
+
+        {% if member.linkedin %}
+          <li class="list-inline-item">
+            <a href="https://linkedin.com/in/{{ member.linkedin }}"><i class="fa-brands fa-linkedin"></i></a>
           </li>
         {% endif %}
 
