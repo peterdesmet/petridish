@@ -32,6 +32,6 @@
     "anchor-js": "^4.3.1",
     "bootstrap": "^5.3.3",
     "fuse.js": "^7.0.0",
-    "jquery": "^3.6.0"
+    "jquery": "^3.7.1"
   }
 }
