@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
-    "@popperjs/core": "^2.11.2",
+    "@popperjs/core": "^2.11.8",
     "anchor-js": "^4.3.1",
     "bootstrap": "^5.3.3",
     "fuse.js": "^7.0.0",
