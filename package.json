@@ -28,7 +28,7 @@
     "copy-js:popper": "cp node_modules/@popperjs/core/dist/umd/popper.min.js assets/theme/js/popper.min.js && cp node_modules/@popperjs/core/dist/umd/popper.min.js.map assets/theme/js/popper.min.js.map"    
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@fortawesome/fontawesome-free": "^6.7.2",
     "@popperjs/core": "^2.11.2",
     "academicons": "^1.9.1",
     "anchor-js": "^4.3.1",
