@@ -5,7 +5,7 @@
         <div class="col-lg">
           <ul class="list-inline">
             {% if site.social.email %}
-              <li class="list-inline-item">
+              <li class="list-inline-item mb-2">
                 <a href="mailto:{{ site.social.email }}">
                   <span class="fa-stack fa-lg">
                     <i class="fa-solid fa-circle fa-stack-2x"></i>
@@ -16,7 +16,7 @@
             {% endif %}
 
             {% if site.social.twitter %}
-              <li class="list-inline-item">
+              <li class="list-inline-item mb-2">
                 <a href="https://twitter.com/{{ site.social.twitter }}">
                   <span class="fa-stack fa-lg">
                     <i class="fa-solid fa-circle fa-stack-2x"></i>
@@ -27,7 +27,7 @@
             {% endif %}
 
             {% if site.social.mastodon %}
-              <li class="list-inline-item">
+              <li class="list-inline-item mb-2">
                 <a rel="me" href="{{ site.social.mastodon }}">
                   <span class="fa-stack fa-lg">
                     <i class="fa-solid fa-circle fa-stack-2x"></i>
@@ -38,7 +38,7 @@
             {% endif %}
 
             {% if site.social.facebook %}
-              <li class="list-inline-item">
+              <li class="list-inline-item mb-2">
                 <a red="me" href="{{ site.social.facebook }}">
                   <span class="fa-stack fa-lg">
                     <i class="fa-solid fa-circle fa-stack-2x"></i>
@@ -49,7 +49,7 @@
             {% endif %}
 
             {% if site.social.github %}
-              <li class="list-inline-item">
+              <li class="list-inline-item mb-2">
                 <a href="https://github.com/{{ site.social.github }}">
                   <span class="fa-stack fa-lg">
                     <i class="fa-solid fa-circle fa-stack-2x"></i>
@@ -60,7 +60,7 @@
             {% endif %}
 
             {% if site.archive_permalink %}
-              <li class="list-inline-item">
+              <li class="list-inline-item mb-2">
                 <a href="{{ '/feed.xml' | absolute_url }}">
                   <span class="fa-stack fa-lg">
                     <i class="fa-solid fa-circle fa-stack-2x"></i>
