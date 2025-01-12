@@ -17,12 +17,11 @@
     "url": "https://github.com/peterdesmet/petridish/issues"
   },
   "scripts": {
-    "copy-all": "mkdir -p assets/theme/css && mkdir -p assets/theme/js && npm run copy-css:bootstrap && npm run copy-font:fontawesome && npm run copy-js:anchor && npm run copy-js:bootstrap && npm run copy-js:jquery && npm run copy-js:fuse && npm run copy-js:popper",
+    "copy-all": "mkdir -p assets/theme/css && mkdir -p assets/theme/js && npm run copy-css:bootstrap && npm run copy-font:fontawesome && npm run copy-js:anchor && npm run copy-js:bootstrap && npm run copy-js:jquery && npm run copy-js:popper",
     "copy-css:bootstrap": "mkdir -p _sass/bootstrap && cp -r node_modules/bootstrap/scss/* _sass/bootstrap",
     "copy-font:fontawesome": "mkdir -p assets/theme/webfonts && cp -r node_modules/@fortawesome/fontawesome-free/webfonts/* assets/theme/webfonts && cp node_modules/@fortawesome/fontawesome-free/css/all.min.css assets/theme/css/fontawesome-all.min.css",
     "copy-js:anchor": "cp node_modules/anchor-js/anchor.min.js assets/theme/js/anchor.min.js",
     "copy-js:bootstrap": "cp node_modules/bootstrap/dist/js/bootstrap.min.js assets/theme/js/bootstrap.min.js && cp node_modules/bootstrap/dist/js/bootstrap.min.js.map assets/theme/js/bootstrap.min.js.map",
-    "copy-js:fuse": "cp node_modules/fuse.js/dist/fuse.min.js assets/theme/js/fuse.min.js",
     "copy-js:jquery": "cp node_modules/jquery/dist/jquery.min.js assets/theme/js/jquery.min.js",
     "copy-js:popper": "cp node_modules/@popperjs/core/dist/umd/popper.min.js assets/theme/js/popper.min.js && cp node_modules/@popperjs/core/dist/umd/popper.min.js.map assets/theme/js/popper.min.js.map"
   },
@@ -31,7 +30,6 @@
     "@popperjs/core": "^2.11.8",
     "anchor-js": "^4.3.1",
     "bootstrap": "^5.3.3",
-    "fuse.js": "^7.0.0",
     "jquery": "^3.7.1"
   }
 }
