@@ -8,8 +8,9 @@ baseurl: "/petridish"                   # Only required if your site is in a dir
 # SOCIAL PROFILES
 social:
   email: name@example.com
-  twitter: peterdesmet
+  bluesky: bluesky_username.bsky.social
   mastodon: https://mastodon.social/@mastodon_username
+  twitter: peterdesmet
   linkedin: https://linkedin.com/company/project_name/
   facebook: https://facebook.com/groups/group_id/
   github: github_username               # Can also be a github_username/repository

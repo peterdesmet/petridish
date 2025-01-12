@@ -15,12 +15,12 @@
               </li>
             {% endif %}
 
-            {% if site.social.twitter %}
+            {% if site.social.bluesky %}
               <li class="list-inline-item mb-2">
-                <a href="https://twitter.com/{{ site.social.twitter }}">
+                <a href="https://bsky.app/profile/{{ site.social.bluesky }}">
                   <span class="fa-stack fa-lg">
                     <i class="fa-solid fa-circle fa-stack-2x"></i>
-                    <i class="fa-brands fa-twitter fa-stack-1x fa-inverse"></i>
+                    <i class="fa-brands fa-bluesky fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
@@ -32,6 +32,17 @@
                   <span class="fa-stack fa-lg">
                     <i class="fa-solid fa-circle fa-stack-2x"></i>
                     <i class="fa-brands fa-mastodon fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            {% endif %}
+
+            {% if site.social.twitter %}
+              <li class="list-inline-item mb-2">
+                <a href="https://twitter.com/{{ site.social.twitter }}">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                    <i class="fa-brands fa-twitter fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>

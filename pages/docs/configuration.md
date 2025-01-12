@@ -250,6 +250,8 @@ Add social icons to the footer by adding your (project's) social profiles in `_c
 ```yml
 social:
   email: name@example.com
+  bluesky: bluesky_username.bsky.social
+  mastodon: https://mastodon.social/@mastodon_username
   twitter: twitter_username
   linkedin: https://linkedin.com/company/project_name/
   facebook: https://facebook.com/groups/group_id/
