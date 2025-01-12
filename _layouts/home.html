@@ -4,10 +4,6 @@ description: Template for homepage.
 remark: See also page.layout == 'home' in head.html and header.html.
 ---
 
-{% if site.tweets_on_home and site.social.twitter %}
-  {% assign two_col = true %}
-{% endif %}
-
 <div class="row">
   <div class="{% if two_col %}col{% else %}col-md-10 col-lg-8 mx-auto{% endif %}">
     <div class="row">
@@ -17,14 +13,6 @@ remark: See also page.layout == 'home' in head.html and header.html.
 
       </div>
 
-      {% if two_col %}
-        <div class="col-lg-4">
-          <a class="twitter-timeline" data-height="500" data-link-color="{{ site.colors.links }}" href="https://twitter.com/{{ site.social.twitter }}?ref_src=twsrc%5Etfw">
-            Tweets by {{ site.social.twitter }}
-          </a>
-          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
-      {% endif %}
     </div>
     
     {% if site.posts_on_home > 0 %}

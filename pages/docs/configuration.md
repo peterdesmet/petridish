@@ -116,10 +116,12 @@ In `_config.yml` you can now define:
 
 ```yml
 posts_on_home: 3                        # Show x number of latest posts on homepage, can be 0
-tweets_on_home: true                    # Show Twitter feed of social.twitter on homepage
 ```
 
 For easier maintenance, move/rename your `index.md` to `pages/home.md` and set its `permalink` to `/`.
+
+{:.alert .alert-warning}
+In earlier versions you could show a Twitter feed on the home page using `tweets_on_home: true` in `_config.yml`. This functionality no longer worked with the change from Twitter to X and the setting has been removed in Petridish v3.1.0.
 
 ## Team page
 
