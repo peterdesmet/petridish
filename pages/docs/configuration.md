@@ -294,6 +294,7 @@ All the above settings can be directly made in your GitHub repository in your br
     ```
 
 4. [Install Jekyll](https://jekyllrb.com/docs/#instructions). Skip the step to make a new site.
-5. Serve your site with `bundle exec jekyll serve`.
-6. Make changes and see the effect at `http://localhost:4000/`.
-7. Push your changes to GitHub.
+5. If required, install github-pages gem with `gem install github-pages`.
+6. Serve your site with `bundle exec jekyll serve`.
+7. Make changes and see the effect at `http://localhost:4000/`.
+8. Push your changes to GitHub.
