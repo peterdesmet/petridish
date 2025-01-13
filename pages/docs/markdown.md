@@ -206,4 +206,4 @@ _Image caption for this image should nicely wrap to the width of the container._
 {:.clearfix}
 ![alt text](https://images.unsplash.com/photo-1486825586573-7131f7991bdd?w=150&h=150&fit=crop){:.rounded .float-start} The image to the left is styled with `{:.rounded .float-start}` to give it round corners and position it at the start (i.e. left), with text wrapping around it. Note that in [Bootstrap v5](https://getbootstrap.com/docs/5.1/migration/#utilities) `.float-left` was renamed to `.float-start` and `.float-right` to `.float-end`, but the old class names are still supported in Petridish.
 
-The image does not wrap around this paragraph, because the previous paragraph also has a [`{:.clearfix}`](https://getbootstrap.com/docs/5.1/helpers/clearfix/) class, which contains wrapping to that paragraph only.
+The image does not wrap around this paragraph, because the previous paragraph also has a [`{:.clearfix}`](https://getbootstrap.com/docs/5.3/helpers/clearfix/) class, which contains wrapping to that paragraph only.
