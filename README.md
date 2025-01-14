@@ -6,15 +6,15 @@ Petridish is a Jekyll theme for research project websites. Or your personal blog
 
 See the demo website for instructions:
 
-- [Installation](https://peterdesmet.github.io/petridish/docs/installation)
-- [Configuration](https://peterdesmet.github.io/petridish/docs/configuration)
-- [Markdown](https://peterdesmet.github.io/petridish/docs/markdown)
+- [Installation](https://peterdesmet.com/petridish/docs/installation)
+- [Configuration](https://peterdesmet.com/petridish/docs/configuration)
+- [Markdown](https://peterdesmet.com/petridish/docs/markdown)
 
 ## Preview
 
-[Demo website](https://peterdesmet.github.io/petridish)
+[Demo website](https://peterdesmet.com/petridish)
 
-[![screenshot](screenshot.png)](https://peterdesmet.github.io/petridish)
+[![screenshot](screenshot.png)](https://peterdesmet.com/petridish)
 
 ## Contributing
 

@@ -12,7 +12,7 @@ authors:
     family-names: Desmet
     orcid: 'https://orcid.org/0000-0002-8442-8025'
 repository-code: 'https://github.com/peterdesmet/petridish'
-url: 'https://peterdesmet.github.io/petridish'
+url: 'https://peterdesmet.com/petridish'
 abstract: Jekyll theme for research project websites.
 keywords:
   - jekyll

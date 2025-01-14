@@ -3,7 +3,7 @@ title: Petridish                        # Title in top navigation bar (navbar) a
 author: Peter Desmet                    # Used for copyright statement in footer
 baseurl: "/petridish"                   # Only required if your site is in a directory e.g. https://username.github.io/sitename
                                         # which has url: "https://username.github.io" (no slash) and baseurl: "/sitename" (leading slash)
-                                        # A baseurl affects internal links, see http://peterdesmet.github.io/petridish/markdown/#links
+                                        # A baseurl affects internal links, see http://peterdesmet.com/petridish/markdown/#links
 
 # SOCIAL PROFILES
 social:
