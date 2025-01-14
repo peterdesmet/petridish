@@ -41,7 +41,8 @@ exclude:
   - LICENSE
   - package-lock.json
   - package.json
-  - petridish.gemspec
+  - jekyll-theme-petridish.gemspec
+  - CITATION.cff
 
 # FRONTMATTER DEFAULTS
 defaults:
