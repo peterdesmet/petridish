@@ -17,7 +17,7 @@ social:
   disqus: disqus_sitename               # Enable Disqus comments from disqus_sitename.disqus.com
 
 # THEME SETTINGS (ALL OPTIONAL)
-posts_on_home: 3                        # Show x number of latest posts on homepage, can be 0
+posts_on_home: 2                        # Show x number of latest posts on homepage, can be 0
 archive_permalink: /blog/               # Permalink of page using the archive.html layout, required when using post tags
 github_edit: true                       # Show an "edit this page" link in the footer, can also be name of branch (default: main)
 colors:
