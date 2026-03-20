@@ -101,4 +101,20 @@
   // Style tables
   // This is done by replacing '<table>' with '<table class="table">' in {{ content }}
 
+  // Style details
+  // Markdown support is enabled by default by replacing <details>' with <details markdown="1">' in {{ content }}
+  details {
+    border-bottom: 1px solid $gray-200;
+
+    summary {
+      @extend h4;
+      font-weight: $font-weight-light;
+      margin-bottom: 0!important;
+      padding: 1rem 0;
+
+      &::marker {
+        color: $link-color;
+      }
+    }
+  }
 }

@@ -182,6 +182,30 @@ HTML table with Bootstrap classes:
 
 Petridish will automatically wrap tables in a div with class [`table-responsive`](https://getbootstrap.com/docs/5.0/content/tables/#responsive-tables) to avoid tables getting wider than their parent container. It will also automatically convert `<table>` to `<table class="table">` to enable Bootstrap layout, unless you already defined class(es) for your table.
 
+## Details
+
+Details can be used to collapse content, e.g. if you want to make a list of frequently asked questions. The `<summary>` is styled like a h4 heading, but with a lighter font weight.
+
+<details markdown="1">
+<summary>First question</summary>
+The collapsed content can be formatted as Markdown, but you need to add `markdown="1"` to enable it:
+
+```html
+<details markdown="1">
+<summary>First question</summary>
+Markdown content
+
+- Item 1
+- Item 2
+</details>
+```
+</details>
+<details markdown="1">
+<summary>Second question</summary>
+
+Content for the second question. Even when collapsed, most browsers will open it if you search for a word that only appears here, like `hypnotoad`.
+</details>
+
 ## Footnotes
 
 Here's a sentence with a footnote. [^1]
