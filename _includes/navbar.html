@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light d-print-none" id="main-nav">
+<nav class="navbar navbar-expand-lg d-print-none" id="main-nav" data-bs-theme="light">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="{{'/' | relative_url }}">
       {% if site.logo %}
@@ -41,7 +41,7 @@
                 </div>
               </li>
             {% else %}
-              <li class="navbar-item">
+              <li class="nav-item">
                 {% if item.text contains '' %}
                   {% assign item_text = item.text %}
                 {% else %}
