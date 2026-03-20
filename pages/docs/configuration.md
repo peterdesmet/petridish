@@ -115,7 +115,7 @@ layout: home
 In `_config.yml` you can now define:
 
 ```yml
-posts_on_home: 3                        # Show x number of latest posts on homepage, can be 0
+posts_on_home: 2                        # Show x number of latest posts on homepage, can be 0
 ```
 
 For easier maintenance, move/rename your `index.md` to `pages/home.md` and set its `permalink` to `/`.
