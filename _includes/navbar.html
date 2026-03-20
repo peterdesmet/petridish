@@ -3,8 +3,12 @@
     <a class="navbar-brand d-flex align-items-center" href="{{'/' | relative_url }}">
       {% if site.logo %}
         <img class="me-3" src="{{ site.logo | relative_url }}" alt="{{ site.title }}">
+        {% if site.logo_and_title %}
+          {{ site.title }}
+        {% endif %}
+      {% else %}
+        {{ site.title }}
       {% endif %}
-      {{ site.title }}
     </a>
     {% if page.navigation and site.data[page.navigation] %}
       {% assign navigation = site.data[page.navigation] %}

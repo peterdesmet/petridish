@@ -241,6 +241,7 @@ Add a logo by uploading it to `assets/` and referencing it in `_config.yml`:
 
 ```yml
 logo: /assets/images/logo.png           # Logo in navbar, will be displayed with 30px height
+logo_and_title: true                    # If logo is enabled, show title as well (default)
 ```
 
 Add a favicon by adding a `favicon.ico` file to the root of your repository.
